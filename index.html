@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silicon Roots</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1117;
+      color: #f0f0f0;
+    }
+    header {
+      background: radial-gradient(circle at top left, #0e76a8, #0f1117);
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    img.logo {
+      width: 140px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #00d8ff;
+    }
+    p.subtitle {
+      font-size: 1.4rem;
+      color: #c0c0c0;
+      margin-top: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .feature {
+      background: #1a1d25;
+      border: 1px solid #292d36;
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      border-color: #00d8ff;
+    }
+    .feature h3 {
+      font-size: 1.4rem;
+      color: #00d8ff;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      color: #ccc;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0 80px;
+    }
+    .cta a {
+      padding: 14px 36px;
+      font-size: 1.1rem;
+      background-color: #00d8ff;
+      color: #0f1117;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 216, 255, 0.3);
+      transition: background-color 0.3s;
+    }
+    .cta a:hover {
+      background-color: #02b5d8;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #222;
+      background-color: #0c0e13;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Silicon Roots Logo" class="logo" />
+    <h1>Silicon Roots</h1>
+    <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>⚙️ Instant CI/CD Setup</h3>
+      <p>Bootstrap your pipeline with GitHub Actions or Bitbucket — in seconds. No YAML headaches.</p>
+    </div>
+    <div class="feature">
+      <h3>🐳 Auto Dockerization</h3>
+      <p>Analyze your stack and generate secure, production-ready Dockerfiles tailored to your app.</p>
+    </div>
+    <div class="feature">
+      <h3>☁️ Smart Multi-Cloud Deploy</h3>
+      <p>We compare cloud pricing, suggest the cheapest, and deploy using Terraform across AWS, GCP, or Azure.</p>
+    </div>
+    <div class="feature">
+      <h3>💸 Cost Intelligence Engine</h3>
+      <p>Track infra spending, get smart alerts, and receive AI-powered recommendations to cut down monthly bills.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="#">🚀 Join the Early Access</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Silicon Roots. Designed for DevOps Builders. All rights reserved.
+  </footer>
+</body>
+</html>
