@@ -21,10 +21,6 @@
       text-align: center;
       padding: 100px 20px 60px;
     }
-    img.logo {
-      width: 140px;
-      margin-bottom: 30px;
-    }
     h1 {
       font-size: 3.5rem;
       font-weight: 700;
@@ -39,14 +35,17 @@
       margin-right: auto;
     }
     .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      padding: 80px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
     .feature {
+      flex: 1 1 280px;
+      max-width: 320px;
       background: #1a1d25;
       border: 1px solid #292d36;
       border-radius: 12px;
@@ -98,7 +97,6 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Silicon Roots Logo" class="logo" />
     <h1>Silicon Roots</h1>
     <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
   </header>
