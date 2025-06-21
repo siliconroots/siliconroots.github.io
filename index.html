@@ -13,85 +13,100 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0f1117;
+      background: linear-gradient(to bottom, #0f1117, #1e2029);
       color: #f0f0f0;
+      overflow-x: hidden;
     }
     header {
-      background: radial-gradient(circle at top left, #0e76a8, #0f1117);
+      background: linear-gradient(to right, #00d8ff, #0077cc);
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 120px 20px 60px;
     }
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 700;
-      color: #00d8ff;
+      color: #ffffff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     p.subtitle {
-      font-size: 1.4rem;
-      color: #c0c0c0;
-      margin-top: 15px;
-      max-width: 700px;
+      font-size: 1.5rem;
+      color: #e0e0e0;
+      margin-top: 20px;
+      max-width: 800px;
       margin-left: auto;
       margin-right: auto;
+    }
+    .announcement {
+      margin-top: 30px;
+      background-color: #ff4757;
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: 600;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 71, 87, 0.3);
     }
     .features {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 80px 20px;
+      padding: 100px 20px;
       max-width: 1200px;
       margin: auto;
     }
     .feature {
       flex: 1 1 280px;
       max-width: 320px;
-      background: #1a1d25;
-      border: 1px solid #292d36;
-      border-radius: 12px;
-      padding: 30px;
-      transition: transform 0.3s ease;
+      background: #232632;
+      border: 1px solid #383c4a;
+      border-radius: 16px;
+      padding: 35px 25px;
+      transition: all 0.3s ease;
+      text-align: center;
     }
     .feature:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(0, 216, 255, 0.2);
       border-color: #00d8ff;
     }
     .feature h3 {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       color: #00d8ff;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     .feature p {
-      color: #ccc;
+      color: #bbb;
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .cta {
       display: flex;
       justify-content: center;
-      margin: 40px 0 80px;
+      margin: 60px 0 100px;
     }
     .cta a {
-      padding: 14px 36px;
-      font-size: 1.1rem;
+      padding: 16px 40px;
+      font-size: 1.2rem;
       background-color: #00d8ff;
       color: #0f1117;
       text-decoration: none;
       font-weight: 700;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 216, 255, 0.3);
-      transition: background-color 0.3s;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 216, 255, 0.3);
+      transition: background-color 0.3s, transform 0.2s;
     }
     .cta a:hover {
       background-color: #02b5d8;
+      transform: translateY(-2px);
     }
     footer {
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #666;
+      padding: 40px 20px;
+      font-size: 1rem;
+      color: #888;
+      background-color: #10131a;
       border-top: 1px solid #222;
-      background-color: #0c0e13;
     }
   </style>
 </head>
@@ -99,6 +114,7 @@
   <header>
     <h1>Silicon Roots</h1>
     <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
+    <div class="announcement">🚧 Something awesome is cooking. We'll be back with our first killer product soon! 🚀</div>
   </header>
 
   <section class="features">
