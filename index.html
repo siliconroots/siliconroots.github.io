@@ -6,57 +6,87 @@
   <title>Silicon Roots</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top center, #0a0f1c 20%, #060a15 80%);
-      color: #fff;
-      background-image: url('https://www.transparenttextures.com/patterns/cloudy-day.png');
-      background-repeat: repeat;
-      background-size: cover;
-      position: relative;
+      background: #000;
+      color: #ffffff;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Full-screen background with glow effect */
+    body::before {
+      content: '';
+      background: url('./2e338c6a-a2ce-4b22-a74e-8a42e221310d.png') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.15;
+      filter: blur(6px) brightness(1.5);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 255, 255, 0.1), transparent 70%);
+      z-index: -1;
     }
 
     header {
       text-align: center;
-      padding: 100px 20px 60px;
+      padding: 120px 20px 60px;
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 700;
-      color: #e0f8ff;
-      text-shadow: 0 0 20px #00cfff;
+      color: #80faff;
+      text-shadow: 0 0 10px #00f7ff, 0 0 30px #00f7ff;
     }
 
     p.subtitle {
-      font-size: 1.3rem;
-      color: #c0ddee;
-      max-width: 720px;
-      margin: 20px auto 50px;
-      line-height: 1.6;
+      font-size: 1.4rem;
+      color: #c8eaff;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 0 10px rgba(0,255,255,0.2);
     }
 
     .announcement {
-      background: linear-gradient(145deg, #06121f, #0a1c30);
-      border: 1px solid #0077ff;
-      color: #aeeaff;
-      font-size: 1.3rem;
-      font-weight: bold;
-      padding: 30px;
-      margin: auto;
-      border-radius: 18px;
-      width: 90%;
-      max-width: 680px;
-      box-shadow: 0 0 25px #0077ff55, 0 0 50px #0077ff22;
+      margin-top: 50px;
+      background: rgba(0, 20, 40, 0.85);
+      border: 2px solid #00f7ff;
+      border-radius: 20px;
+      padding: 30px 40px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      transition: all 0.4s ease;
+      box-shadow: 0 0 30px #00f7ff66, 0 0 80px #00f7ff33;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .announcement:hover {
-      box-shadow: 0 0 45px #00cfffaa;
-      transform: scale(1.02);
+      transform: scale(1.03);
+      box-shadow: 0 0 40px #00f7ff88, 0 0 100px #00f7ff55;
     }
 
     .announcement strong {
@@ -64,11 +94,12 @@
       display: block;
       margin-bottom: 10px;
       color: #ffffff;
+      text-shadow: 0 0 8px #00ffff;
     }
 
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
       max-width: 1100px;
       margin: 80px auto;
@@ -77,50 +108,48 @@
 
     .feature {
       background: rgba(10, 25, 40, 0.7);
-      border: 1px solid #244466;
-      border-radius: 14px;
+      border: 1px solid #00cfff44;
+      border-radius: 16px;
       padding: 30px;
-      box-shadow: 0 0 12px #00334444;
-      transition: 0.3s;
+      box-shadow: 0 0 12px #00cfff33;
+      transition: all 0.3s ease;
     }
 
     .feature:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 20px #00cfff55;
+      box-shadow: 0 0 30px #00cfff99;
     }
 
     .feature h3 {
-      color: #8cd9ff;
+      color: #00eaff;
       margin-bottom: 15px;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     .feature p {
-      font-size: 0.95rem;
-      color: #bde3f3;
-      line-height: 1.5;
+      font-size: 1rem;
+      color: #bbf6ff;
     }
 
     .cta {
       text-align: center;
-      margin: 60px 0 100px;
+      margin: 80px 0;
     }
 
     .cta a {
-      background: linear-gradient(145deg, #0051ff, #00d2ff);
       padding: 18px 50px;
-      font-size: 1.1rem;
-      border-radius: 12px;
-      color: #fff;
-      text-decoration: none;
+      font-size: 1.2rem;
       font-weight: bold;
-      box-shadow: 0 0 20px #00cfffaa;
-      transition: 0.3s ease;
-      display: inline-block;
+      background: linear-gradient(145deg, #00cfff, #0077ff);
+      color: #0f1117;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00f7ff77;
+      transition: all 0.3s ease;
     }
 
     .cta a:hover {
-      background: linear-gradient(145deg, #0077ff, #00eaff);
+      background: linear-gradient(145deg, #00aaff, #005eff);
       transform: translateY(-3px);
     }
 
@@ -128,18 +157,18 @@
       text-align: center;
       padding: 40px 20px;
       font-size: 0.9rem;
-      color: #669;
-      background-color: #030b15;
-      border-top: 1px solid #002244;
+      color: #66aabb;
+      background-color: #010a14;
+      border-top: 1px solid #003344;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
       }
 
       p.subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
 
       .announcement {
@@ -151,9 +180,7 @@
 <body>
   <header>
     <h1>Silicon Roots</h1>
-    <p class="subtitle">
-      Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.
-    </p>
+    <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
     <div class="announcement">
       <strong>⚠ SOMETHING EDGE is COMING 🚀</strong>
       Prepare for a cutting-edge DevOps innovation.
@@ -180,11 +207,11 @@
   </section>
 
   <div class="cta">
-    <a href="#">🚀 JOIN THE EARLY ACCESS</a>
+    <a href="#">🚀 Join the Early Access</a>
   </div>
 
   <footer>
-    © 2028. Silicon Roots, Designed for DevOps Builders. All rights reserved.
+    &copy; 2025 Silicon Roots. Designed for DevOps Builders. All rights reserved.
   </footer>
 </body>
 </html>
