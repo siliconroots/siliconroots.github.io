@@ -23,12 +23,6 @@
       padding: 100px 20px 60px;
       position: relative;
     }
-    .logo {
-      width: 80px;
-      height: auto;
-      margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
-    }
     h1 {
       font-size: 4rem;
       font-weight: 700;
@@ -43,24 +37,27 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .announcement {
       margin-top: 40px;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 71, 87, 0.15);
-      border: 1px solid rgba(255, 71, 87, 0.5);
       display: inline-block;
-      padding: 14px 28px;
-      border-radius: 40px;
+      padding: 18px 30px;
+      font-size: 1.1rem;
       font-weight: 600;
-      color: #fff;
-      box-shadow: 0 0 25px rgba(255, 71, 87, 0.25);
-      font-size: 1rem;
-      transition: all 0.3s ease;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255, 71, 87, 0.1), rgba(255, 71, 87, 0.05));
+      color: #ff4757;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 71, 87, 0.25);
+      box-shadow: 0 8px 24px rgba(255, 71, 87, 0.2);
+      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
     }
     .announcement:hover {
-      background-color: #ff4757;
-      transform: scale(1.05);
+      transform: scale(1.03);
+      background: rgba(255, 71, 87, 0.15);
     }
+
     .features {
       display: flex;
       flex-wrap: wrap;
@@ -70,6 +67,7 @@
       max-width: 1200px;
       margin: auto;
     }
+
     .feature {
       flex: 1 1 280px;
       max-width: 320px;
@@ -81,26 +79,31 @@
       text-align: center;
       box-shadow: 0 0 15px rgba(0, 216, 255, 0.08);
     }
+
     .feature:hover {
       transform: translateY(-8px) scale(1.03);
       box-shadow: 0 12px 30px rgba(0, 216, 255, 0.25);
       border-color: #00d8ff;
     }
+
     .feature h3 {
       font-size: 1.6rem;
       color: #00d8ff;
       margin-bottom: 15px;
     }
+
     .feature p {
       color: #bbb;
       font-size: 1rem;
       line-height: 1.6;
     }
+
     .cta {
       display: flex;
       justify-content: center;
       margin: 60px 0 100px;
     }
+
     .cta a {
       padding: 18px 44px;
       font-size: 1.2rem;
@@ -112,10 +115,12 @@
       box-shadow: 0 8px 20px rgba(0, 216, 255, 0.3);
       transition: background 0.3s, transform 0.3s;
     }
+
     .cta a:hover {
       background: linear-gradient(135deg, #02b5d8, #005fa3);
       transform: translateY(-3px);
     }
+
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -124,6 +129,7 @@
       background-color: #10131a;
       border-top: 1px solid #222;
     }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 2.8rem;
@@ -144,10 +150,9 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Silicon Roots Logo" class="logo" />
     <h1>Silicon Roots</h1>
     <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
-    <div class="announcement">🚧 Something awesome is cooking. We'll be back with our first killer product soon! 🚀</div>
+    <div class="announcement">🚧 Something visionary is on the way. Stay tuned for our first groundbreaking launch. 🚀</div>
   </header>
 
   <section class="features">
