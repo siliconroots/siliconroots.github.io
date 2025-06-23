@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Silicon Roots</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <style>
     * {
       margin: 0;
@@ -14,36 +17,36 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #000;
+      background: #0c0f14;
       color: #ffffff;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Full-screen background with glow effect */
     body::before {
       content: '';
-      background: url('./2e338c6a-a2ce-4b22-a74e-8a42e221310d.png') no-repeat center center fixed;
-      background-size: cover;
-      opacity: 0.15;
-      filter: blur(6px) brightness(1.5);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #081f2d, #000000, #081f2d);
+      background-size: 400% 400%;
+      animation: gradientMotion 20s ease infinite;
+      z-index: -3;
+    }
+
+    canvas#particles {
       position: fixed;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 100%;
+      width: 100vw;
+      height: 100vh;
       z-index: -2;
     }
 
-    body::after {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 20%, rgba(0, 255, 255, 0.1), transparent 70%);
-      z-index: -1;
+    @keyframes gradientMotion {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
@@ -52,47 +55,39 @@
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.8rem;
       font-weight: 700;
       color: #80faff;
       text-shadow: 0 0 10px #00f7ff, 0 0 30px #00f7ff;
+      margin-bottom: 10px;
     }
 
-    p.subtitle {
-      font-size: 1.4rem;
+    .typewriter-text {
+      font-size: 1.3rem;
       color: #c8eaff;
-      margin-top: 20px;
+      text-shadow: 0 0 6px rgba(0,255,255,0.3);
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      text-shadow: 0 0 10px rgba(0,255,255,0.2);
+      margin: 0 auto;
+      height: 30px;
     }
 
     .announcement {
       margin-top: 50px;
-      background: rgba(0, 20, 40, 0.85);
+      background: rgba(0, 20, 40, 0.65);
+      backdrop-filter: blur(12px);
       border: 2px solid #00f7ff;
       border-radius: 20px;
       padding: 30px 40px;
-      color: #ffffff;
       font-size: 1.2rem;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      box-shadow: 0 0 30px #00f7ff66, 0 0 80px #00f7ff33;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .announcement:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 40px #00f7ff88, 0 0 100px #00f7ff55;
+      box-shadow: 0 0 30px #00f7ff66;
     }
 
     .announcement strong {
       font-size: 1.6rem;
-      display: block;
-      margin-bottom: 10px;
       color: #ffffff;
       text-shadow: 0 0 8px #00ffff;
     }
@@ -107,28 +102,36 @@
     }
 
     .feature {
-      background: rgba(10, 25, 40, 0.7);
+      background: rgba(10, 25, 40, 0.5);
       border: 1px solid #00cfff44;
       border-radius: 16px;
       padding: 30px;
-      box-shadow: 0 0 12px #00cfff33;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 20px #00cfff33;
       transition: all 0.3s ease;
+      text-align: center;
     }
 
     .feature:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       box-shadow: 0 0 30px #00cfff99;
     }
 
     .feature h3 {
       color: #00eaff;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       font-size: 1.2rem;
     }
 
     .feature p {
       font-size: 1rem;
       color: #bbf6ff;
+    }
+
+    .feature lottie-player {
+      margin: 0 auto 20px;
+      width: 80px;
+      height: 80px;
     }
 
     .cta {
@@ -146,6 +149,13 @@
       border-radius: 12px;
       box-shadow: 0 0 30px #00f7ff77;
       transition: all 0.3s ease;
+      animation: pulse 2.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00f7ff77; }
+      50% { box-shadow: 0 0 30px #00f7ffcc; }
+      100% { box-shadow: 0 0 10px #00f7ff77; }
     }
 
     .cta a:hover {
@@ -167,7 +177,7 @@
         font-size: 2.6rem;
       }
 
-      p.subtitle {
+      .typewriter-text {
         font-size: 1.1rem;
       }
 
@@ -178,30 +188,36 @@
   </style>
 </head>
 <body>
+  <canvas id="particles"></canvas>
+
   <header>
     <h1>Silicon Roots</h1>
-    <p class="subtitle">Revolutionizing DevOps — One Click CI/CD, Smart Dockerization, and Intelligent Multi-Cloud Optimization for Developers.</p>
+    <div class="typewriter-text" id="typewriter"></div>
     <div class="announcement">
-      <strong>⚠ SOMETHING EDGE is COMING 🚀</strong>
+      <strong>⚠ SOMETHING EDGE is COMING 🚀</strong><br/>
       Prepare for a cutting-edge DevOps innovation.
     </div>
   </header>
 
   <section class="features">
     <div class="feature">
-      <h3>⚙ Instant CI/CD Setup</h3>
+      <lottie-player src="https://lottie.host/58d710e5-328b-4db1-831a-7c388e147edc/cyber-cog.json" background="transparent" speed="1" loop autoplay></lottie-player>
+      <h3>Instant CI/CD Setup</h3>
       <p>Bootstrap your pipeline with GitHub Actions or Bitbucket — in seconds. No YAML headaches.</p>
     </div>
     <div class="feature">
-      <h3>🐳 Auto Dockerization</h3>
+      <lottie-player src="https://lottie.host/d4c77a11-ff9e-43bb-805e-6c3a2c4dce77/docker.json" background="transparent" speed="1" loop autoplay></lottie-player>
+      <h3>Auto Dockerization</h3>
       <p>Analyze your stack and generate secure, production-ready Dockerfiles tailored to your app.</p>
     </div>
     <div class="feature">
-      <h3>☁ Smart Multi-Cloud Deploy</h3>
+      <lottie-player src="https://lottie.host/46ee8f47-cf24-4a94-bbaf-990e32b0d46b/cloud.json" background="transparent" speed="1" loop autoplay></lottie-player>
+      <h3>Smart Multi-Cloud Deploy</h3>
       <p>We compare cloud pricing, suggest the cheapest, and deploy using Terraform across AWS, GCP, or Azure.</p>
     </div>
     <div class="feature">
-      <h3>💰 Cost Intelligence Engine</h3>
+      <lottie-player src="https://lottie.host/aa87ac12-342a-42e1-8d86-843fbf2b42b3/cost.json" background="transparent" speed="1" loop autoplay></lottie-player>
+      <h3>Cost Intelligence Engine</h3>
       <p>Track infra spending, get smart alerts, and receive AI-powered recommendations to cut down monthly bills.</p>
     </div>
   </section>
@@ -213,5 +229,75 @@
   <footer>
     &copy; 2025 Silicon Roots. Designed for DevOps Builders. All rights reserved.
   </footer>
+
+  <script>
+    const typewriter = new Typewriter(document.getElementById('typewriter'), {
+      loop: true,
+      delay: 40,
+    });
+
+    typewriter
+      .typeString("Revolutionizing DevOps.")
+      .pauseFor(1000)
+      .deleteAll()
+      .typeString("One Click CI/CD.")
+      .pauseFor(1000)
+      .deleteAll()
+      .typeString("Smart Dockerization.")
+      .pauseFor(1000)
+      .deleteAll()
+      .typeString("Intelligent Multi-Cloud Optimization.")
+      .pauseFor(1200)
+      .start();
+
+    // GSAP Entrance Animation
+    gsap.from("header h1", { y: -60, opacity: 0, duration: 1.2, delay: 0.3 });
+    gsap.from(".announcement", { scale: 0.9, opacity: 0, duration: 1, delay: 0.8 });
+    gsap.from(".features .feature", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      duration: 1,
+      delay: 1.2
+    });
+
+    // Particle background
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    const particles = Array.from({ length: 60 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      radius: Math.random() * 2 + 1,
+      dx: (Math.random() - 0.5) * 0.5,
+      dy: (Math.random() - 0.5) * 0.5,
+    }));
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#00f7ff';
+        ctx.fill();
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+      });
+      requestAnimationFrame(drawParticles);
+    }
+
+    drawParticles();
+  </script>
 </body>
 </html>
