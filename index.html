@@ -20,18 +20,25 @@
       background: #0c0f14;
       color: #ffffff;
       overflow-x: hidden;
-      position: relative;
     }
 
     body::before {
       content: '';
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: linear-gradient(135deg, #081f2d, #000000, #081f2d);
       background-size: 400% 400%;
       animation: gradientMotion 20s ease infinite;
       z-index: -3;
+    }
+
+    @keyframes gradientMotion {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     canvas#particles {
@@ -43,53 +50,39 @@
       z-index: -2;
     }
 
-    @keyframes gradientMotion {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     header {
       text-align: center;
-      padding: 120px 20px 60px;
+      padding: 100px 20px 40px;
     }
 
     h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
       font-weight: 700;
-      color: #80faff;
-      text-shadow: 0 0 10px #00f7ff, 0 0 30px #00f7ff;
-      margin-bottom: 10px;
+      color: #ffffff;
     }
 
     .typewriter-text {
-      font-size: 1.3rem;
-      color: #c8eaff;
-      text-shadow: 0 0 6px rgba(0,255,255,0.3);
-      max-width: 800px;
-      margin: 0 auto;
-      height: 30px;
+      font-size: 1.2rem;
+      color: #bbbbbb;
+      margin-top: 10px;
     }
 
     .announcement {
-      margin-top: 50px;
-      background: rgba(0, 20, 40, 0.65);
-      backdrop-filter: blur(12px);
-      border: 2px solid #00f7ff;
-      border-radius: 20px;
-      padding: 30px 40px;
-      font-size: 1.2rem;
+      margin-top: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 20px 30px;
+      font-size: 1.1rem;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      box-shadow: 0 0 30px #00f7ff66;
     }
 
     .announcement strong {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       color: #ffffff;
-      text-shadow: 0 0 8px #00ffff;
     }
 
     .features {
@@ -102,86 +95,66 @@
     }
 
     .feature {
-      background: rgba(10, 25, 40, 0.5);
-      border: 1px solid #00cfff44;
-      border-radius: 16px;
-      padding: 30px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 20px #00cfff33;
-      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 30px 20px;
       text-align: center;
     }
 
-    .feature:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 30px #00cfff99;
-    }
-
     .feature h3 {
-      color: #00eaff;
-      margin-bottom: 10px;
+      color: #ffffff;
+      margin-bottom: 12px;
       font-size: 1.2rem;
     }
 
     .feature p {
       font-size: 1rem;
-      color: #bbf6ff;
+      color: #cccccc;
     }
 
     .feature lottie-player {
-      margin: 0 auto 20px;
-      width: 80px;
-      height: 80px;
+      margin: 0 auto 15px;
+      width: 70px;
+      height: 70px;
     }
 
     .cta {
       text-align: center;
-      margin: 80px 0;
+      margin: 60px 0;
     }
 
     .cta a {
-      padding: 18px 50px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      background: linear-gradient(145deg, #00cfff, #0077ff);
-      color: #0f1117;
+      padding: 14px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #ffffff;
+      color: #0c0f14;
       text-decoration: none;
-      border-radius: 12px;
-      box-shadow: 0 0 30px #00f7ff77;
-      transition: all 0.3s ease;
-      animation: pulse 2.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px #00f7ff77; }
-      50% { box-shadow: 0 0 30px #00f7ffcc; }
-      100% { box-shadow: 0 0 10px #00f7ff77; }
+      border-radius: 8px;
+      border: none;
+      transition: background 0.3s ease;
     }
 
     .cta a:hover {
-      background: linear-gradient(145deg, #00aaff, #005eff);
-      transform: translateY(-3px);
+      background: #dddddd;
     }
 
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px 20px;
       font-size: 0.9rem;
-      color: #66aabb;
-      background-color: #010a14;
-      border-top: 1px solid #003344;
+      color: #888888;
+      background-color: #0a0d12;
+      border-top: 1px solid #1a1a1a;
     }
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
       }
 
       .typewriter-text {
-        font-size: 1.1rem;
-      }
-
-      .announcement {
         font-size: 1rem;
       }
     }
@@ -194,7 +167,7 @@
     <h1>Silicon Roots</h1>
     <div class="typewriter-text" id="typewriter"></div>
     <div class="announcement">
-      <strong>⚠ SOMETHING EDGE is COMING 🚀</strong><br/>
+      <strong>⚠ SOMETHING EDGE is COMING</strong><br/>
       Prepare for a cutting-edge DevOps innovation.
     </div>
   </header>
@@ -223,7 +196,7 @@
   </section>
 
   <div class="cta">
-    <a href="#">🚀 Join the Early Access</a>
+    <a href="#">Join the Early Access</a>
   </div>
 
   <footer>
@@ -246,20 +219,9 @@
       .typeString("Smart Dockerization.")
       .pauseFor(1000)
       .deleteAll()
-      .typeString("Intelligent Multi-Cloud Optimization.")
+      .typeString("Multi-Cloud Optimization for Developers.")
       .pauseFor(1200)
       .start();
-
-    // GSAP Entrance Animation
-    gsap.from("header h1", { y: -60, opacity: 0, duration: 1.2, delay: 0.3 });
-    gsap.from(".announcement", { scale: 0.9, opacity: 0, duration: 1, delay: 0.8 });
-    gsap.from(".features .feature", {
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      duration: 1,
-      delay: 1.2
-    });
 
     // Particle background
     const canvas = document.getElementById('particles');
@@ -273,7 +235,7 @@
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    const particles = Array.from({ length: 60 }, () => ({
+    const particles = Array.from({ length: 50 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 2 + 1,
@@ -286,7 +248,7 @@
       particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#00f7ff';
+        ctx.fillStyle = '#555';
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
