@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Silicon Roots</title>
+  <link rel="icon" type="image/png" href="./assets/brand/icon-light.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/typewriter-effect@2.18.0/dist/core.js"></script>
@@ -51,6 +52,15 @@
     header {
       text-align: center;
       padding: 100px 20px 40px;
+    }
+
+    .brand-lockup {
+      max-width: 540px;
+      width: min(90vw, 540px);
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+      filter: drop-shadow(0 4px 22px rgba(0, 255, 255, 0.18));
     }
 
     h1 {
@@ -199,7 +209,8 @@
   <canvas id="particles"></canvas>
 
 <header>
-  <h1>Silicon Roots</h1>
+  <img class="brand-lockup" src="./assets/brand/logo-dark.png" alt="Silicon Roots logo" />
+  <h1 style="font-size: 2.5rem;">Silicon Roots</h1>
   <p style="font-size: 1.1rem; color: #99e6ff; margin-top: 10px; max-width: 700px; margin-left: auto; margin-right: auto;">
     Our mission: <em>to simplify DevOps and Cloud for developers and teams by offering smart tools, automation, and expert-led services.</em>
   </p>
