@@ -1,0 +1,217 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0c0f14;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #081f2d, #000000, #081f2d);
+      background-size: 400% 400%;
+      animation: gradientMotion 20s ease infinite;
+      z-index: -3;
+    }
+
+    @keyframes gradientMotion {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    canvas#particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+
+    .brand-picture {
+      display: block;
+      width: 100%;
+    }
+
+    .brand-lockup {
+      max-width: 720px;
+      width: min(92vw, 720px);
+      height: auto;
+      display: block;
+      margin: 0 auto 20px;
+      filter: drop-shadow(0 4px 22px rgba(0, 255, 255, 0.18));
+      object-fit: contain;
+    }
+
+    .mission-text {
+      font-size: 1.1rem;
+      color: #99e6ff;
+      margin-top: 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
+    .typewriter-text {
+      font-size: 1.3rem;
+      color: #c8eaff;
+      margin-top: 10px;
+      text-shadow: 0 0 6px rgba(0,255,255,0.3);
+    }
+
+    .announcement {
+      margin-top: 50px;
+      background: rgba(0, 20, 40, 0.85);
+      border: 2px solid #00f7ff;
+      border-radius: 20px;
+      padding: 30px 40px;
+      color: #ffffff;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      box-shadow: 0 0 30px #00f7ff66, 0 0 80px #00f7ff33;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .announcement:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px #00f7ff88, 0 0 100px #00f7ff55;
+    }
+
+    .announcement strong {
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-shadow: 0 0 8px #00ffff;
+    }
+
+    .features-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 80px 0;
+      gap: 30px;
+    }
+
+    .features-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1100px;
+      padding: 0 20px;
+    }
+
+    .features-bottom {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .feature {
+      background: rgba(10, 25, 40, 0.7);
+      border: 1px solid #00cfff44;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 0 12px #00cfff33;
+      width: 300px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 30px #00cfff99;
+    }
+
+    .feature .icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      color: #00eaff;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #bbf6ff;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 80px 0;
+    }
+
+    .cta a {
+      padding: 18px 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: linear-gradient(145deg, #00cfff, #0077ff);
+      color: #0f1117;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00f7ff77;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: linear-gradient(145deg, #00aaff, #005eff);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #66aabb;
+      background-color: #010a14;
+      border-top: 1px solid #003344;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 64px 14px 28px;
+      }
+
+      .brand-lockup {
+        width: min(96vw, 640px);
+        margin-bottom: 14px;
+      }
+
+      .mission-text {
+        font-size: 0.98rem;
+        max-width: 94vw;
+      }
+
+      .features-top {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature {
+        width: 90%;
+      }
+    }
