@@ -161,12 +161,23 @@ header { text-align: center; padding: 56px 20px 32px; }
   object-fit: contain;
 }
 [data-theme="light"] .brand-picture__light .brand-lockup {
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.12);
-  filter: none;
+  filter: drop-shadow(0 2px 12px rgba(15, 23, 42, 0.06));
+  border-radius: 0;
+  box-shadow: none;
 }
 
-.mission-text {
+[data-theme="light"] header .mission-text {
+  color: #0f172a;
+  font-weight: 500;
+}
+[data-theme="light"] header .mission-text em {
+  color: #0f172a;
+  font-style: italic;
+}
+[data-theme="light"] header .typewriter-text {
+  color: #1e293b;
+  text-shadow: none;
+}
   font-size: 1.1rem; color: var(--text-sub); margin-top: 4px;
   max-width: 700px; margin-left: auto; margin-right: auto;
   line-height: 1.6; padding: 0 10px;
