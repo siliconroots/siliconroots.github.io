@@ -22,10 +22,16 @@
     <a href="#" class="navbar-brand">SILICON ROOTS</a>
     <div class="nav-links">
       <a href="#services">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#engagement">Engagement</a>
-      <a href="#tech">Tech Stack</a>
-      <a href="#contact" style="color: #00cfff; border-bottom: 1px solid #00cfff; padding-bottom: 2px;">Contact</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#tech">Technologies</a>
+      <a href="#engagement">Delivery Model</a>
+      <a href="#about">About</a>
+    </div>
+    <div style="display: flex; gap: 20px; align-items: center; order: 2;">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-2a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0-2.5A4.5 4.5 0 1 1 12 7.5v9z"/></svg>
+      </button>
+      <a href="#contact" class="cta-secondary" style="padding: 10px 20px; font-size: 0.9rem; margin-left: 0;">Let's Talk</a>
     </div>
   </nav>
 
@@ -35,7 +41,7 @@
     <img class="brand-lockup" src="./assets/brand/logo-dark.png" alt="Silicon Roots logo" />
   </picture>
 <p class="mission-text">
-    Our mission: <em>to eliminate DevOps and SRE operational headaches through automation and engineering expertise.</em>
+    <em>From Jenkins to Kubernetes. From On-Prem to Cloud. We build, automate, scale, and stabilize infrastructure.</em>
   </p>
   <div class="typewriter-text" id="typewriter"></div>
   <div class="announcement" style="margin-bottom: 20px;">
@@ -63,7 +69,31 @@
   </div>
 </header>
 
+  <section id="about" class="section reveal" style="padding-top: 20px; text-align: center;">
+    <h2 class="section-title">Engineering Infrastructure That Scales</h2>
+    <p class="section-subtitle" style="margin-bottom: 20px;">
+      Silicon Roots is a DevOps, SRE, and platform engineering services company helping startups and enterprises modernize infrastructure, automate delivery, improve reliability, and reduce operational complexity.
+    </p>
+    <p class="section-subtitle">
+      We specialize in cloud-native platforms, CI/CD automation, observability, Kubernetes operations, hybrid infrastructure, and enterprise DevOps transformation.
+    </p>
+  </section>
 
+  <section id="solutions" class="section reveal">
+    <h2 class="section-title">Enterprise Solutions</h2>
+    <p class="section-subtitle">Comprehensive engineering capabilities to modernize your delivery.</p>
+    <div class="grid-container">
+      <div class="feature"><div class="icon">🔄</div><h3>DevOps Transformation</h3></div>
+      <div class="feature"><div class="icon">🚀</div><h3>CI/CD Modernization</h3></div>
+      <div class="feature"><div class="icon">🚢</div><h3>Kubernetes Platform Engineering</h3></div>
+      <div class="feature"><div class="icon">⚙️</div><h3>Jenkins Modernization</h3></div>
+      <div class="feature"><div class="icon">📊</div><h3>Observability Engineering</h3></div>
+      <div class="feature"><div class="icon">☁️</div><h3>Cloud Migration</h3></div>
+      <div class="feature"><div class="icon">🤖</div><h3>Infrastructure Automation</h3></div>
+      <div class="feature"><div class="icon">🛡️</div><h3>Reliability Engineering</h3></div>
+      <div class="feature"><div class="icon">🏢</div><h3>Platform Operations</h3></div>
+    </div>
+  </section>
   <section id="stats" class="section reveal">
     <div class="stats-grid">
       <div class="stat-block reveal" data-delay="100">
@@ -91,98 +121,169 @@
     <div class="features-wrapper" style="margin-top: 0;">
       <div class="features-top">
       <div class="feature">
-        <div class="icon">⚙️</div>
-        <h3>DevOps Engineering</h3>
-        <p>End-to-end automation and engineering to streamline your software delivery lifecycle.</p>
+        <div class="icon">⚡</div>
+        <h3>CI/CD & Release Engineering</h3>
+        <p>We design and manage enterprise CI/CD platforms from on-prem Jenkins installations to modern cloud-native GitHub Actions.</p>
       </div>
       <div class="feature">
-        <div class="icon">🛡️</div>
-        <h3>Site Reliability Engineering</h3>
-        <p>Proactive reliability engineering, incident response readiness, and production stability.</p>
+        <div class="icon">⚙️</div>
+        <h3>DevOps Toolchain Automation</h3>
+        <p>Complete toolchain design and integration covering Vault, SonarQube, Nexus, Artifactory, and automated release workflows.</p>
       </div>
       <div class="feature">
         <div class="icon">🚢</div>
-        <h3>Kubernetes Platform Engineering</h3>
-        <p>Enterprise-grade EKS, GKE, and self-hosted Kubernetes architecture and operations.</p>
+        <h3>Platform Engineering</h3>
+        <p>We build scalable internal developer platforms, enabling self-service infrastructure and golden path engineering.</p>
       </div>
       <div class="feature">
-        <div class="icon">⚡</div>
-        <h3>CI/CD Automation</h3>
-        <p>Fast, secure, and reliable deployment pipelines tailored to your organizational needs.</p>
+        <div class="icon">🏢</div>
+        <h3>On-Premises & Hybrid Cloud</h3>
+        <p>Need Jenkins deployed inside your datacenter? We handle private networking, VMware, and bare-metal infrastructure modernization.</p>
       </div>
       <div class="feature">
         <div class="icon">🏗️</div>
-        <h3>Infrastructure as Code</h3>
-        <p>Declarative, version-controlled infrastructure provisioning using Terraform and Pulumi.</p>
+        <h3>Enterprise Infrastructure Services</h3>
+        <p>Comprehensive Linux server hardening, automated patching, NGINX reverse proxies, and SSL/TLS lifecycle automation.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🛡️</div>
+        <h3>Observability & Reliability</h3>
+        <p>Proactive alert engineering, tracing, incident response readiness, and uptime capacity planning for production stability.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🗄️</div>
+        <h3>Database & Message Infra</h3>
+        <p>Operational support, deployment, and automation for PostgreSQL, MongoDB, Redis, RabbitMQ, and Elasticsearch.</p>
       </div>
       <div class="feature">
         <div class="icon">☁️</div>
-        <h3>Cloud Migration & Modernization</h3>
-        <p>Seamless transition of legacy workloads to modern, scalable cloud-native architectures.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">📊</div>
-        <h3>Monitoring & Observability</h3>
-        <p>Comprehensive tracing, logging, and metrics to ensure full visibility into production.</p>
-      </div>
-      <div class="feature">
-        <div class="icon">💰</div>
-        <h3>Cloud Cost Optimization</h3>
-        <p>Strategic resource tuning and architectural changes to significantly reduce cloud spend.</p>
+        <h3>Cloud & Multi-Cloud</h3>
+        <p>Strategic AWS, GCP, and Azure migrations, secure landing zones, automated IAM architectures, and infrastructure as code.</p>
       </div>
       </div>
     </div>
   </section>
 
-  <section id="architecture" class="section reveal">
-    <h2 class="section-title">How We Engineer Reliability</h2>
-    <p class="section-subtitle">A robust, scalable, and automated cloud-native delivery pipeline.</p>
-    <div class="arch-container reveal" data-delay="200">
-      <div class="arch-node">Client Applications</div>
-      <div class="arch-line"><div class="arch-pulse"></div></div>
-      <div class="arch-node">CI/CD Pipeline (GitHub Actions / GitLab)</div>
-      <div class="arch-line"><div class="arch-pulse" style="animation-delay: 0.5s;"></div></div>
-      <div class="arch-node">Kubernetes Cluster (EKS / GKE)</div>
-      <div class="arch-line"><div class="arch-pulse" style="animation-delay: 1s;"></div></div>
-      <div class="arch-node" style="border-color: #ff5f56; box-shadow: 0 0 20px rgba(255, 95, 86, 0.2);">Monitoring & Auto-Healing (Prometheus / ELK)</div>
+  <section id="blueprint" class="section reveal">
+    <h2 class="section-title">Infrastructure Delivery Blueprint</h2>
+    <p class="section-subtitle">Our end-to-end engineering execution model.</p>
+    <div class="blueprint-timeline reveal" data-delay="200">
+      <div class="blueprint-line"></div>
+      <div class="blueprint-pulse"></div>
+      
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Discovery & Assessment</h3>
+          <p>Understanding infrastructure, bottlenecks, delivery workflows, and operational pain points.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Architecture Design</h3>
+          <p>Cloud-native, hybrid, or on-prem architecture planning for scalable delivery.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Automation Implementation</h3>
+          <p>Infrastructure as Code, configuration automation, workflow automation.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>CI/CD & Release Engineering</h3>
+          <p>Jenkins, GitHub Actions, GitLab CI, Azure DevOps, deployment pipelines.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Platform Deployment</h3>
+          <p>Kubernetes, VMs, bare metal, ingress, service mesh, networking.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Observability & Monitoring</h3>
+          <p>Prometheus, Grafana, ELK, Loki, alert engineering.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Reliability Engineering (SRE)</h3>
+          <p>Reliability engineering, incident readiness, SLO/SLA implementation.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Security & Access Control</h3>
+          <p>Vault, IAM, access controls, TLS automation, secret management.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Optimization & Cost Governance</h3>
+          <p>Cloud cost tuning, performance engineering, scaling strategies.</p>
+        </div>
+      </div>
+      <div class="blueprint-step">
+        <div class="blueprint-dot"></div>
+        <div class="blueprint-content">
+          <h3>Continuous Operations Support</h3>
+          <p>Continuous support, platform maintenance, reliability improvements.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="why-us" class="section reveal">
-    <h2 class="section-title">Why Choose Us</h2>
+    <h2 class="section-title">Why Enterprise Teams Work With Us</h2>
     <p class="section-subtitle">A true engineering partner focused on reliability, automation, and operational excellence.</p>
     <div class="grid-container">
       <div class="feature trust-card">
+        <div class="icon">♾️</div>
+        <h3>End-to-End Ownership</h3>
+        <p>From architecture to automation to production support.</p>
+      </div>
+      <div class="feature trust-card">
+        <div class="icon">🏢</div>
+        <h3>Hybrid Infrastructure Expertise</h3>
+        <p>Cloud-native, hybrid, and on-prem environments.</p>
+      </div>
+      <div class="feature trust-card">
         <div class="icon">🤖</div>
         <h3>Automation First</h3>
-        <p>We eliminate repetitive operational work through engineering automation.</p>
+        <p>Manual operational work replaced with repeatable automation.</p>
       </div>
       <div class="feature trust-card">
         <div class="icon">🛡️</div>
-        <h3>Production Reliability</h3>
-        <p>We build resilient cloud systems designed for uptime and stability.</p>
+        <h3>Production Reliability Focus</h3>
+        <p>Engineering for uptime, resilience, and operational stability.</p>
       </div>
       <div class="feature trust-card">
-        <div class="icon">☁️</div>
-        <h3>Cloud Native Expertise</h3>
-        <p>Deep Kubernetes and modern infrastructure experience.</p>
+        <div class="icon">⚡</div>
+        <h3>Platform Engineering Excellence</h3>
+        <p>Developer productivity through scalable platforms.</p>
       </div>
       <div class="feature trust-card">
-        <div class="icon">📈</div>
-        <h3>Scalable Architecture</h3>
-        <p>Infrastructure built to grow with your business.</p>
-      </div>
-      <div class="feature trust-card">
-        <div class="icon">🎯</div>
-        <h3>Operational Excellence</h3>
-        <p>Reduce incidents, deployment failures, and firefighting.</p>
+        <div class="icon">🔒</div>
+        <h3>Enterprise Security Practices</h3>
+        <p>Access control, secrets, compliance-conscious architecture.</p>
       </div>
     </div>
     
     <div class="dashboard-mockup reveal" data-delay="200" style="margin-top: 80px;">
       <div class="dash-header">
         <div class="dash-title"><div class="status-dot"></div> Silicon Roots Command Center</div>
-        <div style="color: #88bbcc; font-size: 0.85rem;">Environment: Production</div>
+        <div style="color: var(--text-sub); font-size: 0.85rem;">Environment: Production</div>
       </div>
       <div class="dash-grid">
         <div class="dash-card">
@@ -205,54 +306,31 @@
   </section>
 
   <section id="engagement" class="section reveal">
-    <h2 class="section-title">Engagement Models</h2>
+    <h2 class="section-title">Delivery Model</h2>
     <p class="section-subtitle">Flexible engineering partnerships tailored to your business stage.</p>
     <div class="grid-container">
       <div class="engagement-card">
+        <h3>Consulting</h3>
+        <p>Architecture reviews and engineering strategy.</p>
+      </div>
+      <div class="engagement-card">
         <h3>Project Delivery</h3>
-        <p>End-to-end DevOps transformation projects and infrastructure modernization.</p>
+        <p>End-to-end implementation ownership.</p>
       </div>
       <div class="engagement-card">
-        <h3>Dedicated Engineering Support</h3>
-        <p>Embedded DevOps / SRE engineering partnership working alongside your team.</p>
+        <h3>Dedicated Engineering</h3>
+        <p>Embedded DevOps/SRE teams.</p>
       </div>
       <div class="engagement-card">
-        <h3>Infrastructure Consulting</h3>
-        <p>Deep architectural reviews, security audits, and cloud cost optimization.</p>
-      </div>
-      <div class="engagement-card">
-        <h3>Managed Platform Operations</h3>
-        <p>Ongoing infrastructure reliability management and production support.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="timeline" class="section reveal">
-    <h2 class="section-title">How We Work</h2>
-    <p class="section-subtitle">Our proven engineering methodology for transforming infrastructure.</p>
-    <div class="timeline">
-      <div class="timeline-item reveal" data-delay="100">
-        <h3>1. Discovery & Audit</h3>
-        <p>We analyze your current architecture, identify bottlenecks, and define clear SLIs/SLOs.</p>
-      </div>
-      <div class="timeline-item reveal" data-delay="300">
-        <h3>2. Architecture Design</h3>
-        <p>Designing scalable, multi-tenant Kubernetes and cloud-native topologies.</p>
-      </div>
-      <div class="timeline-item reveal" data-delay="500">
-        <h3>3. Infrastructure Automation</h3>
-        <p>Codifying everything with Terraform and setting up zero-downtime CI/CD pipelines.</p>
-      </div>
-      <div class="timeline-item reveal" data-delay="700">
-        <h3>4. Reliability Engineering</h3>
-        <p>Implementing Prometheus/Grafana observability and automated incident response.</p>
+        <h3>Managed Operations</h3>
+        <p>Ongoing infrastructure support.</p>
       </div>
     </div>
   </section>
 
   <section id="tech" class="section reveal">
     <h2 class="section-title">Technology Stack</h2>
-    <p class="section-subtitle">We are experts in the tools that power the modern cloud.</p>
+    <p class="section-subtitle">We are experts in the tools that power modern enterprise infrastructure.</p>
     <div class="tech-grid-wrapper">
       <div class="tech-category reveal" data-delay="100">Cloud & Infrastructure</div>
       <div class="tech-grid reveal" data-delay="200">
@@ -260,6 +338,10 @@
         <div class="tech-badge">GCP</div>
         <div class="tech-badge">Azure</div>
         <div class="tech-badge">Terraform</div>
+        <div class="tech-badge">Ansible</div>
+        <div class="tech-badge">Packer</div>
+        <div class="tech-badge">Linux</div>
+        <div class="tech-badge">NGINX</div>
       </div>
       <div class="tech-category reveal" data-delay="300">Containers & Orchestration</div>
       <div class="tech-grid reveal" data-delay="400">
@@ -267,55 +349,86 @@
         <div class="tech-badge">Docker</div>
         <div class="tech-badge">Helm</div>
         <div class="tech-badge">Istio</div>
+        <div class="tech-badge">Vault</div>
       </div>
       <div class="tech-category reveal" data-delay="500">CI/CD & Observability</div>
       <div class="tech-grid reveal" data-delay="600">
+        <div class="tech-badge">Jenkins</div>
         <div class="tech-badge">GitHub Actions</div>
+        <div class="tech-badge">GitLab CI</div>
+        <div class="tech-badge">Azure DevOps</div>
         <div class="tech-badge">ArgoCD</div>
+        <div class="tech-badge">SonarQube</div>
+        <div class="tech-badge">Nexus</div>
+        <div class="tech-badge">Artifactory</div>
         <div class="tech-badge">Prometheus</div>
+        <div class="tech-badge">Grafana</div>
         <div class="tech-badge">ELK Stack</div>
+        <div class="tech-badge">Loki</div>
+      </div>
+      <div class="tech-category reveal" data-delay="700">Databases & Messaging</div>
+      <div class="tech-grid reveal" data-delay="800">
+        <div class="tech-badge">PostgreSQL</div>
+        <div class="tech-badge">MongoDB</div>
+        <div class="tech-badge">Redis</div>
+        <div class="tech-badge">RabbitMQ</div>
+        <div class="tech-badge">Elasticsearch</div>
       </div>
     </div>
   </section>
 
   <div class="company-banner reveal">
-    <h2>Silicon Roots was built to eliminate infrastructure chaos.</h2>
-    <p>We partner with businesses to deliver predictable, automation-first execution, scalable cloud architecture, and true operational excellence.</p>
+    <h2>Enterprise DevOps, SRE & Platform Engineering.</h2>
+    <p>Cloud-native when needed. On-prem when required. Reliability always.</p>
   </div>
 
   <section id="contact" class="section reveal">
-    <h2 class="section-title">Solve Your Infrastructure Headaches.</h2>
-    <p class="section-subtitle" style="margin-bottom: 30px;">Let's build a resilient and scalable future together.</p>
+    <h2 class="section-title">Tell Us What You Need Built</h2>
+    <p class="section-subtitle" style="margin-bottom: 30px;">Need DevOps transformation, Kubernetes operations, CI/CD modernization, Jenkins setup, observability engineering, or reliability support?</p>
+    <p class="section-subtitle" style="margin-bottom: 30px; font-weight: bold; color: var(--accent);">thesiliconroots@gmail.com</p>
     <div class="cta" style="margin-top: 0;">
       <div class="cta-premium">
-        <a href="mailto:thesiliconroots@gmail.com">Talk to Silicon Roots</a>
+        <a href="mailto:thesiliconroots@gmail.com">Start a Conversation</a>
       </div>
+      <a href="mailto:thesiliconroots@gmail.com" class="cta-secondary">Contact Engineering Team</a>
     </div>
   </section>
 
   <footer class="reveal">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Silicon Roots</h4>
-        <p>DevOps • SRE • Cloud Automation • Platform Engineering</p>
-        <p style="margin-top: 15px; font-style: italic;">"Automation-first engineering and production-focused delivery for modern enterprises."</p>
+        <h4>Company</h4>
+        <a href="#about">About Us</a>
+        <a href="#engagement">Delivery Model</a>
+        <a href="#why-us">Why Enterprise Teams Work With Us</a>
       </div>
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Choose Us</a>
-        <a href="#engagement">Engagement Models</a>
-        <a href="#tech">Technologies</a>
-        <a href="#contact">Contact</a>
+        <h4>Services</h4>
+        <a href="#services">CI/CD & Release</a>
+        <a href="#services">Platform Engineering</a>
+        <a href="#services">On-Prem & Hybrid Cloud</a>
+        <a href="#services">Observability & SRE</a>
+      </div>
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="#solutions">DevOps Transformation</a>
+        <a href="#solutions">Kubernetes Operations</a>
+        <a href="#solutions">Jenkins Modernization</a>
+        <a href="#solutions">Cloud Migration</a>
+      </div>
+      <div class="footer-col">
+        <h4>Technologies</h4>
+        <a href="#tech">Cloud & Infrastructure</a>
+        <a href="#tech">Containers & Orchestration</a>
+        <a href="#tech">Databases & Messaging</a>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="mailto:thesiliconroots@gmail.com" style="color: #00f7ff; font-weight: bold;">thesiliconroots@gmail.com</a>
-        <p style="margin-top: 10px;">Available for consulting, architecture reviews, and engineering partnerships.</p>
+        <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Silicon Roots. All rights reserved. Enterprise-grade infrastructure practices.
+      Silicon Roots — DevOps, SRE, Platform Engineering & Cloud Automation Services
     </div>
   </footer>
 

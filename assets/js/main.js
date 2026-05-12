@@ -1,4 +1,26 @@
-const typewriter = new Typewriter(document.getElementById('typewriter'), {
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const rootEl = document.documentElement;
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    if (currentTheme === 'light') {
+      rootEl.setAttribute('data-theme', 'light');
+    }
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isLight = rootEl.getAttribute('data-theme') === 'light';
+        if (isLight) {
+          rootEl.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          rootEl.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+
+    const typewriter = new Typewriter(document.getElementById('typewriter'), {
       loop: true,
       delay: 40,
     });
