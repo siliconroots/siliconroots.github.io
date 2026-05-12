@@ -152,7 +152,7 @@ header { text-align: center; padding: 100px 20px 40px; }
   filter: drop-shadow(0 4px 22px var(--accent-subtle));
   object-fit: contain;
 }
-[data-theme="light"] .brand-lockup { filter: invert(1) hue-rotate(180deg); }
+[data-theme="light"] .brand-lockup { filter: drop-shadow(0 4px 22px rgba(2, 132, 199, 0.2)); }
 
 .mission-text {
   font-size: 1.1rem; color: var(--text-sub); margin-top: 10px;
