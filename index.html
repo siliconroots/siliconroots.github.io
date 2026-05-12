@@ -94,6 +94,37 @@
       <div class="feature"><div class="icon">🏢</div><h3>Platform Operations</h3></div>
     </div>
   </section>
+
+  <section id="industries" class="section reveal">
+    <h2 class="section-title">Industries We Serve</h2>
+    <p class="section-subtitle">Delivering high-performance infrastructure across sectors.</p>
+    <div class="grid-container">
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>SaaS</h3>
+        <p>High-availability platforms for fast-scaling software companies.</p>
+      </div>
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>FinTech</h3>
+        <p>Ultra-secure, compliant, and low-latency infrastructure.</p>
+      </div>
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>E-Commerce</h3>
+        <p>Traffic-ready architectures designed for peak scaling events.</p>
+      </div>
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>Enterprise Platforms</h3>
+        <p>Modernizing legacy stacks into cloud-native environments.</p>
+      </div>
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>Product Engineering</h3>
+        <p>Developer platforms that accelerate feature shipping.</p>
+      </div>
+      <div class="engagement-card" style="width: calc(33.333% - 30px); min-width: 250px;">
+        <h3>Hybrid Environments</h3>
+        <p>Bridging on-premise datacenters with public clouds.</p>
+      </div>
+    </div>
+  </section>
   <section id="stats" class="section reveal">
     <div class="stats-grid">
       <div class="stat-block reveal" data-delay="100">
@@ -164,81 +195,89 @@
     </div>
   </section>
 
-  <section id="blueprint" class="section reveal">
-    <h2 class="section-title">Infrastructure Delivery Blueprint</h2>
-    <p class="section-subtitle">Our end-to-end engineering execution model.</p>
-    <div class="blueprint-timeline reveal" data-delay="200">
-      <div class="blueprint-line"></div>
-      <div class="blueprint-pulse"></div>
+  <section id="command-center" class="section reveal">
+    <h2 class="section-title">Engineering Command Center</h2>
+    <p class="section-subtitle">Real-time platform operations and reliability intelligence.</p>
+    
+    <div class="cmd-center-wrapper reveal" data-delay="200">
+      <div class="cmd-header">
+        <div class="cmd-dots">
+          <div class="cmd-dot" style="background: #ff5f56;"></div>
+          <div class="cmd-dot" style="background: #ffbd2e;"></div>
+          <div class="cmd-dot" style="background: #27c93f;"></div>
+        </div>
+        <div class="cmd-title">Silicon Roots • Platform Operations View</div>
+        <div class="cmd-env"><span class="pulse-dot"></span> PRODUCTION</div>
+      </div>
       
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Discovery & Assessment</h3>
-          <p>Understanding infrastructure, bottlenecks, delivery workflows, and operational pain points.</p>
+      <div class="cmd-grid">
+        <!-- Kubernetes Health -->
+        <div class="cmd-panel k8s-panel">
+          <div class="panel-head">KUBERNETES CLUSTER HEALTH</div>
+          <div class="panel-body">
+            <div class="metric-row"><span>Status</span><span class="green-text">HEALTHY</span></div>
+            <div class="metric-row"><span>Control Plane</span><span class="green-text">SYNCED</span></div>
+            <div class="metric-row"><span>Active Nodes</span><span class="blue-text">24 / 24</span></div>
+            <div class="metric-row"><span>Running Pods</span><span class="blue-text">3,492</span></div>
+            <div class="metric-row"><span>Deploy Health</span><span class="green-text">100%</span></div>
+          </div>
         </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Architecture Design</h3>
-          <p>Cloud-native, hybrid, or on-prem architecture planning for scalable delivery.</p>
+
+        <!-- Monitoring Dashboard -->
+        <div class="cmd-panel metrics-panel">
+          <div class="panel-head">RELIABILITY METRICS</div>
+          <div class="panel-body metrics-grid">
+            <div class="metric-box">
+              <div class="m-val green-text">99.999%</div>
+              <div class="m-label">Uptime</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-val blue-text">42ms</div>
+              <div class="m-label">p99 Latency</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-val">1,240</div>
+              <div class="m-label">Deploys/Mo</div>
+            </div>
+            <div class="metric-box">
+              <div class="m-val" style="color: #ffbd2e;">0</div>
+              <div class="m-label">Active Alerts</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Automation Implementation</h3>
-          <p>Infrastructure as Code, configuration automation, workflow automation.</p>
+
+        <!-- CI/CD Feed -->
+        <div class="cmd-panel feed-panel" style="grid-column: span 2;">
+          <div class="panel-head">CI/CD ACTIVITY FEED</div>
+          <div class="panel-body terminal-font" id="cicd-feed">
+            <div class="feed-item"><span class="time">[10:42:01]</span> <span class="action">Deploy</span> production-api <span class="status success">→ SUCCESS</span></div>
+            <div class="feed-item"><span class="time">[10:41:45]</span> <span class="action">Terraform</span> apply core-infra <span class="status success">→ COMPLETED</span></div>
+            <div class="feed-item"><span class="time">[10:39:20]</span> <span class="action">Helm</span> upgrade payments-service <span class="status success">→ SUCCESS</span></div>
+            <div class="feed-item"><span class="time">[10:35:12]</span> <span class="action">Jenkins</span> build release-pipeline #1024 <span class="status success">→ PASSED</span></div>
+            <div class="feed-item"><span class="time">[10:30:05]</span> <span class="action">ArgoCD</span> sync platform-apps <span class="status success">→ HEALTHY</span></div>
+          </div>
         </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>CI/CD & Release Engineering</h3>
-          <p>Jenkins, GitHub Actions, GitLab CI, Azure DevOps, deployment pipelines.</p>
+
+        <!-- Reliability & Hybrid -->
+        <div class="cmd-panel list-panel">
+          <div class="panel-head">RELIABILITY SYSTEMS</div>
+          <div class="panel-body">
+            <div class="list-item"><span class="check">✓</span> Incident Prevention Active</div>
+            <div class="list-item"><span class="check">✓</span> Auto-healing Enabled</div>
+            <div class="list-item"><span class="check">✓</span> Observability Connected</div>
+            <div class="list-item"><span class="check">✓</span> Alert Routing Healthy</div>
+          </div>
         </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Platform Deployment</h3>
-          <p>Kubernetes, VMs, bare metal, ingress, service mesh, networking.</p>
-        </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Observability & Monitoring</h3>
-          <p>Prometheus, Grafana, ELK, Loki, alert engineering.</p>
-        </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Reliability Engineering (SRE)</h3>
-          <p>Reliability engineering, incident readiness, SLO/SLA implementation.</p>
-        </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Security & Access Control</h3>
-          <p>Vault, IAM, access controls, TLS automation, secret management.</p>
-        </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Optimization & Cost Governance</h3>
-          <p>Cloud cost tuning, performance engineering, scaling strategies.</p>
-        </div>
-      </div>
-      <div class="blueprint-step">
-        <div class="blueprint-dot"></div>
-        <div class="blueprint-content">
-          <h3>Continuous Operations Support</h3>
-          <p>Continuous support, platform maintenance, reliability improvements.</p>
+
+        <div class="cmd-panel list-panel">
+          <div class="panel-head">HYBRID INFRASTRUCTURE</div>
+          <div class="panel-body">
+            <div class="list-item"><span class="cloud-link active"></span> AWS us-east-1</div>
+            <div class="list-item"><span class="cloud-link active"></span> Azure eastus</div>
+            <div class="list-item"><span class="cloud-link active"></span> GCP us-central1</div>
+            <div class="list-item"><span class="cloud-link active"></span> On-Prem Datacenter</div>
+            <div class="list-item"><span class="cloud-link active"></span> Private VPN Links</div>
+          </div>
         </div>
       </div>
     </div>
@@ -280,29 +319,7 @@
       </div>
     </div>
     
-    <div class="dashboard-mockup reveal" data-delay="200" style="margin-top: 80px;">
-      <div class="dash-header">
-        <div class="dash-title"><div class="status-dot"></div> Silicon Roots Command Center</div>
-        <div style="color: var(--text-sub); font-size: 0.85rem;">Environment: Production</div>
-      </div>
-      <div class="dash-grid">
-        <div class="dash-card">
-          <h4>Cluster Health</h4>
-          <div class="dash-val green">99.99%</div>
-          <div class="dash-bar"><div class="dash-progress" style="background: #27c93f;"></div></div>
-        </div>
-        <div class="dash-card">
-          <h4>Deployments (24h)</h4>
-          <div class="dash-val blue">142</div>
-          <div class="dash-bar"><div class="dash-progress" style="width: 100%;"></div></div>
-        </div>
-        <div class="dash-card">
-          <h4>Active Incidents</h4>
-          <div class="dash-val" style="color: #ffbd2e;">0</div>
-          <div class="dash-bar"><div class="dash-progress" style="width: 0%;"></div></div>
-        </div>
-      </div>
-    </div>
+
   </section>
 
   <section id="engagement" class="section reveal">

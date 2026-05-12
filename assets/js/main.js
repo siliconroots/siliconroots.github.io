@@ -124,9 +124,14 @@
 
     // Live Terminal Simulation
     const terminalCommands = [
-      { cmd: "terraform apply -auto-approve", out: "Apply complete! Resources: 42 added, 0 changed, 0 destroyed." },
-      { cmd: "kubectl get pods -n production", out: "NAME                 READY   STATUS    RESTARTS   AGE\\napi-gateway-v2       4/4     Running   0          12d\\nauth-service-v1      3/3     Running   0          12d\\npayment-service      5/5     Running   0          12d" },
-      { cmd: "helm upgrade release oci://registry/chart", out: "Release \"production\" has been upgraded. Happy Helming!\\nSTATUS: deployed\\nREVISION: 42" }
+      { cmd: "terraform apply", out: "Apply complete! Resources: 42 added, 0 changed, 0 destroyed." },
+      { cmd: "kubectl get pods -A", out: "NAMESPACE     NAME                           READY   STATUS    RESTARTS   AGE\\nproduction    api-gateway-v2                 4/4     Running   0          12d\\nproduction    auth-service-v1                3/3     Running   0          12d\\nproduction    payment-service-v5             5/5     Running   0          12d" },
+      { cmd: "helm upgrade production-api", out: "Release \"production-api\" has been upgraded. Happy Helming!\\nSTATUS: deployed\\nREVISION: 104" },
+      { cmd: "jenkins build release-pipeline", out: "Started by user admin\\nBuilding in workspace /var/jenkins_home/workspace/release-pipeline\\nFinished: SUCCESS" },
+      { cmd: "ansible-playbook deploy.yml", out: "PLAY [Deploy Core Infrastructure] **********************************************\\nPLAY RECAP *********************************************************************\\nproduction-db-01 : ok=12   changed=2    unreachable=0    failed=0    skipped=0" },
+      { cmd: "aws eks update-kubeconfig --name core-cluster", out: "Added new context arn:aws:eks:us-east-1:123456789012:cluster/core-cluster to /home/root/.kube/config" },
+      { cmd: "vault kv get production/secrets", out: "====== Data ======\\nKey                 Value\\n---                 -----\\ndb_password         ********\\napi_key             ********" },
+      { cmd: "argocd app sync platform", out: "Name:               platform\\nProject:            default\\nServer:             https://kubernetes.default.svc\\nNamespace:          production\\nSync Status:        Synced\\nHealth Status:      Healthy" }
     ];
 
     const terminalOutput = document.getElementById('terminal-output');
