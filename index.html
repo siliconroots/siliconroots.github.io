@@ -42,12 +42,48 @@
     <strong>🚀 LIVE SERVICES</strong>
     Your DevOps & SRE Partner for Reliable Cloud Operations.
   </div>
+  <div class="terminal-window reveal" data-delay="300">
+    <div class="terminal-header">
+      <div class="terminal-dots">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+      </div>
+      <div style="flex-grow: 1; text-align: center; color: #88bbcc; font-size: 0.85rem; font-family: 'Inter', sans-serif;">root@silicon-roots:~</div>
+    </div>
+    <div class="terminal-body" id="terminal-output">
+      <!-- JS will populate -->
+    </div>
+  </div>
+
   <div class="cta" style="margin: 40px 0;">
-    <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; display: inline-block;">Let's Talk</a>
-    <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; background: rgba(0, 207, 255, 0.1); border: 2px solid #00cfff; color: #00cfff; box-shadow: none; display: inline-block;">Contact Us</a>
+    <div class="cta-premium">
+      <a href="mailto:thesiliconroots@gmail.com">Let's Engineer Your Cloud Platform</a>
+    </div>
   </div>
 </header>
 
+
+  <section id="stats" class="section reveal">
+    <div class="stats-grid">
+      <div class="stat-block reveal" data-delay="100">
+        <h3>24/7</h3>
+        <p>Reliability Mindset</p>
+      </div>
+      <div class="stat-block reveal" data-delay="300">
+        <h3>100%</h3>
+        <p>Infrastructure as Code</p>
+      </div>
+      <div class="stat-block reveal" data-delay="500">
+        <h3>0</h3>
+        <p>Deployment Friction</p>
+      </div>
+      <div class="stat-block reveal" data-delay="700">
+        <h3>∞</h3>
+        <p>Automation Driven</p>
+      </div>
+    </div>
+  </section>
 
   <section id="services" class="section reveal">
     <h2 class="section-title">Premium Engineering Services</h2>
@@ -98,6 +134,20 @@
     </div>
   </section>
 
+  <section id="architecture" class="section reveal">
+    <h2 class="section-title">How We Engineer Reliability</h2>
+    <p class="section-subtitle">A robust, scalable, and automated cloud-native delivery pipeline.</p>
+    <div class="arch-container reveal" data-delay="200">
+      <div class="arch-node">Client Applications</div>
+      <div class="arch-line"><div class="arch-pulse"></div></div>
+      <div class="arch-node">CI/CD Pipeline (GitHub Actions / GitLab)</div>
+      <div class="arch-line"><div class="arch-pulse" style="animation-delay: 0.5s;"></div></div>
+      <div class="arch-node">Kubernetes Cluster (EKS / GKE)</div>
+      <div class="arch-line"><div class="arch-pulse" style="animation-delay: 1s;"></div></div>
+      <div class="arch-node" style="border-color: #ff5f56; box-shadow: 0 0 20px rgba(255, 95, 86, 0.2);">Monitoring & Auto-Healing (Prometheus / ELK)</div>
+    </div>
+  </section>
+
   <section id="why-us" class="section reveal">
     <h2 class="section-title">Why Choose Us</h2>
     <p class="section-subtitle">A true engineering partner focused on reliability, automation, and operational excellence.</p>
@@ -128,6 +178,30 @@
         <p>Reduce incidents, deployment failures, and firefighting.</p>
       </div>
     </div>
+    
+    <div class="dashboard-mockup reveal" data-delay="200" style="margin-top: 80px;">
+      <div class="dash-header">
+        <div class="dash-title"><div class="status-dot"></div> Silicon Roots Command Center</div>
+        <div style="color: #88bbcc; font-size: 0.85rem;">Environment: Production</div>
+      </div>
+      <div class="dash-grid">
+        <div class="dash-card">
+          <h4>Cluster Health</h4>
+          <div class="dash-val green">99.99%</div>
+          <div class="dash-bar"><div class="dash-progress" style="background: #27c93f;"></div></div>
+        </div>
+        <div class="dash-card">
+          <h4>Deployments (24h)</h4>
+          <div class="dash-val blue">142</div>
+          <div class="dash-bar"><div class="dash-progress" style="width: 100%;"></div></div>
+        </div>
+        <div class="dash-card">
+          <h4>Active Incidents</h4>
+          <div class="dash-val" style="color: #ffbd2e;">0</div>
+          <div class="dash-bar"><div class="dash-progress" style="width: 0%;"></div></div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="engagement" class="section reveal">
@@ -153,39 +227,69 @@
     </div>
   </section>
 
+  <section id="timeline" class="section reveal">
+    <h2 class="section-title">How We Work</h2>
+    <p class="section-subtitle">Our proven engineering methodology for transforming infrastructure.</p>
+    <div class="timeline">
+      <div class="timeline-item reveal" data-delay="100">
+        <h3>1. Discovery & Audit</h3>
+        <p>We analyze your current architecture, identify bottlenecks, and define clear SLIs/SLOs.</p>
+      </div>
+      <div class="timeline-item reveal" data-delay="300">
+        <h3>2. Architecture Design</h3>
+        <p>Designing scalable, multi-tenant Kubernetes and cloud-native topologies.</p>
+      </div>
+      <div class="timeline-item reveal" data-delay="500">
+        <h3>3. Infrastructure Automation</h3>
+        <p>Codifying everything with Terraform and setting up zero-downtime CI/CD pipelines.</p>
+      </div>
+      <div class="timeline-item reveal" data-delay="700">
+        <h3>4. Reliability Engineering</h3>
+        <p>Implementing Prometheus/Grafana observability and automated incident response.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="tech" class="section reveal">
     <h2 class="section-title">Technology Stack</h2>
     <p class="section-subtitle">We are experts in the tools that power the modern cloud.</p>
-    <div class="tech-grid">
-      <div class="tech-badge">AWS</div>
-      <div class="tech-badge">GCP</div>
-      <div class="tech-badge">Azure</div>
-      <div class="tech-badge">Kubernetes</div>
-      <div class="tech-badge">Docker</div>
-      <div class="tech-badge">Terraform</div>
-      <div class="tech-badge">GitHub Actions</div>
-      <div class="tech-badge">Jenkins</div>
-      <div class="tech-badge">Prometheus</div>
-      <div class="tech-badge">Grafana</div>
-      <div class="tech-badge">ELK Stack</div>
-      <div class="tech-badge">Istio</div>
-      <div class="tech-badge">ArgoCD</div>
-      <div class="tech-badge">Helm</div>
-      <div class="tech-badge">Linux</div>
+    <div class="tech-grid-wrapper">
+      <div class="tech-category reveal" data-delay="100">Cloud & Infrastructure</div>
+      <div class="tech-grid reveal" data-delay="200">
+        <div class="tech-badge">AWS</div>
+        <div class="tech-badge">GCP</div>
+        <div class="tech-badge">Azure</div>
+        <div class="tech-badge">Terraform</div>
+      </div>
+      <div class="tech-category reveal" data-delay="300">Containers & Orchestration</div>
+      <div class="tech-grid reveal" data-delay="400">
+        <div class="tech-badge">Kubernetes</div>
+        <div class="tech-badge">Docker</div>
+        <div class="tech-badge">Helm</div>
+        <div class="tech-badge">Istio</div>
+      </div>
+      <div class="tech-category reveal" data-delay="500">CI/CD & Observability</div>
+      <div class="tech-grid reveal" data-delay="600">
+        <div class="tech-badge">GitHub Actions</div>
+        <div class="tech-badge">ArgoCD</div>
+        <div class="tech-badge">Prometheus</div>
+        <div class="tech-badge">ELK Stack</div>
+      </div>
     </div>
   </section>
 
   <div class="company-banner reveal">
-    <h2>Your DevOps & SRE Engineering Partner</h2>
-    <p>Silicon Roots helps startups and enterprises automate infrastructure, improve deployment velocity, and achieve production-grade reliability.</p>
+    <h2>Silicon Roots was built to eliminate infrastructure chaos.</h2>
+    <p>We partner with businesses to deliver predictable, automation-first execution, scalable cloud architecture, and true operational excellence.</p>
   </div>
 
   <section id="contact" class="section reveal">
-    <h2 class="section-title">Tell us your infrastructure challenge.</h2>
+    <h2 class="section-title">Solve Your Infrastructure Headaches.</h2>
     <p class="section-subtitle" style="margin-bottom: 30px;">Let's build a resilient and scalable future together.</p>
     <div class="cta" style="margin-top: 0;">
-      <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; display: inline-block;">Start a Conversation</a>
-      <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; background: rgba(0, 207, 255, 0.1); border: 2px solid #00cfff; color: #00cfff; box-shadow: none; display: inline-block;">Contact Us</a>
+      <div class="cta-premium">
+        <a href="mailto:thesiliconroots@gmail.com">Talk to Silicon Roots</a>
+      </div>
     </div>
   </section>
 

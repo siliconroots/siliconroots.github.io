@@ -395,6 +395,211 @@
       color: #447788;
     }
 
+    /* --- NEW PREMIUM UI COMPONENTS --- */
+
+    /* Terminal Mockup */
+    .terminal-window {
+      background: #0a0e14;
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 12px;
+      width: 100%;
+      max-width: 800px;
+      margin: 40px auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 247, 255, 0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+    .terminal-header {
+      background: #141a22;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    }
+    .terminal-dots { display: flex; gap: 8px; }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .terminal-dot.red { background: #ff5f56; }
+    .terminal-dot.yellow { background: #ffbd2e; }
+    .terminal-dot.green { background: #27c93f; }
+    .terminal-body {
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      color: #e0e0e0;
+      min-height: 200px;
+    }
+    .prompt { color: #27c93f; font-weight: bold; }
+    .term-output { color: #00cfff; }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .stat-block {
+      text-align: center;
+      padding: 30px;
+      background: rgba(10, 25, 40, 0.5);
+      border-radius: 16px;
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      min-width: 220px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+    .stat-block:hover {
+      transform: translateY(-5px);
+      border-color: #00cfff;
+    }
+    .stat-block h3 {
+      font-size: 3rem;
+      color: #00f7ff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    }
+    .stat-block p { font-size: 1.1rem; color: #bbf6ff; font-weight: bold; }
+
+    /* Architecture Diagram */
+    .arch-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 60px 0;
+      position: relative;
+    }
+    .arch-node {
+      background: linear-gradient(145deg, #0f1c2e, #0a111a);
+      border: 2px solid #00cfff;
+      border-radius: 12px;
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 207, 255, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+    .arch-line {
+      width: 4px;
+      height: 40px;
+      background: rgba(0, 255, 255, 0.2);
+      position: relative;
+    }
+    .arch-pulse {
+      width: 8px;
+      height: 8px;
+      background: #00f7ff;
+      border-radius: 50%;
+      position: absolute;
+      left: -2px;
+      top: 0;
+      box-shadow: 0 0 10px #00f7ff;
+      animation: pulseDown 2s infinite linear;
+    }
+    @keyframes pulseDown {
+      0% { top: 0; opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    /* Dashboard Mockup */
+    .dashboard-mockup {
+      background: rgba(10, 20, 30, 0.8);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      border-radius: 16px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 40px rgba(0, 255, 255, 0.1);
+    }
+    .dash-header { display: flex; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+    .dash-title { font-weight: bold; color: #fff; display: flex; align-items: center; gap: 10px; }
+    .status-dot { width: 10px; height: 10px; background: #27c93f; border-radius: 50%; box-shadow: 0 0 10px #27c93f; }
+    .dash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .dash-card { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+    .dash-card h4 { color: #88bbcc; font-size: 0.9rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+    .dash-val { font-size: 2rem; color: #fff; font-weight: bold; }
+    .dash-val.green { color: #27c93f; }
+    .dash-val.blue { color: #00cfff; }
+    .dash-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin-top: 15px; overflow: hidden; }
+    .dash-progress { height: 100%; background: #00cfff; width: 0%; animation: loadBar 2s ease forwards; }
+    @keyframes loadBar { to { width: 99.9%; } }
+
+    /* Process Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 600px;
+      margin: 40px auto;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: rgba(0, 255, 255, 0.2);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      padding-bottom: 40px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #0c0f14;
+      border: 2px solid #00f7ff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00f7ff;
+      transition: all 0.3s ease;
+    }
+    .timeline-item:hover::before {
+      background: #00f7ff;
+      transform: scale(1.3);
+    }
+    .timeline-item h3 { color: #00f7ff; margin-bottom: 5px; }
+
+    /* Enhanced Category Grid */
+    .tech-category { width: 100%; text-align: left; color: #88bbcc; border-bottom: 1px solid rgba(0,255,255,0.2); padding-bottom: 5px; margin-top: 20px; margin-bottom: 15px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;}
+    .tech-grid-wrapper { max-width: 1000px; margin: 0 auto; }
+
+    /* Enhanced CTAs */
+    .cta-premium {
+      position: relative;
+      display: inline-block;
+      padding: 2px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #00f7ff, #005eff, #00f7ff);
+      background-size: 200% auto;
+      animation: gradientFlow 3s linear infinite;
+    }
+    .cta-premium a {
+      display: block;
+      padding: 18px 50px;
+      background: #0f1117;
+      color: #fff;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .cta-premium:hover a {
+      background: transparent;
+      color: #0f1117;
+    }
+    @keyframes gradientFlow { to { background-position: 200% center; } }
+
     @media (max-width: 768px) {
       header {
         padding: 64px 14px 28px;

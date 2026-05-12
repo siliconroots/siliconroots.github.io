@@ -50,6 +50,25 @@ const typewriter = new Typewriter(document.getElementById('typewriter'), {
         if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
       });
+
+      // Draw connection lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(0, 247, 255, ${1 - dist / 120})`;
+            ctx.lineWidth = 0.5;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      
       requestAnimationFrame(drawParticles);
     }
 
@@ -65,7 +84,13 @@ const typewriter = new Typewriter(document.getElementById('typewriter'), {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('active');
+          if(entry.target.dataset.delay) {
+            setTimeout(() => {
+              entry.target.classList.add('active');
+            }, parseInt(entry.target.dataset.delay));
+          } else {
+            entry.target.classList.add('active');
+          }
           observer.unobserve(entry.target); // Stop observing once revealed
         }
       });
@@ -74,3 +99,34 @@ const typewriter = new Typewriter(document.getElementById('typewriter'), {
     document.querySelectorAll('.reveal').forEach((el) => {
       observer.observe(el);
     });
+
+    // Live Terminal Simulation
+    const terminalCommands = [
+      { cmd: "terraform apply -auto-approve", out: "Apply complete! Resources: 42 added, 0 changed, 0 destroyed." },
+      { cmd: "kubectl get pods -n production", out: "NAME                 READY   STATUS    RESTARTS   AGE\\napi-gateway-v2       4/4     Running   0          12d\\nauth-service-v1      3/3     Running   0          12d\\npayment-service      5/5     Running   0          12d" },
+      { cmd: "helm upgrade release oci://registry/chart", out: "Release \"production\" has been upgraded. Happy Helming!\\nSTATUS: deployed\\nREVISION: 42" }
+    ];
+
+    const terminalOutput = document.getElementById('terminal-output');
+    if (terminalOutput) {
+      let cmdIndex = 0;
+      function typeCommand() {
+        terminalOutput.innerHTML = '<span class="prompt">root@silicon-roots:~$</span> ';
+        const currentCmd = terminalCommands[cmdIndex].cmd;
+        let charIndex = 0;
+        
+        const typeInterval = setInterval(() => {
+          terminalOutput.innerHTML += currentCmd.charAt(charIndex);
+          charIndex++;
+          if (charIndex >= currentCmd.length) {
+            clearInterval(typeInterval);
+            setTimeout(() => {
+              terminalOutput.innerHTML += '<br><span class="term-output">' + terminalCommands[cmdIndex].out.replace(/\\n/g, '<br>').replace(/ /g, '&nbsp;') + '</span><br><br>';
+              cmdIndex = (cmdIndex + 1) % terminalCommands.length;
+              setTimeout(typeCommand, 3000);
+            }, 600);
+          }
+        }, 60);
+      }
+      setTimeout(typeCommand, 1000);
+    }
