@@ -59,12 +59,20 @@
       dy: (Math.random() - 0.5) * 0.5,
     }));
 
+    function particleColors() {
+      const isLight = rootEl.getAttribute('data-theme') === 'light';
+      return isLight
+        ? { fill: 'rgba(2, 132, 199, 0.22)', line: [2, 132, 199] }
+        : { fill: 'rgba(0, 247, 255, 0.2)', line: [0, 247, 255] };
+    }
+
     function drawParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const { fill, line } = particleColors();
       particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#00f7ff33';
+        ctx.fillStyle = fill;
         ctx.fill();
         p.x += p.dx;
         p.y += p.dy;
@@ -82,7 +90,8 @@
 
           if (dist < 120) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 247, 255, ${1 - dist / 120})`;
+            const [r, g, b] = line;
+            ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${1 - dist / 120})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
