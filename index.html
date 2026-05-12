@@ -18,55 +18,201 @@
 <body>
   <canvas id="particles"></canvas>
 
-<header>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">SILICON ROOTS</a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#tech">Tech Stack</a>
+      <a href="#contact" style="color: #00cfff; border-bottom: 1px solid #00cfff; padding-bottom: 2px;">Contact</a>
+    </div>
+  </nav>
+
+<header class="reveal">
   <picture class="brand-picture">
     <source media="(max-width: 640px)" srcset="./assets/brand/logo-dark-mobile.png" />
     <img class="brand-lockup" src="./assets/brand/logo-dark.png" alt="Silicon Roots logo" />
   </picture>
 <p class="mission-text">
-    Our mission: <em>to simplify DevOps and Cloud for developers and teams by offering smart tools, automation, and expert-led services.</em>
+    Our mission: <em>to eliminate DevOps and SRE operational headaches through automation and engineering expertise.</em>
   </p>
   <div class="typewriter-text" id="typewriter"></div>
-  <div class="announcement">
-    <strong>⚠ SOMETHING EDGE is COMING 🚀</strong>
-    Prepare for a cutting-edge DevOps innovation.
+  <div class="announcement" style="margin-bottom: 20px;">
+    <strong>🚀 LIVE SERVICES</strong>
+    Your DevOps & SRE Partner for Reliable Cloud Operations.
+  </div>
+  <div class="cta" style="margin: 40px 0;">
+    <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; display: inline-block;">Let's Talk</a>
+    <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; background: rgba(0, 207, 255, 0.1); border: 2px solid #00cfff; color: #00cfff; box-shadow: none; display: inline-block;">Contact Us</a>
   </div>
 </header>
 
 
-  <div class="features-wrapper">
-    <div class="features-top">
+  <section id="services" class="section reveal">
+    <h2 class="section-title">Premium Engineering Services</h2>
+    <p class="section-subtitle">We design, build, and operate enterprise-grade infrastructure so your team can focus on shipping products.</p>
+    <div class="features-wrapper" style="margin-top: 0;">
+      <div class="features-top">
       <div class="feature">
         <div class="icon">⚙️</div>
-        <h3>Instant CI/CD Setup</h3>
-        <p>Bootstrap your pipeline with GitHub Actions or Bitbucket — in seconds. No YAML headaches.</p>
+        <h3>DevOps Engineering</h3>
+        <p>End-to-end automation and engineering to streamline your software delivery lifecycle.</p>
       </div>
       <div class="feature">
-        <div class="icon">🐳</div>
-        <h3>Auto Dockerization</h3>
-        <p>Analyze your stack and generate secure, production-ready Dockerfiles tailored to your app.</p>
+        <div class="icon">🛡️</div>
+        <h3>Site Reliability Engineering</h3>
+        <p>Proactive reliability engineering, incident response readiness, and production stability.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🚢</div>
+        <h3>Kubernetes Platform Engineering</h3>
+        <p>Enterprise-grade EKS, GKE, and self-hosted Kubernetes architecture and operations.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>CI/CD Automation</h3>
+        <p>Fast, secure, and reliable deployment pipelines tailored to your organizational needs.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🏗️</div>
+        <h3>Infrastructure as Code</h3>
+        <p>Declarative, version-controlled infrastructure provisioning using Terraform and Pulumi.</p>
       </div>
       <div class="feature">
         <div class="icon">☁️</div>
-        <h3>Smart Multi-Cloud Deploy</h3>
-        <p>We compare cloud pricing, suggest the cheapest, and deploy using Terraform across AWS, GCP, or Azure.</p>
+        <h3>Cloud Migration & Modernization</h3>
+        <p>Seamless transition of legacy workloads to modern, scalable cloud-native architectures.</p>
       </div>
-    </div>
-    <div class="features-bottom">
+      <div class="feature">
+        <div class="icon">📊</div>
+        <h3>Monitoring & Observability</h3>
+        <p>Comprehensive tracing, logging, and metrics to ensure full visibility into production.</p>
+      </div>
       <div class="feature">
         <div class="icon">💰</div>
-        <h3>Cost Intelligence Engine</h3>
-        <p>Track infra spending, get smart alerts, and receive AI-powered recommendations to cut down monthly bills.</p>
+        <h3>Cloud Cost Optimization</h3>
+        <p>Strategic resource tuning and architectural changes to significantly reduce cloud spend.</p>
+      </div>
       </div>
     </div>
+  </section>
+
+  <section id="why-us" class="section reveal">
+    <h2 class="section-title">Why Choose Us</h2>
+    <p class="section-subtitle">A true engineering partner focused on reliability, automation, and operational excellence.</p>
+    <div class="grid-container">
+      <div class="feature trust-card">
+        <div class="icon">🤖</div>
+        <h3>Automation First</h3>
+        <p>We eliminate repetitive operational work through engineering automation.</p>
+      </div>
+      <div class="feature trust-card">
+        <div class="icon">🛡️</div>
+        <h3>Production Reliability</h3>
+        <p>We build resilient cloud systems designed for uptime and stability.</p>
+      </div>
+      <div class="feature trust-card">
+        <div class="icon">☁️</div>
+        <h3>Cloud Native Expertise</h3>
+        <p>Deep Kubernetes and modern infrastructure experience.</p>
+      </div>
+      <div class="feature trust-card">
+        <div class="icon">📈</div>
+        <h3>Scalable Architecture</h3>
+        <p>Infrastructure built to grow with your business.</p>
+      </div>
+      <div class="feature trust-card">
+        <div class="icon">🎯</div>
+        <h3>Operational Excellence</h3>
+        <p>Reduce incidents, deployment failures, and firefighting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="engagement" class="section reveal">
+    <h2 class="section-title">Engagement Models</h2>
+    <p class="section-subtitle">Flexible engineering partnerships tailored to your business stage.</p>
+    <div class="grid-container">
+      <div class="engagement-card">
+        <h3>Project Delivery</h3>
+        <p>End-to-end DevOps transformation projects and infrastructure modernization.</p>
+      </div>
+      <div class="engagement-card">
+        <h3>Dedicated Engineering Support</h3>
+        <p>Embedded DevOps / SRE engineering partnership working alongside your team.</p>
+      </div>
+      <div class="engagement-card">
+        <h3>Infrastructure Consulting</h3>
+        <p>Deep architectural reviews, security audits, and cloud cost optimization.</p>
+      </div>
+      <div class="engagement-card">
+        <h3>Managed Platform Operations</h3>
+        <p>Ongoing infrastructure reliability management and production support.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" class="section reveal">
+    <h2 class="section-title">Technology Stack</h2>
+    <p class="section-subtitle">We are experts in the tools that power the modern cloud.</p>
+    <div class="tech-grid">
+      <div class="tech-badge">AWS</div>
+      <div class="tech-badge">GCP</div>
+      <div class="tech-badge">Azure</div>
+      <div class="tech-badge">Kubernetes</div>
+      <div class="tech-badge">Docker</div>
+      <div class="tech-badge">Terraform</div>
+      <div class="tech-badge">GitHub Actions</div>
+      <div class="tech-badge">Jenkins</div>
+      <div class="tech-badge">Prometheus</div>
+      <div class="tech-badge">Grafana</div>
+      <div class="tech-badge">ELK Stack</div>
+      <div class="tech-badge">Istio</div>
+      <div class="tech-badge">ArgoCD</div>
+      <div class="tech-badge">Helm</div>
+      <div class="tech-badge">Linux</div>
+    </div>
+  </section>
+
+  <div class="company-banner reveal">
+    <h2>Your DevOps & SRE Engineering Partner</h2>
+    <p>Silicon Roots helps startups and enterprises automate infrastructure, improve deployment velocity, and achieve production-grade reliability.</p>
   </div>
 
-  <div class="cta">
-    <a href="#">🚀 Join the Early Access</a>
-  </div>
+  <section id="contact" class="section reveal">
+    <h2 class="section-title">Tell us your infrastructure challenge.</h2>
+    <p class="section-subtitle" style="margin-bottom: 30px;">Let's build a resilient and scalable future together.</p>
+    <div class="cta" style="margin-top: 0;">
+      <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; display: inline-block;">Start a Conversation</a>
+      <a href="mailto:thesiliconroots@gmail.com" style="margin: 10px; background: rgba(0, 207, 255, 0.1); border: 2px solid #00cfff; color: #00cfff; box-shadow: none; display: inline-block;">Contact Us</a>
+    </div>
+  </section>
 
-  <footer>
-    &copy; 2026 Silicon Roots. Designed for DevOps Builders. All rights reserved.
+  <footer class="reveal">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Silicon Roots</h4>
+        <p>DevOps • SRE • Cloud Automation • Platform Engineering</p>
+        <p style="margin-top: 15px; font-style: italic;">"Automation-first engineering and production-focused delivery for modern enterprises."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Choose Us</a>
+        <a href="#engagement">Engagement Models</a>
+        <a href="#tech">Technologies</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:thesiliconroots@gmail.com" style="color: #00f7ff; font-weight: bold;">thesiliconroots@gmail.com</a>
+        <p style="margin-top: 10px;">Available for consulting, architecture reviews, and engineering partnerships.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Silicon Roots. All rights reserved. Enterprise-grade infrastructure practices.
+    </div>
   </footer>
 
   <script src="./assets/js/main.js"></script>
