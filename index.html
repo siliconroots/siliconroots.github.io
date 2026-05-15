@@ -216,8 +216,9 @@
         <div class="cmd-env"><span class="pulse-dot"></span> PRODUCTION</div>
       </div>
       
-      <div class="cmd-grid">
-        <!-- Kubernetes Health -->
+      <div class="cmd-grid" style="grid-template-columns: 1fr 1fr;">
+
+        <!-- ── Kubernetes Health + Resource Rings ── -->
         <div class="cmd-panel k8s-panel">
           <div class="panel-head">KUBERNETES CLUSTER HEALTH</div>
           <div class="panel-body">
@@ -226,45 +227,77 @@
             <div class="metric-row"><span>Active Nodes</span><span class="blue-text">24 / 24</span></div>
             <div class="metric-row"><span>Running Pods</span><span class="blue-text">3,492</span></div>
             <div class="metric-row"><span>Deploy Health</span><span class="green-text">100%</span></div>
+            <!-- Resource usage rings -->
+            <div class="resource-rings">
+              <div class="ring-wrap">
+                <canvas id="ring-cpu" width="80" height="80"></canvas>
+                <div class="ring-label">CPU<br><span id="ring-cpu-val">68%</span></div>
+              </div>
+              <div class="ring-wrap">
+                <canvas id="ring-mem" width="80" height="80"></canvas>
+                <div class="ring-label">MEM<br><span id="ring-mem-val">74%</span></div>
+              </div>
+              <div class="ring-wrap">
+                <canvas id="ring-net" width="80" height="80"></canvas>
+                <div class="ring-label">NET<br><span id="ring-net-val">41%</span></div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Monitoring Dashboard -->
+        <!-- ── Reliability Metrics + Sparklines ── -->
         <div class="cmd-panel metrics-panel">
           <div class="panel-head">RELIABILITY METRICS</div>
-          <div class="panel-body metrics-grid">
-            <div class="metric-box">
-              <div class="m-val green-text">99.999%</div>
-              <div class="m-label">Uptime</div>
+          <div class="panel-body">
+            <div class="metrics-grid">
+              <div class="metric-box">
+                <div class="m-val green-text">99.999%</div>
+                <div class="m-label">Uptime</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val blue-text" id="latency-val">42ms</div>
+                <div class="m-label">p99 Latency</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val" id="deploy-count">1,240</div>
+                <div class="m-label">Deploys/Mo</div>
+              </div>
+              <div class="metric-box">
+                <div class="m-val" style="color: #ffbd2e;">0</div>
+                <div class="m-label">Active Alerts</div>
+              </div>
             </div>
-            <div class="metric-box">
-              <div class="m-val blue-text">42ms</div>
-              <div class="m-label">p99 Latency</div>
-            </div>
-            <div class="metric-box">
-              <div class="m-val">1,240</div>
-              <div class="m-label">Deploys/Mo</div>
-            </div>
-            <div class="metric-box">
-              <div class="m-val" style="color: #ffbd2e;">0</div>
-              <div class="m-label">Active Alerts</div>
-            </div>
+            <!-- Latency sparkline -->
+            <div class="chart-label">p99 Latency — Last 30 min</div>
+            <canvas id="latency-spark" width="260" height="55" style="width:100%;height:55px;"></canvas>
+            <!-- Uptime bar -->
+            <div class="chart-label" style="margin-top:12px;">30-Day Uptime Windows</div>
+            <div id="uptime-bars" class="uptime-bars"></div>
           </div>
         </div>
 
-        <!-- CI/CD Feed -->
-        <div class="cmd-panel feed-panel" style="grid-column: span 2;">
+        <!-- ── CI/CD Activity Feed + Deploy Frequency Chart ── -->
+        <div class="cmd-panel feed-panel" style="grid-column: 1 / -1;">
           <div class="panel-head">CI/CD ACTIVITY FEED</div>
-          <div class="panel-body terminal-font" id="cicd-feed">
-            <div class="feed-item"><span class="time">[10:42:01]</span> <span class="action">Deploy</span> production-api <span class="status success">→ SUCCESS</span></div>
-            <div class="feed-item"><span class="time">[10:41:45]</span> <span class="action">Terraform</span> apply core-infra <span class="status success">→ COMPLETED</span></div>
-            <div class="feed-item"><span class="time">[10:39:20]</span> <span class="action">Helm</span> upgrade payments-service <span class="status success">→ SUCCESS</span></div>
-            <div class="feed-item"><span class="time">[10:35:12]</span> <span class="action">Jenkins</span> build release-pipeline #1024 <span class="status success">→ PASSED</span></div>
-            <div class="feed-item"><span class="time">[10:30:05]</span> <span class="action">ArgoCD</span> sync platform-apps <span class="status success">→ HEALTHY</span></div>
+          <div class="panel-body feed-layout">
+            <div class="feed-left">
+              <div class="terminal-font" id="cicd-feed">
+                <div class="feed-item"><span class="time">[10:42:01]</span> <span class="action">Deploy</span> production-api <span class="status success">→ SUCCESS</span></div>
+                <div class="feed-item"><span class="time">[10:41:45]</span> <span class="action">Terraform</span> apply core-infra <span class="status success">→ COMPLETED</span></div>
+                <div class="feed-item"><span class="time">[10:39:20]</span> <span class="action">Helm</span> upgrade payments-service <span class="status success">→ SUCCESS</span></div>
+                <div class="feed-item"><span class="time">[10:35:12]</span> <span class="action">Jenkins</span> build release-pipeline #1024 <span class="status success">→ PASSED</span></div>
+                <div class="feed-item"><span class="time">[10:30:05]</span> <span class="action">ArgoCD</span> sync platform-apps <span class="status success">→ HEALTHY</span></div>
+              </div>
+            </div>
+            <div class="feed-right">
+              <div class="chart-label">Deploy Frequency — Last 7 Days</div>
+              <canvas id="deploy-bar" width="300" height="110" style="width:100%;height:110px;"></canvas>
+              <div class="deploy-bar-labels" id="deploy-bar-labels"></div>
+            </div>
           </div>
         </div>
 
-        <!-- Reliability & Hybrid -->
+        <!-- ── Reliability Systems ── -->
         <div class="cmd-panel list-panel">
           <div class="panel-head">RELIABILITY SYSTEMS</div>
           <div class="panel-body">
@@ -272,9 +305,20 @@
             <div class="list-item"><span class="check">✓</span> Auto-healing Enabled</div>
             <div class="list-item"><span class="check">✓</span> Observability Connected</div>
             <div class="list-item"><span class="check">✓</span> Alert Routing Healthy</div>
+            <!-- MTTR / MTTD mini stat row -->
+            <div class="mini-stat-row">
+              <div class="mini-stat"><span class="mini-val green-text">4m</span><span class="mini-lbl">MTTR</span></div>
+              <div class="mini-stat"><span class="mini-val blue-text">1m</span><span class="mini-lbl">MTTD</span></div>
+              <div class="mini-stat"><span class="mini-val" style="color:#ffbd2e">0</span><span class="mini-lbl">Open P1s</span></div>
+            </div>
+            <!-- SLO gauge -->
+            <div class="chart-label" style="margin-top:14px;">Error Budget Remaining</div>
+            <div class="slo-track"><div class="slo-fill" id="slo-fill"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-muted);margin-top:3px;"><span>0%</span><span id="slo-pct" style="color:#27c93f;font-weight:bold;">87.3%</span><span>100%</span></div>
           </div>
         </div>
 
+        <!-- ── Hybrid Infrastructure Topology ── -->
         <div class="cmd-panel list-panel">
           <div class="panel-head">HYBRID INFRASTRUCTURE</div>
           <div class="panel-body">
@@ -283,8 +327,12 @@
             <div class="list-item"><span class="cloud-link active"></span> GCP us-central1</div>
             <div class="list-item"><span class="cloud-link active"></span> On-Prem Datacenter</div>
             <div class="list-item"><span class="cloud-link active"></span> Private VPN Links</div>
+            <!-- Topology canvas -->
+            <div class="chart-label" style="margin-top:14px;">Live Topology</div>
+            <canvas id="topo-canvas" width="260" height="110" style="width:100%;height:110px;display:block;"></canvas>
           </div>
         </div>
+
       </div>
     </div>
   </section>

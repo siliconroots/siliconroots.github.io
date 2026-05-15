@@ -306,7 +306,7 @@ header { text-align: center; padding: 56px 20px 32px; }
 .pulse-dot { width: 8px; height: 8px; background: #27c93f; border-radius: 50%; box-shadow: 0 0 10px #27c93f; animation: pulse 2s infinite; }
 @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-.cmd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--card-border); }
+.cmd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--card-border); }
 .cmd-panel { background: var(--dash-card-bg); padding: 25px; transition: background 0.3s ease; }
 .cmd-panel:hover { background: var(--card-hover); }
 .panel-head { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; font-weight: bold; }
@@ -333,6 +333,119 @@ header { text-align: center; padding: 56px 20px 32px; }
 .check { color: #27c93f; font-weight: bold; }
 .cloud-link { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); }
 .cloud-link.active { background: #27c93f; box-shadow: 0 0 8px #27c93f; }
+
+/* ── Command Center chart extras ── */
+.chart-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+/* Resource donut rings (K8s panel) */
+.resource-rings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 18px;
+  gap: 8px;
+}
+.ring-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.ring-label {
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+.ring-label span {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 0.82rem;
+}
+
+/* Uptime mini-bars */
+.uptime-bars {
+  display: flex;
+  gap: 3px;
+  height: 20px;
+  align-items: flex-end;
+}
+.uptime-bar {
+  flex: 1;
+  border-radius: 2px;
+  background: #27c93f;
+  transition: opacity 0.3s;
+  min-height: 8px;
+}
+.uptime-bar.incident { background: #ff5f56; min-height: 4px; }
+
+/* CI/CD feed layout split */
+.feed-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.feed-left { font-family: 'Courier New', Courier, monospace; font-size: 0.9rem; }
+.feed-right {}
+.deploy-bar-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Mini stats (MTTR/MTTD) */
+.mini-stat-row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 14px;
+  gap: 8px;
+}
+.mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.mini-val { font-size: 1.3rem; font-weight: bold; }
+.mini-lbl { font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* SLO error budget bar */
+.slo-track {
+  height: 8px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.slo-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27c93f, #00f7ff);
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Topology canvas */
+#topo-canvas { border-radius: 6px; }
+
+@media (max-width: 640px) {
+  .feed-layout { grid-template-columns: 1fr; }
+  .resource-rings { gap: 4px; }
+}
 
 /* TECH STACK */
 .tech-grid-wrapper { max-width: 1000px; margin: 0 auto; }
