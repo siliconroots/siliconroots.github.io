@@ -575,51 +575,86 @@
       
       <div class="faq-accordion-group reveal" data-delay="100">
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How does StackPilot connect to my cloud accounts?</summary>
+          <summary class="faq-question">What is StackPilot?</summary>
           <div class="faq-answer">
-            <p>StackPilot connects securely using read-only IAM Cross-Account Roles (on AWS) or read-only Service Principals (on Azure/GCP). We provide Terraform files to bootstrap these roles in under 2 minutes. We do not require or support write permissions, ensuring zero risk of accidental modifications.</p>
+            <p>StackPilot is a cloud intelligence platform designed to help engineering teams discover, understand, and govern AWS infrastructure. By connecting to your accounts, it maps resource dependencies, displays cluster metrics, and builds a unified inventory view of your active systems without console hopping.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">What is the performance and cost overhead of discovery scans?</summary>
+          <summary class="faq-question">Who is StackPilot designed for?</summary>
           <div class="faq-answer">
-            <p>0%. StackPilot runs entirely via non-blocking cloud API queries. Unlike traditional monitoring systems, we do not deploy daemon agents or sidecars to your cluster nodes. Your compute performance is untouched, and cloud provider API rates remain well within standard limits.</p>
+            <p>The platform is built for Platform, DevOps, Cloud, and Infrastructure teams managing complex cloud setups. Security teams use it to track compliance drift, FinOps groups use it to audit resource costs, and engineering leaders use it to maintain visibility over system architecture.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Can StackPilot run on-premise or within a private VPC?</summary>
+          <summary class="faq-question">Does StackPilot support multiple AWS accounts?</summary>
           <div class="faq-answer">
-            <p>Yes. We offer self-hosted helm-chart deployments so you can run StackPilot inside your own private virtual network, keeping all resource metadata fully locked down within your organizational borders.</p>
+            <p>Yes. You can onboard multiple AWS accounts and access them from a unified dashboard. StackPilot provides centralized visibility across accounts and regions while maintaining tenant-aware isolation to ensure secure data separation.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How are credentials and configuration histories secured?</summary>
+          <summary class="faq-question">How does AWS account onboarding work?</summary>
           <div class="faq-answer">
-            <p>All database records are encrypted at rest using AES-256 with KMS key rotations. Session metadata is routed through secure WebSockets, and StackPilot does not store actual application databases or customer credentials—only infrastructural metadata (resource IDs, tags, VPC configs).</p>
+            <p>Onboarding is performed by supplying AWS credentials to StackPilot. The platform validates the connection, stores the configuration securely, and schedules periodic discoveries to index your infrastructure without requiring persistent access keys or write access.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Does StackPilot store our cloud data or resource payload contents?</summary>
+          <summary class="faq-question">How are credentials protected?</summary>
           <div class="faq-answer">
-            <p>No. StackPilot only indexes resource metadata (ARNs, configuration properties, subnets, routes, and tags). We never read, inspect, or ingest actual application data rows, file storage payloads, or user secrets.</p>
+            <p>All credentials are encrypted at rest using AES-GCM encryption in secure storage. We follow a strict philosophy of least privilege, requiring only read-only access schemas, and fully support standard credential rotation processes.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How does StackPilot authenticate users and manage access controls?</summary>
+          <summary class="faq-question">Does StackPilot continuously scan my infrastructure?</summary>
           <div class="faq-answer">
-            <p>We support enterprise SSO (SAML 2.0 / OIDC) using Okta, Azure AD, or Google Workspace. Role-Based Access Control (RBAC) allows administrators to assign read limits, scoping visibility down to specific cloud sub-organizations or single Kubernetes namespaces.</p>
+            <p>StackPilot runs scheduled synchronization cycles to discover resources and update inventory metadata. This scheduled approach prevents API rate limiting and avoids adding unnecessary overhead to your cloud accounts.</p>
           </div>
         </details>
 
         <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How do alerts and drift warnings integrate into our workflow?</summary>
+          <summary class="faq-question">Does StackPilot install agents inside my infrastructure?</summary>
           <div class="faq-answer">
-            <p>StackPilot supports webhook endpoints to push slack notices, pagerduty incidents, or triggering GitHub Action pipelines whenever an unmapped VPC subnet is detected or a resource undergoes manual (non-IaC) configuration modifications.</p>
+            <p>No. StackPilot is entirely agentless. It operates by querying AWS and Kubernetes APIs, meaning you do not need to install sidecars, agents, or daemons on your nodes or inside your virtual private clouds.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What information does StackPilot discover?</summary>
+          <div class="faq-answer">
+            <p>StackPilot indexes cloud accounts, active regions, EC2/RDS resources, network settings (VPCs, subnets, route tables), cluster states, resource relationships, cost trends, and basic security metadata to construct a complete visual inventory of your running system.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How does StackPilot handle organizations and permissions?</summary>
+          <div class="faq-answer">
+            <p>The platform provides organization mapping, tenant isolation, and Role-Based Access Control (RBAC). Administrators can manage user permissions and restrict access to specific organizations, accounts, or namespaces, maintaining clear auditability.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Are audit logs available?</summary>
+          <div class="faq-answer">
+            <p>Yes. StackPilot records key platform actions, configuration updates, and access logs. These audit trails provide operational accountability and help trace modifications made within the StackPilot console.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Does StackPilot provide FinOps capabilities?</summary>
+          <div class="faq-answer">
+            <p>Yes. StackPilot provides cost visibility and inventory-driven financial awareness. The platform monitors active resources, calculates associated cloud spend, and highlights underutilized assets to help teams identify cost savings.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What is the long-term vision for StackPilot?</summary>
+          <div class="faq-answer">
+            <p>Our roadmap includes expanding our discovery engine to Azure and GCP, launching an automated policy evaluation system, and adding developer integrations. These roadmap initiatives aim to build a unified multi-cloud infrastructure graph.</p>
           </div>
         </details>
       </div>
