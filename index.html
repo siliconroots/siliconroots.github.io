@@ -90,7 +90,6 @@
           <a href="#contact" class="btn btn-primary">Request a Demo</a>
           <a href="#features" class="btn btn-secondary">Explore Features</a>
           <a href="https://github.com/thesiliconroots" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-          <a href="#contact" class="btn btn-link">Contact Us</a>
         </div>
       </div>
       
@@ -186,284 +185,31 @@
     </div>
   </section>
 
-  <!-- StackPilot Product Feature Sections -->
-  <section class="product-features" id="features">
+  <!-- Capability Metrics Strip -->
+  <section class="metrics-strip reveal">
     <div class="section-container">
-      <div class="section-header reveal">
-        <h2 class="section-title">Deep Platform Capabilities</h2>
-        <p class="section-subtitle">StackPilot maps, monitors, and secures your cloud resources from code to production cluster.</p>
-      </div>
-
-      <!-- Feature 1: Executive Dashboard -->
-      <div class="feature-block reveal">
-        <div class="feature-text">
-          <span class="feature-tag">CENTRAL HUB</span>
-          <h3>Executive Dashboard</h3>
-          <p class="feature-desc">
-            A birds-eye view of your entire cluster operations, Kubernetes node health, deployment distributions, and cost aggregates. Get immediate situational awareness.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Mitigate operational downtime risk with unified core metrics.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Rapid correlation of cluster events without context switching.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Real-time alerts mapping and resource allocation updates.</div>
-          </div>
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-num">&lt; 2.0s</div>
+          <div class="metric-title">Discovery Latency</div>
+          <div class="metric-desc">Continuous indexing overhead per 10k resources</div>
         </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/overview</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/executive-dashboard.png" alt="StackPilot Executive Dashboard Screenshot" loading="lazy" />
-            </div>
-          </div>
+        <div class="metric-card">
+          <div class="metric-num">1M+</div>
+          <div class="metric-title">Active Resources</div>
+          <div class="metric-desc">Tested scaling capacity in single tenant deployment</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">0%</div>
+          <div class="metric-title">Agent Overhead</div>
+          <div class="metric-desc">Runs entirely via non-blocking read-only cloud APIs</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">5 min</div>
+          <div class="metric-title">Sync Intervals</div>
+          <div class="metric-desc">Default polling cycle for configuration drift checks</div>
         </div>
       </div>
-
-      <!-- Feature 2: Cloud Accounts -->
-      <div class="feature-block reverse reveal">
-        <div class="feature-text">
-          <span class="feature-tag">MULTI-CLOUD</span>
-          <h3>Cloud Accounts</h3>
-          <p class="feature-desc">
-            Securely connect and govern multiple AWS, Azure, and GCP accounts in a unified inventory. Track resource syncing and credential states dynamically.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Consolidate governance controls across all corporate units.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Automated IAM cross-account role integration and drift detection.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Real-time validation of account connectivity statuses.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/cloud/accounts</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/cloud-accounts.png" alt="StackPilot Cloud Accounts Setup Screenshot" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 3: Universal Search -->
-      <div class="feature-block reveal">
-        <div class="feature-text">
-          <span class="feature-tag">INVENTORY DISCOVERY</span>
-          <h3>Universal Search</h3>
-          <p class="feature-desc">
-            Instantly query any container, load balancer, subnet, or database across all environments and accounts. Say goodbye to clicking through vendor portals.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Save hundreds of hours of manual discovery and asset tracking.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Query resources instantly using name, type, region, tag, or status filters.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Immediate discovery of orphaned resources or unmapped assets.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/intelligence/search</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/universal-search.png" alt="StackPilot Universal Search Page" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 4: Infrastructure Graph & Topology -->
-      <div class="feature-block reverse reveal">
-        <div class="feature-text">
-          <span class="feature-tag">DEPENDENCY MAPPING</span>
-          <h3>Infrastructure Topology</h3>
-          <p class="feature-desc">
-            Inspect real-time interactive maps showing how VPCs, security groups, nodes, services, and workloads interconnect. Diagnose network boundaries visually.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Streamline compliance audits with accurate architecture diagrams.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Identify routing loops, isolated pods, and network traffic hops.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Rapidly isolate root causes by visualizing dependency paths.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/operations/topology</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/topology.png" alt="StackPilot Infrastructure Topology Network Map" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 5: FinOps -->
-      <div class="feature-block reveal">
-        <div class="feature-text">
-          <span class="feature-tag">COST OPTIMIZATION</span>
-          <h3>FinOps & Costs</h3>
-          <p class="feature-desc">
-            Aggregate and isolate cost anomalies down to individual clusters, namespaces, and services. Optimize provisioning levels using resource metrics.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Drastically reduce cloud overhead costs by 20-40%.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Attribute infrastructure budgets directly to namespaces.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Real-time automated notifications of cost threshold exceedances.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/costs</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/finops.png" alt="StackPilot FinOps Cost Allocation View" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 6: Security Posture -->
-      <div class="feature-block reverse reveal">
-        <div class="feature-text">
-          <span class="feature-tag">GOVERNANCE & AUDIT</span>
-          <h3>Security Posture</h3>
-          <p class="feature-desc">
-            Continuous compliance evaluation against standard frameworks. Automatically locate unencrypted disks, open security groups, and outdated cluster versions.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Maintain compliance certificates and avoid security breach costs.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Identify security vulnerabilities before the deployment phase.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Instant mapping of drift from established security templates.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/intelligence/security</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/security-posture.png" alt="StackPilot Security Posture Auditor" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 7: RBAC & Organizations -->
-      <div class="feature-block reveal">
-        <div class="feature-text">
-          <span class="feature-tag">ACCESS CONTROL</span>
-          <h3>RBAC & Permissions</h3>
-          <p class="feature-desc">
-            Enforce least privilege mapping. Map developer teams to specific namespaces, resource scopes, and cloud environments with centralized audit logging.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Eliminate data leaks and prevent accidental resource destructions.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Seamlessly integrate custom SSO credentials and group roles.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Quick provisioning and de-provisioning of team access settings.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/settings</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/rbac.png" alt="StackPilot Settings RBAC Management" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 8: Audit Logs -->
-      <div class="feature-block reverse reveal">
-        <div class="feature-text">
-          <span class="feature-tag">COMPLIANCE LEDGER</span>
-          <h3>Audit Logs</h3>
-          <p class="feature-desc">
-            Every user action, cluster sync command, onboarding event, and configuration update is logged in an immutable, searchable audit feed.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Accelerate SOC2, ISO27001, and HIPAA compliance verification.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Identify precise change authors for immediate issue resolution.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Complete record of operations histories for root cause investigations.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/operations/audit</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/audit-logs.png" alt="StackPilot Audit Log Activity View" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 9: Cluster Command Center -->
-      <div class="feature-block reveal">
-        <div class="feature-text">
-          <span class="feature-tag">KUBERNETES RUNTIME</span>
-          <h3>Cluster Command Center</h3>
-          <p class="feature-desc">
-            Drill deep into Kubernetes health metrics. Map pod statuses, runtime events, CPU requests vs limits, and namespaces topology.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Protect service SLAs and keep user transactions running.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Eliminate terminal commands; see node allocations and namespaces instantly.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Track horizontal pods auto-scaler limits and replica capacities.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/operations/clusters</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/cluster-command-center.png" alt="StackPilot Cluster Command Center Dashboard" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 10: Sync Operations -->
-      <div class="feature-block reverse reveal">
-        <div class="feature-text">
-          <span class="feature-tag">DATA INTEGRITY</span>
-          <h3>Sync Operations</h3>
-          <p class="feature-desc">
-            Monitor the state-syncing engine. StackPilot updates resource mapping lists continuously to catch cluster drifts and changes.
-          </p>
-          <div class="value-matrix">
-            <div class="val-item"><strong>Business Value:</strong> Ensure dashboards always display accurate infrastructure states.</div>
-            <div class="val-item"><strong>Engineering Value:</strong> Immediate identification of sync limits, throttling, or API errors.</div>
-            <div class="val-item"><strong>Operational Value:</strong> Tune synchronization schedules to balance API quotas.</div>
-          </div>
-        </div>
-        <div class="feature-visual">
-          <div class="browser-frame static">
-            <div class="browser-header">
-              <div class="browser-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-              <div class="browser-address">https://stackpilot.io/intelligence/sync-operations</div>
-            </div>
-            <div class="browser-body">
-              <img src="./assets/screenshots/sync-operations.png" alt="StackPilot Sync Engine Overview" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
@@ -581,225 +327,86 @@
     <div class="section-container">
       <div class="section-header reveal">
         <h2 class="section-title">Why StackPilot</h2>
-        <p class="section-subtitle">Intelligent features engineered to replace manual operations with structured platform governance.</p>
+        <p class="section-subtitle">Deep capability platform engineered to replace manual inventory operations with unified platform discovery.</p>
       </div>
       <div class="grid-container">
         
         <div class="feature trust-card reveal" data-delay="50">
           <div class="icon">☁️</div>
           <h3>Cloud Intelligence</h3>
-          <p>Real-time analytics mapping, configuration audit trail, and instant cloud provider drift alerts.</p>
+          <p>Enterprise-wide cloud configuration tracking, historical drift detection, and real-time state analysis.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="100">
           <div class="icon">🔍</div>
-          <h3>Inventory Discovery</h3>
-          <p>Continuous indexing processes locate and catalogue every subnet, instance, bucket, and gateway automatically.</p>
+          <h3>Infrastructure Discovery</h3>
+          <p>Automated, continuous indexing processes locate and catalog all target resources across multi-cloud provider accounts.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="150">
-          <div class="icon">🌐</div>
-          <h3>Topology Mapping</h3>
-          <p>Generates complex dependency graphs of interconnected VPCs, nodes, security zones, and services.</p>
+          <div class="icon">🗂️</div>
+          <h3>Multi-Account Visibility</h3>
+          <p>Consolidate multiple cloud credentials, directories, and regions into a single, unified inventory plane.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="200">
           <div class="icon">⚡</div>
-          <h3>Universal Search</h3>
-          <p>A single typing query box that aggregates search indexes across multiple AWS credentials and regions.</p>
+          <h3>Inventory Intelligence</h3>
+          <p>Query resources, configure search tags, and audit operational metadata using structured intelligence layers.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="250">
-          <div class="icon">💰</div>
-          <h3>FinOps Intelligence</h3>
-          <p>Cost allocation tracking that associates cluster resources and overhead bills down to namespaces.</p>
+          <div class="icon">🌐</div>
+          <h3>Infrastructure Relationships</h3>
+          <p>Automated dependency mapping tracing logical links from VPC gateways down to individual cluster subnets.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="300">
-          <div class="icon">🛡️</div>
-          <h3>Security Auditor</h3>
-          <p>Automatic compliance reporting mapped against CIS, SOC2, and customized corporate rules.</p>
+          <div class="icon">🔎</div>
+          <h3>Universal Search</h3>
+          <p>Sub-second querying aggregating active systems, resources, and configurations across your entire fleet.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="350">
-          <div class="icon">⚖️</div>
-          <h3>Governance Rules</h3>
-          <p>Establish organizational guardrails, auto-healing actions, and policy enforcement triggers.</p>
+          <div class="icon">💰</div>
+          <h3>FinOps</h3>
+          <p>Cost allocation intelligence mapping infrastructure overhead and raw usage bills down to application namespaces.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="400">
-          <div class="icon">🏢</div>
-          <h3>Organizations</h3>
-          <p>Map complex team hierarchies, workspace scopes, and cloud environments under one client portal.</p>
+          <div class="icon">🛡️</div>
+          <h3>Security Posture</h3>
+          <p>Continuous compliance monitoring scanning settings and resource configurations against CIS and custom policies.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="450">
           <div class="icon">👥</div>
-          <h3>RBAC Controls</h3>
-          <p>Define precise read/write rules for users, admins, and service accounts using least-privilege schemas.</p>
+          <h3>RBAC</h3>
+          <p>Granular access rules and team scoping permissions conforming strictly to least-privilege enterprise requirements.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="500">
           <div class="icon">📜</div>
-          <h3>Audit Ledgers</h3>
-          <p>Immutable action database tracking administrator overrides, API calls, and sync configurations.</p>
+          <h3>Audit Logs</h3>
+          <p>Immutable activity ledger tracking administrator actions, API interactions, and synchronization histories.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="550">
-          <div class="icon">⚙️</div>
-          <h3>Cluster Intelligence</h3>
-          <p>Kubernetes telemetry mapping pod distributions, resource request limits, and controller health logs.</p>
+          <div class="icon">🏢</div>
+          <h3>Organization Management</h3>
+          <p>Model complex company structures, coordinate separate team scopes, and govern multiple staging accounts.</p>
         </div>
 
         <div class="feature trust-card reveal" data-delay="600">
-          <div class="icon">🔄</div>
-          <h3>Real-time Sync</h3>
-          <p>State sync workers updating resources continuously to minimize dashboard stale-data alerts.</p>
+          <div class="icon">☸️</div>
+          <h3>Cluster Intelligence</h3>
+          <p>Track Kubernetes runtime allocations, deployment workloads, namespaces, and node statuses out-of-the-box.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Live Command Center Node Telemetry (Wow Factor Preserved) -->
-  <section id="command-center" class="command-center-section">
-    <div class="section-container">
-      <div class="section-header reveal">
-        <h2 class="section-title">Live Telemetry Simulation</h2>
-        <p class="section-subtitle">StackPilot maps operational metrics, deployment activity, and cluster topology in real time.</p>
-      </div>
-      
-      <div class="cmd-center-wrapper reveal" data-delay="100">
-        <div class="cmd-header">
-          <div class="cmd-dots">
-            <div class="cmd-dot" style="background: #ff5f56;"></div>
-            <div class="cmd-dot" style="background: #ffbd2e;"></div>
-            <div class="cmd-dot" style="background: #27c93f;"></div>
-          </div>
-          <div class="cmd-title">StackPilot Operations View</div>
-          <div class="cmd-env"><span class="pulse-dot"></span> SIMULATED RUNTIME</div>
-        </div>
-        
-        <div class="cmd-grid">
-          <!-- Kubernetes Health -->
-          <div class="cmd-panel">
-            <div class="panel-head">KUBERNETES CLUSTER HEALTH</div>
-            <div class="panel-body">
-              <div class="metric-row"><span>Status</span><span class="green-text">HEALTHY</span></div>
-              <div class="metric-row"><span>Control Plane</span><span class="green-text">SYNCED</span></div>
-              <div class="metric-row"><span>Active Nodes</span><span class="blue-text">24 / 24</span></div>
-              <div class="metric-row"><span>Running Pods</span><span class="blue-text">3,492</span></div>
-              <div class="metric-row"><span>Deploy Health</span><span class="green-text">100%</span></div>
-              
-              <!-- Canvas Rings -->
-              <div class="resource-rings">
-                <div class="ring-wrap">
-                  <canvas id="ring-cpu" width="80" height="80"></canvas>
-                  <div class="ring-label">CPU<br><span id="ring-cpu-val">68%</span></div>
-                </div>
-                <div class="ring-wrap">
-                  <canvas id="ring-mem" width="80" height="80"></canvas>
-                  <div class="ring-label">MEM<br><span id="ring-mem-val">74%</span></div>
-                </div>
-                <div class="ring-wrap">
-                  <canvas id="ring-net" width="80" height="80"></canvas>
-                  <div class="ring-label">NET<br><span id="ring-net-val">41%</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reliability Metrics -->
-          <div class="cmd-panel">
-            <div class="panel-head">RELIABILITY METRICS</div>
-            <div class="panel-body">
-              <div class="metrics-grid">
-                <div class="metric-box">
-                  <div class="m-val green-text">99.999%</div>
-                  <div class="m-label">Uptime</div>
-                </div>
-                <div class="metric-box">
-                  <div class="m-val blue-text" id="latency-val">42ms</div>
-                  <div class="m-label">p99 Latency</div>
-                </div>
-                <div class="metric-box">
-                  <div class="m-val" id="deploy-count">1,240</div>
-                  <div class="m-label">Deploys/Mo</div>
-                </div>
-                <div class="metric-box">
-                  <div class="m-val" style="color: #ffbd2e;">0</div>
-                  <div class="m-label">Active Alerts</div>
-                </div>
-              </div>
-              
-              <div class="chart-label">p99 Latency — Last 30 min</div>
-              <canvas id="latency-spark" width="260" height="55" style="width:100%;height:55px;"></canvas>
-              
-              <div class="chart-label" style="margin-top:12px;">30-Day Uptime Windows</div>
-              <div id="uptime-bars" class="uptime-bars"></div>
-            </div>
-          </div>
-
-          <!-- CI/CD Activity Feed -->
-          <div class="cmd-panel" style="grid-column: 1 / -1;">
-            <div class="panel-head">CI/CD ACTIVITY FEED</div>
-            <div class="panel-body feed-layout">
-              <div class="feed-left">
-                <div class="terminal-font" id="cicd-feed">
-                  <div class="feed-item"><span class="time">[10:42:01]</span> <span class="action">Deploy</span> production-api <span class="status success">→ SUCCESS</span></div>
-                  <div class="feed-item"><span class="time">[10:41:45]</span> <span class="action">Terraform</span> apply core-infra <span class="status success">→ COMPLETED</span></div>
-                  <div class="feed-item"><span class="time">[10:39:20]</span> <span class="action">Helm</span> upgrade payments-service <span class="status success">→ SUCCESS</span></div>
-                  <div class="feed-item"><span class="time">[10:35:12]</span> <span class="action">Jenkins</span> build release-pipeline #1024 <span class="status success">→ PASSED</span></div>
-                  <div class="feed-item"><span class="time">[10:30:05]</span> <span class="action">ArgoCD</span> sync platform-apps <span class="status success">→ HEALTHY</span></div>
-                </div>
-              </div>
-              <div class="feed-right">
-                <div class="chart-label">Deploy Frequency — Last 7 Days</div>
-                <canvas id="deploy-bar" width="300" height="110" style="width:100%;height:110px;"></canvas>
-                <div class="deploy-bar-labels" id="deploy-bar-labels"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Reliability Systems -->
-          <div class="cmd-panel">
-            <div class="panel-head">RELIABILITY SYSTEMS</div>
-            <div class="panel-body">
-              <div class="list-item"><span class="check">✓</span> Incident Prevention Active</div>
-              <div class="list-item"><span class="check">✓</span> Auto-healing Enabled</div>
-              <div class="list-item"><span class="check">✓</span> Observability Connected</div>
-              <div class="list-item"><span class="check">✓</span> Alert Routing Healthy</div>
-              
-              <div class="mini-stat-row">
-                <div class="mini-stat"><span class="mini-val green-text">4m</span><span class="mini-lbl">MTTR</span></div>
-                <div class="mini-stat"><span class="mini-val blue-text">1m</span><span class="mini-lbl">MTTD</span></div>
-                <div class="mini-stat"><span class="mini-val" style="color:#ffbd2e">0</span><span class="mini-lbl">Open P1s</span></div>
-              </div>
-              
-              <div class="chart-label" style="margin-top:14px;">Error Budget Remaining</div>
-              <div class="slo-track"><div class="slo-fill" id="slo-fill"></div></div>
-              <div style="display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-muted);margin-top:3px;"><span>0%</span><span id="slo-pct" style="color:#27c93f;font-weight:bold;">87.3%</span><span>100%</span></div>
-            </div>
-          </div>
-
-          <!-- Hybrid Topology -->
-          <div class="cmd-panel">
-            <div class="panel-head">HYBRID INFRASTRUCTURE</div>
-            <div class="panel-body">
-              <div class="list-item"><span class="cloud-link active"></span> AWS us-east-1</div>
-              <div class="list-item"><span class="cloud-link active"></span> Azure eastus</div>
-              <div class="list-item"><span class="cloud-link active"></span> GCP us-central1</div>
-              <div class="list-item"><span class="cloud-link active"></span> On-Prem Datacenter</div>
-              <div class="list-item"><span class="cloud-link active"></span> Private VPN Links</div>
-              
-              <div class="chart-label" style="margin-top:14px;">Live Topology</div>
-              <canvas id="topo-canvas" width="260" height="110" style="width:100%;height:110px;display:block;"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Our Mission Section -->
   <section class="mission-section" id="mission">
@@ -809,19 +416,13 @@
           <span class="editorial-tag">OUR MISSION</span>
           <h2>Truth Over Dashboards.</h2>
           <p class="editorial-lead">
-            Silicon Roots was founded on a simple premise: engineering teams should spend their cycles building features, not clicking through fragmented infrastructure consoles to answer basic questions.
+            Silicon Roots was founded on a simple premise: engineering teams should spend their cycles building software, not hunting for metadata across fragmented infrastructure panels.
           </p>
         </div>
         <div class="editorial-right reveal" data-delay="100">
           <div class="editorial-content">
             <h4>Engineering Philosophy</h4>
-            <p>We believe in programmatic clarity. Every component in StackPilot is built for maximum speed, security by default, and immediate API extensibility. We design tools for developers and site reliability engineers who prioritize clean design and robust APIs.</p>
-            
-            <h4>Operational Simplicity</h4>
-            <p>Infrastructure is complex enough. Governance tools should not add to that noise. We write lightweight sync protocols, perform non-blocking inventory scans, and aggregate multi-cloud scopes into unified, intuitive topologies.</p>
-            
-            <h4>Truth Over Marketing</h4>
-            <p>We do not publish AI-generated diagrams or sell automated self-healing magic. We provide clean, real-time discovery databases, detailed configuration histories, and actionable policy engines so SREs can control their systems with confidence.</p>
+            <p>We believe in programmatic clarity. StackPilot is built to compile complex multi-cloud configurations and Kubernetes clusters into a single, unified inventory database of truth. No agent overhead, no vanity dashboards—just direct API intelligence so engineers can govern their platforms with absolute confidence.</p>
           </div>
         </div>
       </div>
@@ -833,7 +434,7 @@
     <div class="section-container">
       <div class="section-header reveal">
         <h2 class="section-title">Our Vision</h2>
-        <p class="section-subtitle">How we are transforming cloud platform engineering into a unified cloud intelligence plane.</p>
+        <p class="section-subtitle">How we are building the unified cloud intelligence plane.</p>
       </div>
       
       <div class="blueprint-timeline">
@@ -843,69 +444,38 @@
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <h3>Today</h3>
-            <p>Consolidated AWS inventory discovery, EKS cluster health analytics, and basic cost attribution mapping.</p>
+            <h3>Phase 1: Unified Discovery</h3>
+            <p>Automate active resource indexing, credential syncing, and universal search across multi-cloud accounts and Kubernetes fleets.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <h3>Cloud Intelligence</h3>
-            <p>Dynamic search indexes tracking resources across AWS organizations, highlighting orphaned subnets and security drifts.</p>
+            <h3>Phase 2: Dependency Graphing</h3>
+            <p>Generate topological relationship mappings to auto-detect resource linkages, isolate network zones, and identify orphan resources.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <h3>Infrastructure Graph</h3>
-            <p>Visual dependency mapping tracing connectivity from ELB ingress blocks down to individual cluster endpoints.</p>
+            <h3>Phase 3: Policy & Governance</h3>
+            <p>Establish OPA compliance checks, track configurations against security benchmarks, and map usage costs down to team scopes.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <h3>Azure & GCP Integration</h3>
-            <p>Extend inventory schemas and topology maps to support Microsoft Azure subscriptions and Google Cloud projects.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <h3>Policy & Governance Engine</h3>
-            <p>Establish OPA rules that audit setups continuously, block insecure subnets, and flag pricing drift before deployment.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <h3>AI-Assisted Insights</h3>
-            <p>Provide contextual infrastructure explanations and draft Terraform files directly from user requests.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <h3>Enterprise Platform</h3>
-            <p>Integrate robust SSO systems (OIDC, SAML), audit ledger routing, workspace limits, and organization management templates.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <h3>Developer Ecosystem</h3>
-            <p>Expose a public API, customize reporting dashboards, and enable third-party plugins and modules.</p>
+            <h3>Phase 4: Developer Ecosystem</h3>
+            <p>Expose CLI tools and a developer SDK, enabling custom reporting integrations, webhooks, and third-party platform plugins.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Technical Specs & Roadmap Grid -->
   <section class="tech-roadmap-section" id="tech">
@@ -964,66 +534,33 @@
     </div>
   </section>
 
-  <!-- Live Demo CTA Section -->
-  <section class="demo-cta-section" id="demo">
+  <!-- Ready to Explore CTA Section -->
+  <section class="ready-cta-section" id="contact">
     <div class="section-container">
-      <div class="demo-cta-card reveal">
-        <span class="cta-tag">DEMO REQUEST</span>
-        <h2>Request a Guided StackPilot Demo</h2>
+      <div class="ready-cta-card reveal">
+        <h2>Ready to Explore StackPilot?</h2>
         <p class="cta-subtitle">
-          Want to see StackPilot in action? Contact us to schedule a live video walk-through with our engineering team, or to request a dedicated sandbox workspace pre-populated with simulated multi-cloud and Kubernetes workloads.
+          Connect your multi-cloud environments and catalog your entire active infrastructure inventory in under 15 minutes.
         </p>
-        <div class="cta-actions">
-          <a href="#contact" class="btn btn-primary">Contact Us to Request Demo</a>
-        </div>
-        <p class="cta-note">Dedicated workspaces are configured and ready in under 15 minutes.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us Section -->
-  <section class="contact-section" id="contact">
-    <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h2>Start a Conversation</h2>
-          <p>
-            Have security compliance requirements? Need support setting up StackPilot inside a private hybrid cluster network? Get in touch with our engineering team.
-          </p>
-          
-          <div class="contact-methods">
-            <div class="contact-method">
-              <strong>Website:</strong>
-              <a href="https://siliconroots.github.io">siliconroots.github.io</a>
-            </div>
-            <div class="contact-method">
-              <strong>Email:</strong>
-              <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
-            </div>
-            <div class="contact-method">
-              <strong>GitHub:</strong>
-              <a href="https://github.com/thesiliconroots" target="_blank" rel="noopener">github.com/thesiliconroots</a>
-            </div>
-          </div>
-        </div>
         
-        <!-- Contact Form Card -->
-        <div class="contact-form-card reveal" data-delay="100">
-          <form id="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for contacting Silicon Roots. Our engineering team will get back to you shortly.');">
-            <div class="form-group">
-              <label for="contact-name">Name</label>
-              <input type="text" id="contact-name" name="name" required placeholder="Alice Smith" />
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email Address</label>
-              <input type="email" id="contact-email" name="email" required placeholder="alice@company.com" />
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" name="message" rows="4" required placeholder="Tell us about your cloud infrastructure setup..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-          </form>
+        <div class="cta-actions-group">
+          <a href="mailto:thesiliconroots@gmail.com?subject=StackPilot%20Demo%20Request" class="btn btn-primary">Request a Demo</a>
+          <a href="https://github.com/thesiliconroots" class="btn btn-secondary" target="_blank" rel="noopener">GitHub Project</a>
+        </div>
+
+        <div class="cta-links-row">
+          <div class="cta-link-item">
+            <span class="label">Email</span>
+            <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
+          </div>
+          <div class="cta-link-item">
+            <span class="label">Website</span>
+            <a href="https://siliconroots.github.io">siliconroots.github.io</a>
+          </div>
+          <div class="cta-link-item">
+            <span class="label">GitHub</span>
+            <a href="https://github.com/thesiliconroots" target="_blank" rel="noopener">github.com/thesiliconroots</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1048,7 +585,7 @@
           <h4>Products</h4>
           <a href="#features">StackPilot Features</a>
           <a href="#gallery">Interactive Gallery</a>
-          <a href="#demo">Live Demo</a>
+          <a href="#contact">Request Demo</a>
         </div>
 
         <!-- Column 3: Company -->
