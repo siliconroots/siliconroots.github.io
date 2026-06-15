@@ -1215,143 +1215,53 @@ h1, h2, h3, h4, .navbar-logo-link {
   color: var(--text-muted);
 }
 
-/* PRICING SECTION */
-.pricing-section {
+/* SECURITY & TRUST SECTION */
+.trust-section {
   border-top: 1px solid var(--card-border);
   background: rgba(0, 0, 0, 0.1);
   padding: 100px 20px;
 }
 
-.pricing-grid {
+.trust-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  align-items: stretch;
 }
 
-.pricing-card {
+.trust-card-cto {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  border-radius: 16px;
+  padding: 36px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 10px 30px var(--card-shadow);
+  box-shadow: 0 8px 25px var(--card-shadow);
   backdrop-filter: blur(10px);
 }
 
-.pricing-card:hover, .pricing-card:focus-within {
-  transform: translateY(-8px);
+.trust-card-cto:hover, .trust-card-cto:focus-within {
+  transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: 0 20px 40px var(--accent-subtle);
+  box-shadow: 0 16px 35px var(--accent-subtle);
 }
 
-.pricing-card.popular {
-  border: 2px solid var(--accent);
-  transform: scale(1.03);
+.trust-card-cto .card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
-.pricing-card.popular:hover, .pricing-card.popular:focus-within {
-  transform: translateY(-8px) scale(1.03);
-}
-
-.popular-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent);
-  color: #000;
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 6px 16px;
-  border-radius: 20px;
-  letter-spacing: 1.5px;
-  box-shadow: 0 4px 12px var(--accent-subtle);
-}
-
-.pricing-tier-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.tier-name {
-  font-size: 1.75rem;
+.trust-card-cto h3 {
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-main);
   margin-bottom: 16px;
 }
 
-.price-box {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 20px;
-}
-
-.price-symbol {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-right: 4px;
-}
-
-.price-val {
-  font-family: var(--font-mono);
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--text-main);
-  line-height: 1;
-}
-
-.price-term {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin-left: 6px;
-}
-
-.tier-desc {
+.trust-card-cto p {
   font-size: 0.95rem;
+  line-height: 1.6;
   color: var(--text-muted);
-  line-height: 1.5;
-  margin-bottom: 30px;
-  min-height: 45px;
-}
-
-.card-separator {
-  border: 0;
-  border-top: 1px solid var(--card-border);
-  margin-bottom: 30px;
-}
-
-.tier-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex-grow: 1;
-}
-
-.tier-features li {
-  font-size: 0.92rem;
-  color: var(--text-sub);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.tier-features li span {
-  color: var(--accent);
-  font-weight: bold;
 }
 
 /* FAQ SECTION */
@@ -1427,19 +1337,12 @@ h1, h2, h3, h4, .navbar-logo-link {
 }
 
 @media (max-width: 992px) {
-  .pricing-grid {
+  .trust-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 500px;
-  }
-  .pricing-card.popular {
-    transform: none;
-  }
-  .pricing-card.popular:hover, .pricing-card.popular:focus-within {
-    transform: translateY(-8px);
+    gap: 24px;
+    max-width: 600px;
   }
 }
-
 /* READY TO EXPLORE CTA SECTION */
 .ready-cta-section {
   border-top: 1px solid var(--card-border);
@@ -1464,6 +1367,14 @@ h1, h2, h3, h4, .navbar-logo-link {
   line-height: 1.15;
   margin-bottom: 20px;
   letter-spacing: -0.5px;
+}
+
+.ready-cta-card .cta-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 36px;
 }
 
 .cta-actions-group {
