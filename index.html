@@ -60,9 +60,9 @@
       <a href="#features">Features</a>
       <a href="#gallery">Gallery</a>
       <a href="#why-us">Why StackPilot</a>
-      <a href="#mission">Our Mission</a>
       <a href="#tech">Technology</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-actions">
@@ -534,6 +534,129 @@
     </div>
   </section>
 
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Transparent, Developer-First Pricing</h2>
+        <p class="section-subtitle">Start indexing your infrastructure for free. Scale as your multi-cloud footprint expands.</p>
+      </div>
+      
+      <div class="pricing-grid reveal" data-delay="100">
+        <!-- Developer Plan -->
+        <div class="pricing-card" tabindex="0">
+          <div class="pricing-tier-tag">INDIVIDUAL</div>
+          <h3 class="tier-name">Developer</h3>
+          <div class="price-box">
+            <span class="price-symbol">$</span>
+            <span class="price-val">0</span>
+            <span class="price-term">/mo</span>
+          </div>
+          <p class="tier-desc">Perfect for independent developers and sandbox cloud testing environments.</p>
+          <hr class="card-separator">
+          <ul class="tier-features">
+            <li><span>✓</span> 1 Connected Cloud Account</li>
+            <li><span>✓</span> Up to 500 Discovered Resources</li>
+            <li><span>✓</span> Universal Search & Catalog</li>
+            <li><span>✓</span> Community Discord Support</li>
+            <li><span>✓</span> 15-Minute Sync Intervals</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-block">Get Started</a>
+        </div>
+
+        <!-- Scale Plan (Most Popular) -->
+        <div class="pricing-card popular" tabindex="0">
+          <div class="popular-badge">RECOMMENDED</div>
+          <div class="pricing-tier-tag">GROWING TEAMS</div>
+          <h3 class="tier-name">Scale</h3>
+          <div class="price-box">
+            <span class="price-symbol">$</span>
+            <span class="price-val">49</span>
+            <span class="price-term">/mo</span>
+          </div>
+          <p class="tier-desc">For growing startups needing multi-account visibility and topology mapping.</p>
+          <hr class="card-separator">
+          <ul class="tier-features">
+            <li><span>✓</span> Unlimited Cloud Accounts</li>
+            <li><span>✓</span> Up to 10,000 Discovered Resources</li>
+            <li><span>✓</span> Multi-Cloud Topology Maps</li>
+            <li><span>✓</span> Cost Attribution & FinOps</li>
+            <li><span>✓</span> 5-Minute Sync Intervals</li>
+            <li><span>✓</span> Email & Slack Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Start Free Trial</a>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card" tabindex="0">
+          <div class="pricing-tier-tag">LARGE INFRASTRUCTURE</div>
+          <h3 class="tier-name">Enterprise</h3>
+          <div class="price-box">
+            <span class="price-val">Custom</span>
+          </div>
+          <p class="tier-desc">For platform engineering teams requiring advanced compliance policies and custom deployment models.</p>
+          <hr class="card-separator">
+          <ul class="tier-features">
+            <li><span>✓</span> Unlimited Resources</li>
+            <li><span>✓</span> Self-Hosted / VPC Deployment</li>
+            <li><span>✓</span> OPA Policy Compliance Checks</li>
+            <li><span>✓</span> SAML SSO & RBAC Groups</li>
+            <li><span>✓</span> Real-Time Webhook Routing</li>
+            <li><span>✓</span> 24/7 Premium Support (SLA)</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-block">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions about StackPilot? We've got answers.</p>
+      </div>
+      
+      <div class="faq-accordion-group reveal" data-delay="100">
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How does StackPilot connect to my cloud accounts?</summary>
+          <div class="faq-answer">
+            <p>StackPilot connects securely using read-only IAM Cross-Account Roles (on AWS) or read-only Service Principals (on Azure/GCP). We provide Terraform files to bootstrap these roles in under 2 minutes. We do not require or support write permissions, ensuring zero risk of accidental modifications.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What is the performance and cost overhead of discovery scans?</summary>
+          <div class="faq-answer">
+            <p>0%. StackPilot runs entirely via non-blocking cloud API queries. Unlike traditional monitoring systems, we do not deploy daemon agents or sidecars to your cluster nodes. Your compute performance is untouched, and cloud provider API rates remain well within standard limits.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Can StackPilot run on-premise or within a private VPC?</summary>
+          <div class="faq-answer">
+            <p>Yes. Under the Enterprise plan, we offer self-hosted helm-chart deployments so you can run StackPilot inside your own private virtual network, keeping all resource metadata fully locked down within your organizational borders.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How are credentials and configuration histories secured?</summary>
+          <div class="faq-answer">
+            <p>All database records are encrypted at rest using AES-256 with KMS key rotations. Session metadata is routed through secure WebSockets, and StackPilot does not store actual application databases or customer credentials—only infrastructural metadata (resource IDs, tags, VPC configs).</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How do alerts and drift warnings integrate into our workflow?</summary>
+          <div class="faq-answer">
+            <p>StackPilot supports webhook endpoints to push slack notices, pagerduty incidents, or triggering GitHub Action pipelines whenever an unmapped VPC subnet is detected or a resource undergoes manual (non-IaC) configuration modifications.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Ready to Explore CTA Section -->
   <section class="ready-cta-section" id="contact">
     <div class="section-container">
@@ -585,7 +708,8 @@
           <h4>Products</h4>
           <a href="#features">StackPilot Features</a>
           <a href="#gallery">Interactive Gallery</a>
-          <a href="#contact">Request Demo</a>
+          <a href="#pricing">Pricing Plans</a>
+          <a href="#faq">FAQ</a>
         </div>
 
         <!-- Column 3: Company -->
@@ -594,6 +718,7 @@
           <a href="#mission">Our Mission</a>
           <a href="#tech">Technology Stack</a>
           <a href="#roadmap">Product Roadmap</a>
+          <a href="#contact">Request Demo</a>
         </div>
 
         <!-- Column 4: Contact -->
