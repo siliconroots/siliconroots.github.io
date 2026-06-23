@@ -1098,118 +1098,6 @@ h1, h2, h3, h4, .navbar-logo-link {
   display: inline-block;
 }
 
-/* QUICKSTART SECTION */
-.quickstart-section {
-  border-top: 1px solid var(--card-border);
-  background: rgba(0, 0, 0, 0.15);
-}
-
-.quickstart-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--card-gap);
-  max-width: var(--content-wide);
-  margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  .quickstart-grid {
-    grid-template-columns: 1fr;
-    max-width: 560px;
-  }
-}
-
-.quickstart-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: var(--card-shadow-rest);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.quickstart-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.quickstart-card-head h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.quickstart-card-head p {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-}
-
-.terminal-container {
-  background: #020617;
-  border: 1px solid var(--card-border);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-[data-theme="light"] .terminal-container {
-  background: #0f172a;
-}
-
-.terminal-header {
-  background: #0f172a;
-  padding: 10px 14px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.terminal-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.terminal-dot.red { background: #ef4444; }
-.terminal-dot.yellow { background: #eab308; }
-.terminal-dot.green { background: #22c55e; }
-
-.terminal-title {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  margin-left: 6px;
-  opacity: 0.7;
-}
-
-.terminal-body {
-  padding: 16px;
-  margin: 0;
-  overflow-x: auto;
-}
-
-.terminal-body code {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: #38bdf8;
-  line-height: 1.6;
-}
-
-.terminal-body .comment {
-  color: #64748b;
-  font-style: italic;
-}
-
 @media (max-width: 992px) {
   .trust-grid {
     grid-template-columns: 1fr;
@@ -1719,7 +1607,7 @@ h1, h2, h3, h4, .navbar-logo-link {
   margin-bottom: 14px;
 }
 
-/* Generic CTA eyebrow (quickstart, etc.) */
+/* Generic CTA eyebrow */
 .cta-eyebrow {
   display: inline-block;
   font-family: var(--font-mono);
