@@ -1,10 +1,164 @@
-# siliconroots.github.io
+# 🌱 Silicon Roots
 
-This repository is **already connected to GitHub** and published with **GitHub Pages** — the public site for **Silicon Roots**, the engineering organization building open infrastructure software (`index.html`, assets). StackPilot is presented here as the flagship project. This repo is **not** any product application.
+### Building Open Infrastructure Software for Modern Engineering Teams
 
-- **GitHub:** [github.com/siliconroots/siliconroots.github.io](https://github.com/siliconroots/siliconroots.github.io)
-- **Live site:** [https://siliconroots.github.io](https://siliconroots.github.io) (default Pages URL for this repo name; confirm under **Settings → Pages** if you use a custom domain.)
-- **Remote (example):** `git@github.com:siliconroots/siliconroots.github.io.git`
-- **Deploy:** GitHub builds/serves from the branch and folder configured in **Settings → Pages** (commonly `main` + `/` root).
+Silicon Roots is an engineering-driven initiative focused on cloud intelligence, infrastructure visibility, platform engineering, and operational excellence.
 
-**Team workflow:** engineers work on the SaaS in separate repos (e.g. `siliconroots-backend`, `siliconroots-frontend`, `siliconroots-platform`). Changes to the **marketing site** only happen **here**, via PRs to this repo — keep Pages content and product code in different remotes so Pages stays simple and safe to publish.
+We build software that helps teams understand, govern, and operate modern cloud environments with confidence.
+
+> Our mission is simple: make infrastructure easier to understand than it is to create.
+
+---
+
+## 🚀 Flagship Project
+
+### StackPilot
+
+Cloud Intelligence Platform for AWS
+
+StackPilot provides a unified view of cloud infrastructure through discovery, inventory, topology, governance, security insights, and operational visibility.
+
+### Core Capabilities
+
+* Multi-Account AWS Discovery
+* Infrastructure Inventory
+* Cloud Resource Relationships
+* Infrastructure Topology
+* Universal Search
+* Security Posture Insights
+* FinOps & Cost Visibility
+* Organizations & RBAC
+* Audit Logs
+* Cluster Command Center
+* Infrastructure Intelligence
+
+🔗 Repository
+
+https://github.com/siliconroots/stackpilot
+
+🌐 Website
+
+https://siliconroots.github.io
+
+---
+
+## 🎯 Why We Build
+
+Modern cloud environments grow quickly.
+
+As infrastructure expands across accounts, regions, services, and teams, visibility becomes fragmented and operational context gets lost.
+
+Silicon Roots exists to help engineering teams:
+
+* Understand their infrastructure
+* Improve governance
+* Increase operational awareness
+* Simplify cloud operations
+* Reduce complexity
+* Build with confidence
+
+---
+
+## 🏗 Engineering Principles
+
+### Truth Over Dashboards
+
+Accurate infrastructure data matters more than flashy visualizations.
+
+### Security By Default
+
+Least privilege, tenant isolation, encryption, and secure design should be foundational.
+
+### Simplicity Over Complexity
+
+Infrastructure is already complicated enough.
+
+Tools should reduce complexity, not create more of it.
+
+### Open Collaboration
+
+We believe great software is built through transparency, feedback, and community participation.
+
+### Long-Term Thinking
+
+We prioritize maintainability, reliability, and sustainable engineering practices.
+
+---
+
+## 🗺 Current Focus
+
+### StackPilot
+
+Building a modern Cloud Intelligence Platform focused on:
+
+* Infrastructure Discovery
+* Resource Inventory
+* Topology Mapping
+* Search & Exploration
+* Governance
+* Security Visibility
+* FinOps Awareness
+* Multi-Account Management
+
+---
+
+## 🔮 Future Direction
+
+Planned initiatives under Silicon Roots:
+
+### Infrastructure Graph
+
+A relationship engine for cloud resources and dependencies.
+
+### Policy Engine
+
+Governance and compliance automation.
+
+### Cloud SDK
+
+Developer-friendly infrastructure discovery libraries.
+
+### Multi-Cloud Intelligence
+
+Azure and GCP visibility alongside AWS.
+
+### AI-Assisted Insights
+
+Infrastructure context and operational intelligence powered by data.
+
+---
+
+## 🤝 Contributing
+
+We welcome:
+
+* Issues
+* Feature Requests
+* Discussions
+* Pull Requests
+* Documentation Improvements
+* Community Feedback
+
+If you're interested in infrastructure, cloud platforms, DevOps, platform engineering, or cloud intelligence, we'd love to collaborate.
+
+---
+
+## 📚 Resources
+
+🌐 Website
+
+https://siliconroots.github.io
+
+🚀 StackPilot
+
+https://github.com/siliconroots/stackpilot
+
+📧 Contact
+
+[thesiliconroots@gmail.com](mailto:thesiliconroots@gmail.com)
+
+---
+
+## 🌳 Silicon Roots
+
+Building open infrastructure software for cloud intelligence, platform engineering, and modern operations.
