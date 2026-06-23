@@ -56,13 +56,11 @@
       </div>
     </a>
     <div class="nav-links" id="nav-menu">
-      <a href="#about">Why We Build</a>
-      <a href="#ecosystem">Ecosystem Suite</a>
-      <a href="#stackpilot">Flagship Project</a>
-      <a href="#principles">Architecture &amp; Principles</a>
-      <a href="#roadmap">Enterprise &amp; Future</a>
-      <a href="#quickstart">Quickstart</a>
-      <a href="#community">Contributing</a>
+      <a href="#ecosystem">Projects</a>
+      <a href="#stackpilot">StackPilot</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#community">Community</a>
+      <a href="#about">About</a>
     </div>
     <div class="nav-actions">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Color Theme">
@@ -174,26 +172,6 @@
     </div>
   </header>
 
-  <!-- Technology Trust Bar -->
-  <section class="trust-bar" aria-label="Technologies used across Silicon Roots projects">
-    <div class="trust-container">
-      <span class="trust-label">ENGINEERING STACK</span>
-      <div class="trust-logos">
-        <span>React</span>
-        <span>TypeScript</span>
-        <span>Spring Boot</span>
-        <span>PostgreSQL</span>
-        <span>Redis</span>
-        <span>Docker</span>
-        <span>Kubernetes</span>
-        <span>Helm</span>
-        <span>AWS</span>
-        <span>JWT</span>
-        <span>GitHub Actions</span>
-      </div>
-    </div>
-  </section>
-
   <!-- About Silicon Roots Section: Why We Build -->
   <section class="about-section" id="about">
     <div class="section-container">
@@ -285,7 +263,7 @@
         <div class="project-landscape-card">
           <div class="project-landscape-header">
             <div class="project-landscape-title-group">
-              <span class="project-status active">Active</span>
+              <span class="project-status research">In Development</span>
               <h3>InfraGraph</h3>
             </div>
             <span class="project-landscape-category">Core Graph DB</span>
@@ -298,7 +276,7 @@
             <span class="meta-tag">GraphDB / Go</span>
           </div>
           <div class="project-landscape-actions">
-            <span class="project-action-placeholder">Integrated with StackPilot</span>
+            <span class="project-action-placeholder">In active development</span>
           </div>
         </div>
 
@@ -306,7 +284,7 @@
         <div class="project-landscape-card">
           <div class="project-landscape-header">
             <div class="project-landscape-title-group">
-              <span class="project-status active">Active</span>
+              <span class="project-status planned">Planned</span>
               <h3>Policy Engine</h3>
             </div>
             <span class="project-landscape-category">OPA Auditor</span>
@@ -319,7 +297,7 @@
             <span class="meta-tag">OPA / Rego</span>
           </div>
           <div class="project-landscape-actions">
-            <span class="project-action-placeholder">Continuous Audit Layer</span>
+            <span class="project-action-placeholder">Planned initiative</span>
           </div>
         </div>
 
@@ -528,7 +506,28 @@
     </div>
   </section>
 
+  <!-- Technology Stack Section -->
+  <section class="tech-section" id="technology">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="cta-tag">TECHNOLOGY</span>
+        <h2 class="section-title">Built on a Proven Open-Source Stack</h2>
+        <p class="section-subtitle">Silicon Roots software is engineered on battle-tested, widely adopted technologies—chosen for reliability, security, and long-term maintainability.</p>
+      </div>
 
+      <div class="tech-grid reveal" data-delay="100">
+        <div class="tech-badge" tabindex="0">AWS</div>
+        <div class="tech-badge" tabindex="0">Kubernetes</div>
+        <div class="tech-badge" tabindex="0">Docker</div>
+        <div class="tech-badge" tabindex="0">React</div>
+        <div class="tech-badge" tabindex="0">Spring Boot</div>
+        <div class="tech-badge" tabindex="0">PostgreSQL</div>
+        <div class="tech-badge" tabindex="0">Redis</div>
+        <div class="tech-badge" tabindex="0">TypeScript</div>
+        <div class="tech-badge" tabindex="0">GitHub</div>
+      </div>
+    </div>
+  </section>
 
   <!-- Lightbox Modal for Gallery -->
   <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer">
@@ -686,20 +685,25 @@
     <div class="section-container">
       <div class="section-header reveal">
         <span class="editorial-tag">🤝 CONTRIBUTING</span>
-        <h2 class="section-title">Want to Collaborate?</h2>
-        <p class="section-subtitle">We welcome Issues, Feature Requests, Discussions, Pull Requests, Documentation Improvements, and Community Feedback. If you're interested in infrastructure, cloud platforms, DevOps, platform engineering, or cloud intelligence, we'd love to collaborate.</p>
+        <h2 class="section-title">Built in the Open</h2>
+        <p class="section-subtitle">StackPilot is open source. We welcome issues, feature requests, discussions, and pull requests from anyone working on cloud, platform, or infrastructure engineering.</p>
       </div>
 
       <div class="community-grid reveal" data-delay="100">
         <a class="community-card" href="https://github.com/siliconroots" target="_blank" rel="noopener">
           <div class="icon">⌥</div>
           <h3>GitHub Org</h3>
-          <p>Browse the repositories under the Silicon Roots organization.</p>
+          <p>Browse the open-source repositories under the Silicon Roots organization.</p>
         </a>
         <a class="community-card" href="https://github.com/siliconroots/stackpilot/issues" target="_blank" rel="noopener">
           <div class="icon">🐛</div>
           <h3>Issues</h3>
-          <p>Report bugs, request features, and track fixes in the open.</p>
+          <p>Report bugs and track fixes in the open with full transparency.</p>
+        </a>
+        <a class="community-card" href="https://github.com/siliconroots/stackpilot/issues/new" target="_blank" rel="noopener">
+          <div class="icon">✨</div>
+          <h3>Feature Requests</h3>
+          <p>Tell us what you need. Operator feedback drives the roadmap.</p>
         </a>
         <a class="community-card" href="https://github.com/siliconroots/stackpilot/pulls" target="_blank" rel="noopener">
           <div class="icon">🤝</div>
@@ -710,6 +714,11 @@
           <div class="icon">💬</div>
           <h3>Discussions</h3>
           <p>Ask design questions, share ideas, and engage with other operators.</p>
+        </a>
+        <a class="community-card" href="https://github.com/siliconroots/stackpilot#readme" target="_blank" rel="noopener">
+          <div class="icon">📚</div>
+          <h3>Documentation</h3>
+          <p>Read the docs to understand how StackPilot works, end to end.</p>
         </a>
       </div>
     </div>
@@ -772,6 +781,89 @@ helm install stackpilot siliconroots/stackpilot \
   --values values.yaml</code></pre>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="cta-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Straight answers about Silicon Roots and StackPilot.</p>
+      </div>
+
+      <div class="faq-accordion-group reveal" data-delay="100">
+        <details class="faq-item" open tabindex="0">
+          <summary class="faq-question">What is Silicon Roots?</summary>
+          <div class="faq-answer">
+            <p>Silicon Roots is an engineering organization building open infrastructure software for cloud, platform, and infrastructure teams. StackPilot is our flagship project, with further tools—InfraGraph, a Policy Engine, and a Cloud SDK—in development and planning.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What is StackPilot?</summary>
+          <div class="faq-answer">
+            <p>StackPilot is an agentless cloud intelligence platform for AWS. It discovers resources across accounts and regions, builds a unified inventory, maps topology and dependencies, and surfaces security, FinOps, and operational insights through a single console.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Why was StackPilot built?</summary>
+          <div class="faq-answer">
+            <p>Cloud environments grow faster than the tools used to understand them. Context ends up scattered across consoles, accounts, and tribal knowledge. StackPilot exists to make infrastructure easier to understand than it is to create.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Who is StackPilot for?</summary>
+          <div class="faq-answer">
+            <p>Platform, DevOps, Cloud, and Infrastructure teams operating complex AWS estates. Security teams use it to track compliance drift, FinOps teams to audit cost, and engineering leaders to keep visibility over system architecture.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">Is StackPilot open source?</summary>
+          <div class="faq-answer">
+            <p>Yes. StackPilot is open source under the permissive Apache-2.0 license—code, schemas, and Helm charts. You can self-host it locally or in your own Kubernetes cluster, and read exactly how it works.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How can I contribute?</summary>
+          <div class="faq-answer">
+            <p>Open an issue, file a feature request, start a discussion, or submit a pull request on GitHub. Operator feedback directly shapes the roadmap, and contributions are reviewed in the open.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How does AWS onboarding work?</summary>
+          <div class="faq-answer">
+            <p>You connect an AWS account using a read-only IAM cross-account role (SecurityAudit plus a small custom policy). StackPilot validates the connection and runs agentless discovery against standard cloud APIs—no agents, sidecars, or write access required.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How are credentials protected?</summary>
+          <div class="faq-answer">
+            <p>StackPilot requests least-privilege, read-only access only and never stores write credentials. It indexes metadata namespaces only—ARNs, resource types, VPC routing tables—and never reads database rows, file contents, or application payloads.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What is the roadmap?</summary>
+          <div class="faq-answer">
+            <p>StackPilot for AWS is the active focus. Next come InfraGraph and a Policy Engine, followed by a Cloud SDK, multi-cloud (Azure and GCP) intelligence, and AI-assisted insights. See the Future Direction section above for the full timeline.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What future projects are planned?</summary>
+          <div class="faq-answer">
+            <p>InfraGraph (a versioned cloud relationship graph), a Policy Engine (OPA/Rego compliance as code), and a Cloud SDK &amp; CLI for programmatic access. These are in development, planned, or on the roadmap—not finished products yet—and are clearly marked as such.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
