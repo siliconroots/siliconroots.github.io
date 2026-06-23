@@ -22,6 +22,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Mobile Menu Toggle Logic
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking any nav link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking outside the navbar
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+  }
+
   // ═══════════════════════════════════════════════════════
   // SHOWCASE AUTO-ROTATING CAROUSEL
   // ═══════════════════════════════════════════════════════

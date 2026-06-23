@@ -59,6 +59,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#stackpilot">StackPilot</a>
+      <a href="#quickstart">Quickstart</a>
       <a href="#open-source">Open Source</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#community">Community</a>
@@ -69,6 +70,12 @@
         <!-- Icon representing half sun / half moon -->
         <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-2a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0-2.5A4.5 4.5 0 1 1 12 7.5v9z"/>
+        </svg>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open Navigation Menu">
+        <!-- Icon representing hamburger menu -->
+        <svg class="menu-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
       </button>
       <a href="https://github.com/siliconroots" class="cta-nav-button" target="_blank" rel="noopener">GitHub</a>
@@ -89,7 +96,7 @@
         <div class="hero-cta-group">
           <a href="#projects" class="btn btn-primary">Explore Projects</a>
           <a href="#stackpilot" class="btn btn-secondary">View StackPilot</a>
-          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline" target="_blank" rel="noopener">StackPilot on GitHub</a>
+          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
           <a href="#contact" class="btn btn-outline">Contact</a>
         </div>
       </div>
@@ -114,31 +121,31 @@
             <!-- Showcase Slides -->
             <div class="showcase-carousel-inner" id="carousel-inner">
               <div class="showcase-slide active" data-index="0" data-route="/overview" data-title="Executive Dashboard" data-desc="Aggregated real-time observability, node distributions, cost trends, and active workloads.">
-                <img src="./assets/screenshots/executive-dashboard.png" alt="StackPilot Executive Dashboard View" loading="eager" />
+                <img src="./assets/screenshots/executive-dashboard.webp" alt="StackPilot Executive Dashboard View" loading="eager" />
               </div>
               <div class="showcase-slide" data-index="1" data-route="/cloud/accounts" data-title="Cloud Accounts" data-desc="Unified view of multi-account setups, resource synchronization status, and region coverages.">
-                <img src="./assets/screenshots/cloud-accounts.png" alt="StackPilot Cloud Accounts View" loading="lazy" />
+                <img src="./assets/screenshots/cloud-accounts.webp" alt="StackPilot Cloud Accounts View" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="2" data-route="/intelligence/search" data-title="Universal Search" data-desc="Search across all resources, regions, and cloud providers instantly with simple typing.">
-                <img src="./assets/screenshots/universal-search.png" alt="StackPilot Universal Search" loading="lazy" />
+                <img src="./assets/screenshots/universal-search.webp" alt="StackPilot Universal Search" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="3" data-route="/operations/topology" data-title="Infrastructure Topology" data-desc="Real-time multi-cloud dependency mapping, node interconnections, and network boundaries.">
-                <img src="./assets/screenshots/topology.png" alt="StackPilot Infrastructure Topology" loading="lazy" />
+                <img src="./assets/screenshots/topology.webp" alt="StackPilot Infrastructure Topology" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="4" data-route="/costs" data-title="FinOps Dashboard" data-desc="Detailed cost allocation, cloud waste detection, and savings suggestions.">
-                <img src="./assets/screenshots/finops.png" alt="StackPilot FinOps View" loading="lazy" />
+                <img src="./assets/screenshots/finops.webp" alt="StackPilot FinOps View" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="5" data-route="/intelligence/security" data-title="Security Posture" data-desc="Continuous compliance auditing, CIS benchmark scores, and active vulnerability mapping.">
-                <img src="./assets/screenshots/security-posture.png" alt="StackPilot Security Posture View" loading="lazy" />
+                <img src="./assets/screenshots/security-posture.webp" alt="StackPilot Security Posture View" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="6" data-route="/settings" data-title="RBAC & Scope Rules" data-desc="Granular user access rules, workspace mappings, and role-based policies.">
-                <img src="./assets/screenshots/rbac.png" alt="StackPilot Role Based Access Control View" loading="lazy" />
+                <img src="./assets/screenshots/rbac.webp" alt="StackPilot Role Based Access Control View" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="7" data-route="/operations/audit" data-title="Audit Logs" data-desc="Immutable ledger of infrastructure state updates, deployment hooks, and configuration changes.">
-                <img src="./assets/screenshots/audit-logs.png" alt="StackPilot Audit Logs View" loading="lazy" />
+                <img src="./assets/screenshots/audit-logs.webp" alt="StackPilot Audit Logs View" loading="lazy" />
               </div>
               <div class="showcase-slide" data-index="8" data-route="/operations/clusters" data-title="Cluster Command Center" data-desc="Deep Kubernetes cluster runtime health analytics, replica monitors, and node statuses.">
-                <img src="./assets/screenshots/cluster-command-center.png" alt="StackPilot Cluster Command Center" loading="lazy" />
+                <img src="./assets/screenshots/cluster-command-center.webp" alt="StackPilot Cluster Command Center" loading="lazy" />
               </div>
             </div>
           </div>
@@ -243,6 +250,11 @@
           <h3>Security by Default</h3>
           <p>Least privilege, zero-write threat models and zero data-ingest policies are starting points, not afterthoughts.</p>
         </div>
+        <div class="feature trust-card">
+          <div class="icon">🔌</div>
+          <h3>Extensible Abstractions</h3>
+          <p>We build open interfaces allowing operators to extend schema models, query custom metadata, and write custom platform plugins.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -290,7 +302,7 @@
                 <div class="browser-address">https://stackpilot.io/overview</div>
               </div>
               <div class="flagship-frame-body">
-                <img src="./assets/screenshots/executive-dashboard.png" alt="StackPilot Executive Dashboard" loading="lazy" />
+                <img src="./assets/screenshots/executive-dashboard.webp" alt="StackPilot Executive Dashboard" loading="lazy" />
               </div>
             </div>
           </div>
@@ -381,63 +393,63 @@
         <p class="gallery-block-sub">Click any screen to expand it. Executive Dashboard, Cloud Accounts, Universal Search, Topology, FinOps, Security, RBAC, Audit and the Cluster Command Center.</p>
 
         <div class="gallery-grid">
-          <div class="gallery-item" data-src="./assets/screenshots/executive-dashboard.png" data-caption="Executive Dashboard overview: CPU/Mem rings, uptime, and deployment counters." tabindex="0">
-            <img src="./assets/screenshots/executive-dashboard.png" alt="Executive Dashboard" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/executive-dashboard.webp" data-caption="Executive Dashboard overview: CPU/Mem rings, uptime, and deployment counters." tabindex="0">
+            <img src="./assets/screenshots/executive-dashboard.webp" alt="Executive Dashboard" loading="lazy" />
             <div class="gallery-overlay"><span>Executive Dashboard</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/cloud-accounts.png" data-caption="Cloud Accounts setup: mapping AWS credentials and monitoring connection health." tabindex="0">
-            <img src="./assets/screenshots/cloud-accounts.png" alt="Cloud Accounts" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/cloud-accounts.webp" data-caption="Cloud Accounts setup: mapping AWS credentials and monitoring connection health." tabindex="0">
+            <img src="./assets/screenshots/cloud-accounts.webp" alt="Cloud Accounts" loading="lazy" />
             <div class="gallery-overlay"><span>Cloud Accounts</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/universal-search.png" data-caption="Universal search querying cluster subnets and service deployment groups." tabindex="0">
-            <img src="./assets/screenshots/universal-search.png" alt="Universal Search" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/universal-search.webp" data-caption="Universal search querying cluster subnets and service deployment groups." tabindex="0">
+            <img src="./assets/screenshots/universal-search.webp" alt="Universal Search" loading="lazy" />
             <div class="gallery-overlay"><span>Universal Search</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/topology.png" data-caption="Topology mapper displaying VPC security borders and live network links." tabindex="0">
-            <img src="./assets/screenshots/topology.png" alt="Topology Mapping" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/topology.webp" data-caption="Topology mapper displaying VPC security borders and live network links." tabindex="0">
+            <img src="./assets/screenshots/topology.webp" alt="Topology Mapping" loading="lazy" />
             <div class="gallery-overlay"><span>Topology Map</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/finops.png" data-caption="FinOps cost metrics filtering overhead costs down to namespaces." tabindex="0">
-            <img src="./assets/screenshots/finops.png" alt="FinOps Dashboard" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/finops.webp" data-caption="FinOps cost metrics filtering overhead costs down to namespaces." tabindex="0">
+            <img src="./assets/screenshots/finops.webp" alt="FinOps Dashboard" loading="lazy" />
             <div class="gallery-overlay"><span>FinOps Analysis</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/security-posture.png" data-caption="Security posture compliance analyzer measuring rules against CIS standards." tabindex="0">
-            <img src="./assets/screenshots/security-posture.png" alt="Security Posture Auditor" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/security-posture.webp" data-caption="Security posture compliance analyzer measuring rules against CIS standards." tabindex="0">
+            <img src="./assets/screenshots/security-posture.webp" alt="Security Posture Auditor" loading="lazy" />
             <div class="gallery-overlay"><span>Security Posture</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/rbac.png" data-caption="Granular access rules and team member workspace configuration." tabindex="0">
-            <img src="./assets/screenshots/rbac.png" alt="RBAC Management" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/rbac.webp" data-caption="Granular access rules and team member workspace configuration." tabindex="0">
+            <img src="./assets/screenshots/rbac.webp" alt="RBAC Management" loading="lazy" />
             <div class="gallery-overlay"><span>RBAC Settings</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/audit-logs.png" data-caption="Immutable activity log displaying administrator and developer command histories." tabindex="0">
-            <img src="./assets/screenshots/audit-logs.png" alt="Audit Logs" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/audit-logs.webp" data-caption="Immutable activity log displaying administrator and developer command histories." tabindex="0">
+            <img src="./assets/screenshots/audit-logs.webp" alt="Audit Logs" loading="lazy" />
             <div class="gallery-overlay"><span>Audit Trail</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/cluster-command-center.png" data-caption="Cluster Command Center displaying pod lifecycle logs and CPU limits." tabindex="0">
-            <img src="./assets/screenshots/cluster-command-center.png" alt="Cluster Command Center" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/cluster-command-center.webp" data-caption="Cluster Command Center displaying pod lifecycle logs and CPU limits." tabindex="0">
+            <img src="./assets/screenshots/cluster-command-center.webp" alt="Cluster Command Center" loading="lazy" />
             <div class="gallery-overlay"><span>Cluster Command Center</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/sync-operations.png" data-caption="Synchronization engine: verifying real-time database discovery queues." tabindex="0">
-            <img src="./assets/screenshots/sync-operations.png" alt="Sync Operations" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/sync-operations.webp" data-caption="Synchronization engine: verifying real-time database discovery queues." tabindex="0">
+            <img src="./assets/screenshots/sync-operations.webp" alt="Sync Operations" loading="lazy" />
             <div class="gallery-overlay"><span>Sync Engine</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/eks-clusters.png" data-caption="EKS clusters index and inventory count of nodes and active pods." tabindex="0">
-            <img src="./assets/screenshots/eks-clusters.png" alt="EKS Clusters" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/eks-clusters.webp" data-caption="EKS clusters index and inventory count of nodes and active pods." tabindex="0">
+            <img src="./assets/screenshots/eks-clusters.webp" alt="EKS Clusters" loading="lazy" />
             <div class="gallery-overlay"><span>EKS Inventory</span></div>
           </div>
 
-          <div class="gallery-item" data-src="./assets/screenshots/aws-onboarding.png" data-caption="AWS onboarding guide with IAM cross-account role creation steps." tabindex="0">
-            <img src="./assets/screenshots/aws-onboarding.png" alt="AWS Onboarding Wizard" loading="lazy" />
+          <div class="gallery-item" data-src="./assets/screenshots/aws-onboarding.webp" data-caption="AWS onboarding guide with IAM cross-account role creation steps." tabindex="0">
+            <img src="./assets/screenshots/aws-onboarding.webp" alt="AWS Onboarding Wizard" loading="lazy" />
             <div class="gallery-overlay"><span>Onboarding Wizard</span></div>
           </div>
         </div>
@@ -526,6 +538,7 @@
         <div class="oss-headline-row">
           <h2 class="oss-title">StackPilot</h2>
           <span class="project-badge active">● Active</span>
+          <span class="project-badge license">Apache-2.0</span>
         </div>
         <span class="oss-kicker">Cloud Intelligence Platform</span>
         <p class="oss-desc">
@@ -541,6 +554,7 @@
         <div class="trust-signals" aria-label="Repository trust signals">
           <span class="trust-signal">⌥ Public Repository</span>
           <span class="trust-signal">🌱 Open Source</span>
+          <span class="trust-signal">⚖️ Apache-2.0 License</span>
           <span class="trust-signal">📚 Documentation</span>
           <span class="trust-signal">🏛️ GitHub Organization</span>
           <span class="trust-signal">⚙️ Active Development</span>
@@ -860,77 +874,63 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section" id="faq">
+  <!-- Quickstart Section -->
+  <section class="quickstart-section" id="quickstart">
     <div class="section-container">
       <div class="section-header reveal">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">Questions about Silicon Roots and StackPilot.</p>
+        <span class="cta-eyebrow">EVALUATE STACKPILOT</span>
+        <h2 class="section-title">Get Started in 60 Seconds</h2>
+        <p class="section-subtitle">StackPilot is open source and self-hostable. Run it locally or deploy it to your Kubernetes cluster.</p>
       </div>
-      
-      <div class="faq-accordion-group reveal" data-delay="100">
-        <details class="faq-item" open tabindex="0">
-          <summary class="faq-question">What is Silicon Roots?</summary>
-          <div class="faq-answer">
-            <p>Silicon Roots is an engineering organization building open infrastructure software for cloud, platform and infrastructure teams. StackPilot is our flagship project, with further projects—Infrastructure Graph, Policy Engine, Cloud SDK and a Platform Engineering Toolkit—in research and planning.</p>
-          </div>
-        </details>
 
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">What is StackPilot?</summary>
-          <div class="faq-answer">
-            <p>StackPilot is a cloud intelligence platform that helps engineering teams discover, understand, and govern cloud and Kubernetes infrastructure. By connecting to your accounts, it maps resource dependencies, displays cluster metrics, and builds a unified inventory view of your active systems without console hopping.</p>
+      <div class="quickstart-grid reveal" data-delay="100">
+        <div class="quickstart-card">
+          <div class="quickstart-card-head">
+            <h3>Option 1: Docker Compose</h3>
+            <p>Perfect for local evaluation and testing discovery flows.</p>
           </div>
-        </details>
+          <div class="terminal-container">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">bash</span>
+            </div>
+            <pre class="terminal-body"><code><span class="comment"># Clone the repository</span>
+git clone https://github.com/siliconroots/stackpilot.git
+cd stackpilot
 
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Are the future projects available today?</summary>
-          <div class="faq-answer">
-            <p>No. Infrastructure Graph, Policy Engine, Cloud SDK and the Platform Engineering Toolkit are projects we are actively researching and designing. They are not shipping products yet—they describe the direction Silicon Roots is heading. StackPilot is the platform you can use today.</p>
-          </div>
-        </details>
+<span class="comment"># Boot up the local database and platform services</span>
+docker-compose up -d
 
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Who is StackPilot designed for?</summary>
-          <div class="faq-answer">
-            <p>The platform is built for Platform, DevOps, Cloud, and Infrastructure teams managing complex cloud setups. Security teams use it to track compliance drift, FinOps groups use it to audit resource costs, and engineering leaders use it to maintain visibility over system architecture.</p>
+<span class="comment"># Open StackPilot Console in your browser</span>
+echo "http://localhost:3000"</code></pre>
           </div>
-        </details>
+        </div>
 
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Does StackPilot support multiple cloud accounts?</summary>
-          <div class="faq-answer">
-            <p>Yes. You can onboard multiple AWS accounts and access them from a unified dashboard. StackPilot provides centralized visibility across accounts and regions while maintaining tenant-aware isolation to ensure secure data separation. Azure and GCP support is on the roadmap.</p>
+        <div class="quickstart-card">
+          <div class="quickstart-card-head">
+            <h3>Option 2: Kubernetes (Helm)</h3>
+            <p>Deploy a scalable instance inside your EKS/K8s infrastructure.</p>
           </div>
-        </details>
+          <div class="terminal-container">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">bash</span>
+            </div>
+            <pre class="terminal-body"><code><span class="comment"># Add the Helm repository</span>
+helm repo add siliconroots https://charts.siliconroots.io
+helm repo update
 
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How are credentials protected?</summary>
-          <div class="faq-answer">
-            <p>All credentials are encrypted at rest using AES-GCM encryption in secure storage. We follow a strict philosophy of least privilege, requiring only read-only access schemas, and fully support standard credential rotation processes.</p>
+<span class="comment"># Install StackPilot under the platform namespace</span>
+helm install stackpilot siliconroots/stackpilot \
+  --namespace platform \
+  --create-namespace \
+  --values values.yaml</code></pre>
           </div>
-        </details>
-
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Does StackPilot install agents inside my infrastructure?</summary>
-          <div class="faq-answer">
-            <p>No. StackPilot is entirely agentless. It operates by querying AWS and Kubernetes APIs, meaning you do not need to install sidecars, agents, or daemons on your nodes or inside your virtual private clouds.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">Is Silicon Roots open source?</summary>
-          <div class="faq-answer">
-            <p>Open source is core to how we work. We build in the open, develop transparently, and grow our software with the community that runs it. Follow and contribute to our work on GitHub.</p>
-          </div>
-        </details>
-
-        <details class="faq-item" tabindex="0">
-          <summary class="faq-question">How do I get involved or request a demo?</summary>
-          <div class="faq-answer">
-            <p>Engage with us on GitHub through discussions, issues and pull requests, or reach out directly at thesiliconroots@gmail.com to request a StackPilot demo or talk about building with Silicon Roots.</p>
-          </div>
-        </details>
+        </div>
       </div>
     </div>
   </section>
@@ -939,30 +939,21 @@
   <section class="ready-cta-section" id="contact">
     <div class="section-container">
       <div class="ready-cta-card reveal">
-        <h2>Build with Silicon Roots.</h2>
+        <span class="cta-eyebrow">GET STARTED</span>
+        <h2>Ready to Build with Silicon Roots?</h2>
         <p class="cta-subtitle">
-          Try StackPilot, follow our open source work, or talk to us about where modern infrastructure software is heading.
+          Explore StackPilot, browse the source, or request a walkthrough. We'd love to hear from you.
         </p>
-        
+
         <div class="cta-actions-group">
-          <a href="mailto:thesiliconroots@gmail.com?subject=StackPilot%20Demo%20Request" class="btn btn-primary">Request Demo</a>
-          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+          <a href="#stackpilot" class="btn btn-primary">Explore StackPilot</a>
+          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-secondary" target="_blank" rel="noopener">View GitHub</a>
+          <a href="mailto:thesiliconroots@gmail.com?subject=StackPilot%20Demo%20Request" class="btn btn-outline">Request Demo</a>
         </div>
 
-        <div class="cta-links-row">
-          <div class="cta-link-item">
-            <span class="label">Email</span>
-            <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
-          </div>
-          <div class="cta-link-item">
-            <span class="label">Repository</span>
-            <a href="https://github.com/siliconroots/stackpilot" target="_blank" rel="noopener">github.com/siliconroots/stackpilot</a>
-          </div>
-          <div class="cta-link-item">
-            <span class="label">Organization</span>
-            <a href="https://github.com/siliconroots" target="_blank" rel="noopener">github.com/siliconroots</a>
-          </div>
-        </div>
+        <p class="cta-email-line">
+          Or email us at <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
+        </p>
       </div>
     </div>
   </section>
@@ -971,7 +962,7 @@
   <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-grid">
-        
+
         <!-- Column 1: Brand -->
         <div class="footer-col brand-col">
           <div class="footer-logo-wrap">
@@ -986,28 +977,16 @@
         <div class="footer-col">
           <h4>Projects</h4>
           <a href="#stackpilot">StackPilot</a>
-          <a href="https://github.com/siliconroots/stackpilot" target="_blank" rel="noopener">StackPilot Repository</a>
           <a href="#projects">Future Projects</a>
           <a href="#roadmap">Roadmap</a>
         </div>
 
-        <!-- Column 3: Organization -->
+        <!-- Column 3: Connect -->
         <div class="footer-col">
-          <h4>Organization</h4>
-          <a href="#about">About</a>
-          <a href="#mission">Mission</a>
-          <a href="#open-source">Open Source</a>
-          <a href="#community">Community</a>
-          <a href="#contribute">Contribute</a>
-        </div>
-
-        <!-- Column 4: Contact -->
-        <div class="footer-col">
-          <h4>Contact &amp; Links</h4>
-          <a href="mailto:thesiliconroots@gmail.com">thesiliconroots@gmail.com</a>
-          <a href="https://github.com/siliconroots/stackpilot" target="_blank" rel="noopener">StackPilot on GitHub</a>
-          <a href="https://github.com/siliconroots" target="_blank" rel="noopener">GitHub Organization</a>
+          <h4>Connect</h4>
           <a href="https://siliconroots.github.io">Website</a>
+          <a href="https://github.com/siliconroots" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:thesiliconroots@gmail.com">Email</a>
         </div>
 
       </div>
