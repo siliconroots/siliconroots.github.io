@@ -56,14 +56,13 @@
       </div>
     </a>
     <div class="nav-links" id="nav-menu">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#stackpilot">StackPilot</a>
+      <a href="#about">Why We Build</a>
+      <a href="#stackpilot">Flagship Project</a>
+      <a href="#principles">Engineering Principles</a>
+      <a href="#roadmap">Future Direction</a>
       <a href="#quickstart">Quickstart</a>
-      <a href="#charter">Charter</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#community">Community</a>
-      <a href="#contact">Contact</a>
+      <a href="#community">Contributing</a>
+      <a href="#contact">Resources</a>
     </div>
     <div class="nav-actions">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Color Theme">
@@ -86,15 +85,19 @@
   <header class="hero-section" id="hero">
     <div class="hero-container">
       <div class="hero-content reveal">
-        <span class="hero-eyebrow">SILICON ROOTS · OPEN SOURCE ENGINE COLLECTIVE</span>
+        <span class="hero-eyebrow">🌱 SILICON ROOTS</span>
         <h1 class="hero-headline">
-          Building the Open-Source <span class="gradient-text">Infrastructure Control Plane</span>.
+          Building <span class="gradient-text">Open Infrastructure Software</span> for Modern Engineering Teams.
         </h1>
         <p class="hero-subtitle">
-          A developer-first collective creating modular, secure, and extensible tools to discover, operate, and govern cloud infrastructure.
+          Silicon Roots is an engineering-driven initiative focused on cloud intelligence, infrastructure visibility, platform engineering, and operational excellence. We build software that helps teams understand, govern, and operate modern cloud environments with confidence.
         </p>
+        <blockquote class="hero-mission-quote">
+          <span class="quote-label">OUR MISSION</span>
+          <p>"Make infrastructure easier to understand than it is to create."</p>
+        </blockquote>
         <div class="hero-cta-group">
-          <a href="#projects" class="btn btn-primary">Explore Projects</a>
+          <a href="#stackpilot" class="btn btn-primary">Explore Flagship</a>
           <a href="https://github.com/siliconroots" class="btn btn-secondary" target="_blank" rel="noopener">Browse GitHub</a>
         </div>
       </div>
@@ -191,67 +194,55 @@
     </div>
   </section>
 
-  <!-- About Silicon Roots Section -->
+  <!-- About Silicon Roots Section: Why We Build -->
   <section class="about-section" id="about">
     <div class="section-container">
       <div class="editorial-grid">
         <div class="editorial-left reveal">
-          <span class="editorial-tag">ABOUT SILICON ROOTS</span>
-          <h2>An engineering organization, not a single product.</h2>
+          <span class="editorial-tag">🎯 WHY WE BUILD</span>
+          <h2>Modern cloud environments grow quickly.</h2>
           <p class="editorial-lead">
-            Silicon Roots is a small engineering organization building open infrastructure software for the teams who operate modern cloud systems. We build because we have lived the problem: infrastructure grows faster than the tools used to understand it.
+            As infrastructure expands across accounts, regions, services, and teams, visibility becomes fragmented and operational context gets lost.
           </p>
         </div>
         <div class="editorial-right reveal" data-delay="100">
           <div class="editorial-content">
-            <h4>Why we build software</h4>
-            <p>Cloud platforms have become distributed systems of their own—spread across accounts, regions, clusters and teams. We build software that turns that sprawl into something engineers can actually reason about, govern and operate with confidence.</p>
-            <h4>How we work</h4>
-            <p>Engineering-first, open by default, and deliberately long-term. We ship real tools backed by real architecture, document them openly, and grow them with the community that runs them in production.</p>
+            <h4>Reclaim Operational Context</h4>
+            <p>We build tools that address this fragmentation directly—aggregating namespaces, security compliance, network connections, and metrics into a queryable control plane.</p>
           </div>
         </div>
       </div>
 
       <div class="grid-container about-principles reveal" data-delay="150">
         <div class="feature trust-card">
-          <div class="icon">🧩</div>
-          <h3>Engineering-First</h3>
-          <p>Decisions are driven by architecture and operational reality, not marketing roadmaps. We build the tools we want to use.</p>
-        </div>
-        <div class="feature trust-card">
-          <div class="icon">🌱</div>
-          <h3>Open Source Culture</h3>
-          <p>Open by default. Transparent development, public discussion, and software you can read, run and extend.</p>
-        </div>
-        <div class="feature trust-card">
-          <div class="icon">🛠️</div>
-          <h3>Platform Engineering</h3>
-          <p>We focus on the platform layer—the systems, abstractions and tooling that let product teams move quickly and safely.</p>
-        </div>
-        <div class="feature trust-card">
-          <div class="icon">🧠</div>
-          <h3>Infrastructure Intelligence</h3>
-          <p>Turning raw cloud and cluster metadata into structured, searchable, queryable understanding of what is actually running.</p>
+          <div class="icon">🔍</div>
+          <h3>Understand Infrastructure</h3>
+          <p>Gain absolute structural clarity on what cloud services are running, how they are connected, and where they reside.</p>
         </div>
         <div class="feature trust-card">
           <div class="icon">⚖️</div>
-          <h3>Cloud Governance</h3>
-          <p>Visibility, policy and accountability across multi-account, multi-cloud estates—without slowing engineers down.</p>
+          <h3>Improve Governance</h3>
+          <p>Automate compliance, configuration audit trails, and security rule tracking across multi-tenant regions.</p>
         </div>
         <div class="feature trust-card">
-          <div class="icon">✦</div>
-          <h3>Operational Simplicity</h3>
-          <p>Agentless, read-only, low-overhead by design. The tools should reduce operational burden, never add to it.</p>
+          <div class="icon">📡</div>
+          <h3>Increase Operational Awareness</h3>
+          <p>Expose and trace logical resource relationships, network topology lines, and configuration dependencies.</p>
         </div>
         <div class="feature trust-card">
-          <div class="icon">🔐</div>
-          <h3>Security by Default</h3>
-          <p>Least privilege, zero-write threat models and zero data-ingest policies are starting points, not afterthoughts.</p>
+          <div class="icon">⚡</div>
+          <h3>Simplify Cloud Operations</h3>
+          <p>Eliminate console fatigue by query-indexing dispersed metadata configurations into a unified console.</p>
         </div>
         <div class="feature trust-card">
-          <div class="icon">🔌</div>
-          <h3>Extensible Abstractions</h3>
-          <p>We build open interfaces allowing operators to extend schema models, query custom metadata, and write custom platform plugins.</p>
+          <div class="icon">🧩</div>
+          <h3>Reduce Complexity</h3>
+          <p>Abstract provider-specific details and represent resources as simple, unified, extensible schemas.</p>
+        </div>
+        <div class="feature trust-card">
+          <div class="icon">🛡️</div>
+          <h3>Build with Confidence</h3>
+          <p>Empower developers with self-service infrastructure contexts to prevent misconfigurations and drift.</p>
         </div>
       </div>
     </div>
@@ -261,138 +252,88 @@
   <section class="projects-section" id="projects">
     <div class="section-container">
       <div class="section-header reveal">
-        <span class="cta-tag">PROJECT DIRECTORY</span>
-        <h2 class="section-title">The Silicon Roots Ecosystem</h2>
-        <p class="section-subtitle">Our open-source software catalog—shipping today, and on the horizon. We are transparent about development states.</p>
-      </div>
-
-      <div class="projects-landscape-grid reveal" data-delay="100">
-        <!-- StackPilot Card -->
-        <div class="project-landscape-card flagship">
-          <div class="project-landscape-header">
-            <div class="project-landscape-title-group">
-              <span class="project-landscape-badge flagship">Flagship</span>
-              <span class="project-status active">Active</span>
-              <h3>StackPilot</h3>
-            </div>
-            <span class="project-landscape-category">Inventory & Discovery</span>
-          </div>
-          <p class="project-landscape-desc">
-            A cloud intelligence platform that discovers, indexes, and topographically maps AWS and Kubernetes infrastructure. Agentless, zero-write, and queryable.
-          </p>
-          <div class="project-landscape-meta">
-            <span class="meta-tag">⚖️ Apache-2.0</span>
-            <span class="meta-tag">☁️ AWS & K8s</span>
-          </div>
-          <div class="project-landscape-actions">
-            <a href="#stackpilot" class="btn btn-secondary btn-sm">Explore Features</a>
-            <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-
-        <!-- Infrastructure Graph Card -->
-        <div class="project-landscape-card">
-          <div class="project-landscape-header">
-            <div class="project-landscape-title-group">
-              <span class="project-status research">Research</span>
-              <h3>Infrastructure Graph</h3>
-            </div>
-            <span class="project-landscape-category">Data Engine</span>
-          </div>
-          <p class="project-landscape-desc">
-            A queryable, versioned graph engine modeling complex resource connections, dependencies, and security boundaries across cloud structures.
-          </p>
-          <div class="project-landscape-meta">
-            <span class="meta-tag">⚖️ Apache-2.0</span>
-            <span class="meta-tag">GraphDB</span>
-          </div>
-          <div class="project-landscape-actions">
-            <a href="https://github.com/siliconroots" class="btn btn-outline btn-sm" target="_blank" rel="noopener">View Design Specs</a>
-          </div>
-        </div>
-
-        <!-- Policy Engine Card -->
-        <div class="project-landscape-card">
-          <div class="project-landscape-header">
-            <div class="project-landscape-title-group">
-              <span class="project-status planned">Planned</span>
-              <h3>Policy Engine</h3>
-            </div>
-            <span class="project-landscape-category">Governance</span>
-          </div>
-          <p class="project-landscape-desc">
-            Continuous configuration posture evaluation and configuration compliance checking using declarative policies (compliance-as-code).
-          </p>
-          <div class="project-landscape-meta">
-            <span class="meta-tag">⚖️ Apache-2.0</span>
-            <span class="meta-tag">OPA / Rego</span>
-          </div>
-          <div class="project-landscape-actions">
-            <span class="project-action-placeholder">Initiating Design Phase</span>
-          </div>
-        </div>
-
-        <!-- Cloud SDK Card -->
-        <div class="project-landscape-card">
-          <div class="project-landscape-header">
-            <div class="project-landscape-title-group">
-              <span class="project-status roadmap">Roadmap</span>
-              <h3>Cloud SDK & CLI</h3>
-            </div>
-            <span class="project-landscape-category">Developer Tooling</span>
-          </div>
-          <p class="project-landscape-desc">
-            A unified CLI and developer SDK featuring typed clients to query, extract, and automate cloud discovery datasets programmatically.
-          </p>
-          <div class="project-landscape-meta">
-            <span class="meta-tag">⚖️ Apache-2.0</span>
-            <span class="meta-tag">CLI / Go / TypeScript</span>
-          </div>
-          <div class="project-landscape-actions">
-            <span class="project-action-placeholder">Scheduled for H2 2026</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Flagship Project: StackPilot -->
   <section class="flagship-section" id="stackpilot">
     <div class="section-container">
       <div class="section-header reveal">
-        <span class="flagship-eyebrow">FLAGSHIP PROJECT</span>
-        <h2 class="section-title">StackPilot — Cloud Intelligence Platform</h2>
-        <p class="section-subtitle">A deep look at the platform Silicon Roots ships today. Every screen below is the real StackPilot product interface.</p>
+        <span class="flagship-eyebrow">🚀 FLAGSHIP PROJECT</span>
+        <h2 class="section-title">StackPilot</h2>
+        <p class="section-subtitle">Cloud Intelligence Platform for AWS</p>
+        <p class="section-description-lead">
+          StackPilot provides a unified view of cloud infrastructure through discovery, inventory, topology, governance, security insights, and operational visibility.
+        </p>
+        <div class="flagship-cta-row">
+          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://siliconroots.github.io" class="btn btn-secondary">Documentation</a>
+        </div>
       </div>
 
-      <!-- Capability Metrics Strip -->
-      <div class="metrics-grid reveal">
-        <div class="metric-card">
-          <div class="metric-num">&lt; 2.0s</div>
-          <div class="metric-title">Discovery Latency</div>
-          <div class="metric-desc">Continuous indexing overhead per 10k resources</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">1M+</div>
-          <div class="metric-title">Active Resources</div>
-          <div class="metric-desc">Tested scaling capacity in single tenant deployment</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">0%</div>
-          <div class="metric-title">Agent Overhead</div>
-          <div class="metric-desc">Runs entirely via non-blocking read-only cloud APIs</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">5 min</div>
-          <div class="metric-title">Sync Intervals</div>
-          <div class="metric-desc">Default polling cycle for configuration drift checks</div>
+      <!-- Core Capabilities Grid -->
+      <div class="capabilities-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Core Capabilities</h3>
+        <div class="grid-container capabilities-grid">
+          <div class="feature trust-card">
+            <div class="icon">☁️</div>
+            <h3>Multi-Account AWS Discovery</h3>
+            <p>Automated discovery across multiple AWS accounts, organizations, and active operational regions.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🗂️</div>
+            <h3>Infrastructure Inventory</h3>
+            <p>A comprehensive inventory of compute, network, database, and storage configurations.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🔗</div>
+            <h3>Cloud Resource Relationships</h3>
+            <p>Map logical connections, subnet placements, security configurations, and resource boundaries.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🌐</div>
+            <h3>Infrastructure Topology</h3>
+            <p>Visual map of configuration topologies, VPC boundaries, cluster nodes, and connectivity routes.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🔎</div>
+            <h3>Universal Search</h3>
+            <p>Explore, query, and locate assets instantly with a flexible metadata search engine.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🛡️</div>
+            <h3>Security Posture Insights</h3>
+            <p>Audit configurations continuously to identify risks and track compliance drift.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">💰</div>
+            <h3>FinOps &amp; Cost Visibility</h3>
+            <p>Allocate costs, discover idle assets, and audit cloud expenses to reduce waste.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">👥</div>
+            <h3>Organizations &amp; RBAC</h3>
+            <p>Configure team workspaces, scope permissions, and manage resource access rules.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">📖</div>
+            <h3>Audit Logs</h3>
+            <p>Maintain an immutable audit history of metadata queries and configuration syncs.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">☸️</div>
+            <h3>Cluster Command Center</h3>
+            <p>Trace Kubernetes runtime resources, pod distributions, namespaces, and node clusters.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🧠</div>
+            <h3>Infrastructure Intelligence</h3>
+            <p>Transform raw cloud metadata configurations into actionable operational insights.</p>
+          </div>
         </div>
       </div>
 
       <!-- Interactive Product Gallery -->
       <div class="gallery-block reveal" data-delay="100">
         <h3 class="gallery-block-title">Inside StackPilot</h3>
-        <p class="gallery-block-sub">Click any screen to expand it. Executive Dashboard, Cloud Accounts, Universal Search, Topology, FinOps, Security, RBAC, Audit and the Cluster Command Center.</p>
+        <p class="gallery-block-sub">Click any screen to expand the real StackPilot product interface.</p>
 
         <div class="gallery-grid">
           <div class="gallery-item" data-src="./assets/screenshots/executive-dashboard.webp" data-caption="Executive Dashboard overview: CPU/Mem rings, uptime, and deployment counters." tabindex="0">
@@ -537,37 +478,51 @@
     </div>
   </div>
 
-  <!-- Mission Section -->
-  <section class="mission-section" id="mission">
+  <!-- Engineering Principles Section -->
+  <section class="principles-section" id="principles">
     <div class="section-container">
-      <div class="editorial-grid">
-        <div class="editorial-left reveal">
-          <span class="editorial-tag">OUR MISSION</span>
-          <h2>Why Silicon Roots exists.</h2>
-          <p class="editorial-lead">
-            Cloud infrastructure has outgrown the tools used to understand it. We exist to give engineering teams real operational visibility—and the long-term software to keep it.
-          </p>
+      <div class="section-header reveal">
+        <span class="editorial-tag">🏗️ ENGINEERING PRINCIPLES</span>
+        <h2 class="section-title">Our Core Principles</h2>
+        <p class="section-subtitle">Values that shape the design, architecture, and deployment of Silicon Roots software.</p>
+      </div>
+
+      <div class="grid-container principles-grid reveal" data-delay="100">
+        <div class="feature trust-card">
+          <div class="icon">📊</div>
+          <h3>Truth Over Dashboards</h3>
+          <p>Accurate, high-fidelity infrastructure data matters far more than flashy, superficial visualizations.</p>
         </div>
-        <div class="editorial-right reveal" data-delay="100">
-          <div class="editorial-content">
-            <h4>Cloud complexity is the default</h4>
-            <p>Modern estates span accounts, regions, clusters and providers. Context is scattered across consoles, spreadsheets and tribal knowledge. We build software that consolidates that reality into a single source of truth.</p>
-            <h4>Visibility, understanding, productivity</h4>
-            <p>Operational visibility is the foundation. On top of it we layer infrastructure understanding—dependencies, ownership, cost and risk—so engineers spend their cycles shipping software, not hunting for metadata.</p>
-            <h4>Long-term thinking</h4>
-            <p>We are building for the decade, not the demo. Open foundations, durable architecture and tools that compound in value as the systems they observe grow.</p>
-          </div>
+        <div class="feature trust-card">
+          <div class="icon">🔐</div>
+          <h3>Security By Default</h3>
+          <p>Least privilege access, tenant isolation, strict encryption, and secure-by-design structures are foundational starting requirements.</p>
+        </div>
+        <div class="feature trust-card">
+          <div class="icon">🧩</div>
+          <h3>Simplicity Over Complexity</h3>
+          <p>Infrastructure complexity is already a major operational challenge. Tooling must simplify, not compound the architecture.</p>
+        </div>
+        <div class="feature trust-card">
+          <div class="icon">🤝</div>
+          <h3>Open Collaboration</h3>
+          <p>We build our roadmap out in the open through transparency, public feedback, code reviews, and direct community participation.</p>
+        </div>
+        <div class="feature trust-card">
+          <div class="icon">⏳</div>
+          <h3>Long-Term Thinking</h3>
+          <p>We prioritize sustainable design, codebase maintainability, software reliability, and durable engineering practices.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Vision Section -->
-  <section class="vision-section" id="vision">
+  <!-- Future Direction Section -->
+  <section class="vision-section" id="roadmap">
     <div class="section-container">
       <div class="section-header reveal">
-        <h2 class="section-title">Our Vision</h2>
-        <p class="section-subtitle">The path from a single flagship platform to a complete open infrastructure ecosystem.</p>
+        <h2 class="section-title">Future Direction</h2>
+        <p class="section-subtitle">Planned initiatives and active roadmap steps under the Silicon Roots umbrella.</p>
       </div>
       
       <div class="blueprint-timeline">
@@ -577,45 +532,45 @@
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <span class="blueprint-stage">Today</span>
-            <h3>An engineering organization</h3>
-            <p>Silicon Roots builds open infrastructure software, with StackPilot shipping today as our flagship platform.</p>
+            <span class="blueprint-stage">Active Focus</span>
+            <h3>StackPilot Platform</h3>
+            <p>Developing our flagship Cloud Intelligence Platform—focusing on Discovery, Inventory, Topology, Search, Governance, Security, and FinOps for AWS environments.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <span class="blueprint-stage">Now Shipping</span>
-            <h3>StackPilot</h3>
-            <p>Unified multi-cloud discovery, inventory, topology, FinOps, security posture and Kubernetes intelligence.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <span class="blueprint-stage">Next</span>
+            <span class="blueprint-stage">Up Next</span>
             <h3>Infrastructure Graph</h3>
-            <p>A queryable, versioned graph of resources and relationships—the connective tissue under every Silicon Roots tool.</p>
+            <p>A high-performance relationship engine designed to trace and model cloud resources and configurations dependencies automatically.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <span class="blueprint-stage">Then</span>
+            <span class="blueprint-stage">Planned</span>
             <h3>Policy Engine</h3>
-            <p>Declarative governance and compliance as code, evaluated continuously across the graph.</p>
+            <p>Governance and configuration compliance automation enabling continuous policy-as-code validation against CIS benchmarks.</p>
           </div>
         </div>
 
         <div class="blueprint-step reveal">
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
-            <span class="blueprint-stage">Then</span>
+            <span class="blueprint-stage">In Design</span>
             <h3>Cloud SDK</h3>
-            <p>Typed clients, a CLI and extension points so teams can build on top of Silicon Roots infrastructure data.</p>
+            <p>Developer-friendly, typed client libraries and interfaces to query, extract, and integrate cloud discovery metadata programmatically.</p>
+          </div>
+        </div>
+
+        <div class="blueprint-step reveal">
+          <div class="blueprint-dot"></div>
+          <div class="blueprint-content">
+            <span class="blueprint-stage">Roadmap</span>
+            <h3>Multi-Cloud Intelligence</h3>
+            <p>Expanding discovery engine capabilities to deliver native, agentless Azure and GCP metadata visibility alongside AWS.</p>
           </div>
         </div>
 
@@ -623,164 +578,44 @@
           <div class="blueprint-dot"></div>
           <div class="blueprint-content">
             <span class="blueprint-stage">Horizon</span>
-            <h3>Multi-cloud Intelligence</h3>
-            <p>Deep parity across AWS, Azure and GCP with cross-cloud correlation and insight.</p>
-          </div>
-        </div>
-
-        <div class="blueprint-step reveal">
-          <div class="blueprint-dot"></div>
-          <div class="blueprint-content">
-            <span class="blueprint-stage">Horizon</span>
-            <h3>Developer Platform</h3>
-            <p>An open ecosystem of tools, integrations and plugins for the teams building and operating modern infrastructure.</p>
+            <h3>AI-Assisted Insights</h3>
+            <p>Operational intelligence powered by infrastructure topology data to offer automated configuration recommendations.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Organization Charter Section -->
-  <section class="charter-section" id="charter">
-    <div class="section-container">
-      <div class="section-header reveal">
-        <span class="editorial-tag">ORGANIZATION CHARTER</span>
-        <h2 class="section-title">Core Ecosystem Commitments</h2>
-        <p class="section-subtitle">Every piece of software built under the Silicon Roots umbrella conforms to these technical principles.</p>
-      </div>
-
-      <div class="grid-container charter-grid reveal" data-delay="100">
-        <div class="feature trust-card">
-          <div class="icon">⚖️</div>
-          <h3>Permissive Open Source</h3>
-          <p>Every tool is published under business-friendly open-source licenses (primarily Apache-2.0). No open-core traps, no licensing bait-and-switch.</p>
-        </div>
-        <div class="feature trust-card">
-          <div class="icon">🛡️</div>
-          <h3>Zero-Ingest Security</h3>
-          <p>Our tools process metadata namespaces only. We do not inspect, cache, or ingest customer database tables, files, or application payloads.</p>
-        </div>
-        <div class="feature trust-card">
-          <div class="icon">🔌</div>
-          <h3>Extensible &amp; Standardized</h3>
-          <p>We build open APIs and support extensible data schemas so operators can easily write custom plugins and extend core models.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Roadmap Section -->
-  <section class="roadmap-section" id="roadmap">
-    <div class="section-container">
-      <div class="section-header reveal">
-        <h2 class="section-title">Roadmap</h2>
-        <p class="section-subtitle">What is live, what is coming next, and what is on the horizon across Silicon Roots.</p>
-      </div>
-
-      <div class="roadmap-phases reveal" data-delay="100">
-        <div class="phase-col current">
-          <div class="phase-head">
-            <span class="phase-status">Current</span>
-            <h3>Shipping today</h3>
-          </div>
-          <div class="phase-items">
-            <span class="phase-chip">AWS Cloud Intelligence</span>
-            <span class="phase-chip">Kubernetes &amp; EKS</span>
-            <span class="phase-chip">Universal Search</span>
-            <span class="phase-chip">Topology Mapping</span>
-            <span class="phase-chip">FinOps</span>
-            <span class="phase-chip">Security Posture</span>
-            <span class="phase-chip">RBAC &amp; Audit</span>
-          </div>
-        </div>
-
-        <div class="phase-col upcoming">
-          <div class="phase-head">
-            <span class="phase-status">Upcoming</span>
-            <h3>In active development</h3>
-          </div>
-          <div class="phase-items">
-            <span class="phase-chip">Azure</span>
-            <span class="phase-chip">GCP</span>
-            <span class="phase-chip">Policy Engine</span>
-            <span class="phase-chip">Infrastructure Graph</span>
-            <span class="phase-chip">Enterprise Integrations</span>
-          </div>
-        </div>
-
-        <div class="phase-col future">
-          <div class="phase-head">
-            <span class="phase-status">Future</span>
-            <h3>On the horizon</h3>
-          </div>
-          <div class="phase-items">
-            <span class="phase-chip">AI Insights</span>
-            <span class="phase-chip">Cloud SDK</span>
-            <span class="phase-chip">Plugin Ecosystem</span>
-            <span class="phase-chip">Developer Platform</span>
-            <span class="phase-chip">Multi-cloud Intelligence</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Community Section -->
+  <!-- Contributing Section -->
   <section class="community-section" id="community">
     <div class="section-container">
       <div class="section-header reveal">
-        <h2 class="section-title">Community</h2>
-        <p class="section-subtitle">Silicon Roots is built in the open. Join the conversation, file an issue, or contribute.</p>
+        <span class="editorial-tag">🤝 CONTRIBUTING</span>
+        <h2 class="section-title">Want to Collaborate?</h2>
+        <p class="section-subtitle">We welcome Issues, Feature Requests, Discussions, Pull Requests, Documentation Improvements, and Community Feedback. If you're interested in infrastructure, cloud platforms, DevOps, platform engineering, or cloud intelligence, we'd love to collaborate.</p>
       </div>
 
       <div class="community-grid reveal" data-delay="100">
-        <a class="community-card" href="https://github.com/siliconroots/stackpilot" target="_blank" rel="noopener">
+        <a class="community-card" href="https://github.com/siliconroots" target="_blank" rel="noopener">
           <div class="icon">⌥</div>
-          <h3>GitHub</h3>
-          <p>Browse the source and follow development as it happens.</p>
+          <h3>GitHub Org</h3>
+          <p>Browse the repositories under the Silicon Roots organization.</p>
         </a>
         <a class="community-card" href="https://github.com/siliconroots/stackpilot/issues" target="_blank" rel="noopener">
           <div class="icon">🐛</div>
           <h3>Issues</h3>
-          <p>Report bugs and track fixes in the open with full transparency.</p>
-        </a>
-        <a class="community-card" href="https://github.com/siliconroots/stackpilot/issues/new" target="_blank" rel="noopener">
-          <div class="icon">✨</div>
-          <h3>Feature Requests</h3>
-          <p>Tell us what you need. Operator feedback drives the roadmap.</p>
+          <p>Report bugs, request features, and track fixes in the open.</p>
         </a>
         <a class="community-card" href="https://github.com/siliconroots/stackpilot/pulls" target="_blank" rel="noopener">
           <div class="icon">🤝</div>
-          <h3>Contributions</h3>
-          <p>Open a pull request. We welcome contributors who run this software in production.</p>
+          <h3>Pull Requests</h3>
+          <p>Submit bug fixes, improvements, or enhancements directly.</p>
         </a>
         <a class="community-card" href="https://github.com/siliconroots/stackpilot/discussions" target="_blank" rel="noopener">
           <div class="icon">💬</div>
           <h3>Discussions</h3>
-          <p>Ask questions, share ideas and shape the direction of the project.</p>
+          <p>Ask design questions, share ideas, and engage with other operators.</p>
         </a>
-        <a class="community-card" href="https://github.com/siliconroots/stackpilot#readme" target="_blank" rel="noopener">
-          <div class="icon">📚</div>
-          <h3>Documentation</h3>
-          <p>Read the docs to understand how StackPilot works, end to end.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contributing CTA Section -->
-  <section class="contribute-section" id="contribute">
-    <div class="section-container">
-      <div class="contribute-card reveal">
-        <span class="contribute-eyebrow">CONTRIBUTING</span>
-        <h2>Want to Contribute?</h2>
-        <p class="contribute-sub">Help shape the future of StackPilot. It is open source, built in the open, and contributions are welcome.</p>
-        <div class="contribute-actions">
-          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-primary" target="_blank" rel="noopener">View Repository</a>
-          <a href="https://github.com/siliconroots/stackpilot/issues" class="btn btn-secondary" target="_blank" rel="noopener">Open Issues</a>
-          <a href="https://github.com/siliconroots/stackpilot#readme" class="btn btn-outline" target="_blank" rel="noopener">Documentation</a>
-          <a href="https://github.com/siliconroots" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-        </div>
       </div>
     </div>
   </section>
@@ -888,8 +723,7 @@ helm install stackpilot siliconroots/stackpilot \
         <div class="footer-col">
           <h4>Projects</h4>
           <a href="#stackpilot">StackPilot</a>
-          <a href="#projects">Future Projects</a>
-          <a href="#roadmap">Roadmap</a>
+          <a href="#roadmap">Future Direction</a>
         </div>
 
         <!-- Column 3: Connect -->

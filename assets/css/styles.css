@@ -452,6 +452,32 @@ h1, h2, h3, h4, .navbar-logo-link {
   align-items: center;
 }
 
+.hero-mission-quote {
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+  margin: 0 0 36px 0;
+}
+
+.hero-mission-quote p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  font-style: italic;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quote-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
 /* Reusable Browser Frame component styling */
 .browser-frame {
   background: var(--dash-mock-bg);
