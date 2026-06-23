@@ -928,109 +928,44 @@ h1, h2, h3, h4, .navbar-logo-link {
   margin-bottom: 16px;
 }
 
-/* OUR VISION TIMELINE */
-.vision-section {
+/* BUILDING FOR THE LONG TERM */
+.longterm-section {
   border-top: 1px solid var(--card-border);
   background: rgba(0, 0, 0, 0.1);
 }
 
-.blueprint-timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin: 40px auto 0;
-  max-width: 800px;
-  padding: 20px 0;
-}
-
-.blueprint-line {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: var(--timeline-bg);
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
-.blueprint-pulse {
-  position: absolute;
-  top: 0; left: 50%;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-  transform: translateX(-50%);
-  box-shadow: 0 0 15px var(--accent);
-  animation: blueprintPulse 6s linear infinite;
-  z-index: 1;
-}
-
-@keyframes blueprintPulse {
-  0% { top: 0; opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-.blueprint-step {
-  display: flex;
-  width: 100%;
-  margin-bottom: 40px;
-  position: relative;
-  z-index: 2;
-  align-items: center;
-}
-
-.blueprint-step:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.blueprint-content {
-  width: 45%;
+.longterm-card {
+  max-width: var(--content-narrow, 760px);
+  margin: 0 auto;
+  text-align: center;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 15px var(--card-shadow);
-  backdrop-filter: blur(5px);
-  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 56px 48px;
+  box-shadow: 0 4px 20px var(--card-shadow);
 }
 
-.blueprint-content:hover {
-  border-color: var(--accent);
-  box-shadow: 0 6px 20px var(--accent-subtle);
-  transform: translateY(-2px);
+.longterm-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 14px 0 22px;
 }
 
-.blueprint-step:nth-child(odd) .blueprint-content {
-  margin-left: auto;
-}
-
-.blueprint-step:nth-child(even) .blueprint-content {
-  margin-right: auto;
-}
-
-.blueprint-content h3 {
-  color: var(--accent);
-  margin-bottom: 8px;
+.longterm-lead {
   font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 20px;
 }
 
-.blueprint-content p {
-  color: var(--text-sub);
-  font-size: 0.95rem;
-  line-height: 1.5;
+.longterm-body {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 16px;
 }
 
-.blueprint-dot {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
-  background: var(--bg);
-  border: 3px solid var(--accent);
-  border-radius: 50%;
+.longterm-body:last-child {
+  margin-bottom: 0;
 }
 
 /* TECHNOLOGY STACK SECTION */
@@ -1396,76 +1331,9 @@ h1, h2, h3, h4, .navbar-logo-link {
   background: rgba(0, 0, 0, 0.15);
 }
 
-.projects-group {
-  margin-bottom: 70px;
-}
-
-.projects-group:last-child {
-  margin-bottom: 0;
-}
-
-.projects-group-head {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 28px;
-}
-
-.projects-group-label {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--text-main);
-  white-space: nowrap;
-}
-
-.projects-group-rule {
-  flex-grow: 1;
-  height: 1px;
-  background: var(--card-border);
-}
-
-.projects-group-note {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-  max-width: 760px;
-  margin: -10px 0 32px;
-}
-
-/* Ecosystem: current flagship card spans full width */
+/* Projects: flagship card spans full width */
 .eco-current {
   width: 100%;
-}
-
-/* Ecosystem: future initiatives — centered wrap, no orphan row */
-.future-projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--card-gap);
-}
-
-.future-projects-grid > .project-landscape-card {
-  flex: 1 1 300px;
-  max-width: 360px;
-}
-
-/* Organization timeline year anchor */
-.timeline-anchor {
-  display: block;
-  width: max-content;
-  margin: 0 auto 8px;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: var(--accent-subtle);
-  border: 1px solid var(--card-border);
-  border-radius: 999px;
-  padding: 8px 18px;
 }
 
 /* Flagship project card (Current Projects) */
@@ -1929,18 +1797,6 @@ h1, h2, h3, h4, .navbar-logo-link {
   gap: 14px;
 }
 
-/* Vision timeline stage label */
-.blueprint-stage {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--accent-secondary);
-  display: block;
-  margin-bottom: 6px;
-}
-
 /* SCROLL REVEAL UTILITIES */
 .reveal {
   opacity: 0;
@@ -2046,21 +1902,6 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   color: #22c55e;
 }
 
-.project-status.research {
-  background: rgba(59, 130, 246, 0.1);
-  color: #3b82f6;
-}
-
-.project-status.planned {
-  background: rgba(234, 179, 8, 0.1);
-  color: #eab308;
-}
-
-.project-status.roadmap {
-  background: rgba(168, 85, 247, 0.1);
-  color: #a855f7;
-}
-
 .project-landscape-category {
   font-size: 0.8rem;
   color: var(--accent-secondary);
@@ -2100,13 +1941,6 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   align-items: center;
 }
 
-.project-action-placeholder {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
-
 /* TECHNICAL SPECIFICATIONS MATRIX */
 .specs-block {
   margin-top: 80px;
@@ -2114,15 +1948,9 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
 
 .specs-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--card-gap);
   margin-top: 40px;
-}
-
-@media (max-width: 900px) {
-  .specs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 600px) {
@@ -2247,27 +2075,6 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   .hero-cta-group {
     justify-content: center;
   }
-  
-  .blueprint-line {
-    left: 20px;
-  }
-  
-  .blueprint-pulse {
-    left: 20px;
-  }
-  
-  .blueprint-dot {
-    left: 20px;
-  }
-  
-  .blueprint-step, .blueprint-step:nth-child(even) {
-    flex-direction: row;
-  }
-  
-  .blueprint-content {
-    width: calc(100% - 50px);
-    margin-left: 50px !important;
-  }
 
   .flagship-title {
     font-size: 2.2rem;
@@ -2317,8 +2124,8 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
     padding: 28px;
   }
 
-  .projects-group-head {
-    gap: 12px;
+  .longterm-card {
+    padding: 36px 24px;
   }
 
   .showcase-caption-container {
