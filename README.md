@@ -1,6 +1,6 @@
 # siliconroots.github.io
 
-This repository is **already connected to GitHub** and published with **GitHub Pages** — the public marketing / landing site (`index.html`, assets). It is **not** the product application.
+This repository is **already connected to GitHub** and published with **GitHub Pages** — the public site for **Silicon Roots**, the engineering organization building open infrastructure software (`index.html`, assets). StackPilot is presented here as the flagship project. This repo is **not** any product application.
 
 - **GitHub:** [github.com/siliconroots/siliconroots.github.io](https://github.com/siliconroots/siliconroots.github.io)
 - **Live site:** [https://siliconroots.github.io](https://siliconroots.github.io) (default Pages URL for this repo name; confirm under **Settings → Pages** if you use a custom domain.)
