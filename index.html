@@ -57,12 +57,12 @@
     </a>
     <div class="nav-links" id="nav-menu">
       <a href="#about">Why We Build</a>
+      <a href="#ecosystem">Ecosystem Suite</a>
       <a href="#stackpilot">Flagship Project</a>
-      <a href="#principles">Engineering Principles</a>
-      <a href="#roadmap">Future Direction</a>
+      <a href="#principles">Architecture &amp; Principles</a>
+      <a href="#roadmap">Enterprise &amp; Future</a>
       <a href="#quickstart">Quickstart</a>
       <a href="#community">Contributing</a>
-      <a href="#contact">Resources</a>
     </div>
     <div class="nav-actions">
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Color Theme">
@@ -248,10 +248,105 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="projects-section" id="projects">
+  <!-- Ecosystem Section -->
+  <section class="projects-section" id="ecosystem">
     <div class="section-container">
       <div class="section-header reveal">
+        <span class="cta-tag">THE ECOSYSTEM SUITE</span>
+        <h2 class="section-title">Modular Open Infrastructure Stack</h2>
+        <p class="section-subtitle">How Silicon Roots tools interlock to form a unified, pluggable infrastructure control plane.</p>
+      </div>
+
+      <div class="projects-landscape-grid reveal" data-delay="100">
+        <!-- StackPilot Card -->
+        <div class="project-landscape-card flagship">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-landscape-badge flagship">Flagship</span>
+              <span class="project-status active">Active</span>
+              <h3>StackPilot</h3>
+            </div>
+            <span class="project-landscape-category">Control Plane &amp; UI</span>
+          </div>
+          <p class="project-landscape-desc">
+            An agentless cloud intelligence platform providing multi-account discovery, resource inventory, live network topology mapping, universal metadata search, and a unified operator console.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ Apache-2.0</span>
+            <span class="meta-tag">React / Java / Go</span>
+          </div>
+          <div class="project-landscape-actions">
+            <a href="#stackpilot" class="btn btn-secondary btn-sm">Explore Capabilities</a>
+            <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <!-- InfraGraph Card -->
+        <div class="project-landscape-card">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status active">Active</span>
+              <h3>InfraGraph</h3>
+            </div>
+            <span class="project-landscape-category">Core Graph DB</span>
+          </div>
+          <p class="project-landscape-desc">
+            A high-performance relationship engine mapping cloud configurations and cross-resource dependencies into a queryable, versioned graph schema to track lineage and security boundaries.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ Apache-2.0</span>
+            <span class="meta-tag">GraphDB / Go</span>
+          </div>
+          <div class="project-landscape-actions">
+            <span class="project-action-placeholder">Integrated with StackPilot</span>
+          </div>
+        </div>
+
+        <!-- Policy Engine Card -->
+        <div class="project-landscape-card">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status active">Active</span>
+              <h3>Policy Engine</h3>
+            </div>
+            <span class="project-landscape-category">OPA Auditor</span>
+          </div>
+          <p class="project-landscape-desc">
+            Continuous configuration compliance evaluation and drift checking utilizing OPA (Open Policy Agent) / Rego policies for real-time compliance reporting.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ Apache-2.0</span>
+            <span class="meta-tag">OPA / Rego</span>
+          </div>
+          <div class="project-landscape-actions">
+            <span class="project-action-placeholder">Continuous Audit Layer</span>
+          </div>
+        </div>
+
+        <!-- Cloud SDK Card -->
+        <div class="project-landscape-card">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status roadmap">Roadmap</span>
+              <h3>Cloud SDK &amp; CLI</h3>
+            </div>
+            <span class="project-landscape-category">Developer Tooling</span>
+          </div>
+          <p class="project-landscape-desc">
+            A unified CLI and developer SDK featuring typed client libraries to query, filter, and automate cloud discovery datasets programmatically across systems.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ Apache-2.0</span>
+            <span class="meta-tag">Go / TypeScript / Python</span>
+          </div>
+          <div class="project-landscape-actions">
+            <span class="project-action-placeholder">Releasing H2 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Flagship Project: StackPilot -->
   <section class="flagship-section" id="stackpilot">
     <div class="section-container">
@@ -433,39 +528,7 @@
     </div>
   </section>
 
-  <!-- StackPilot Open Source Flagship Section -->
-  <section class="oss-section" id="stackpilot-oss">
-    <div class="section-container">
-      <div class="oss-card reveal">
-        <span class="oss-eyebrow">OPEN SOURCE FLAGSHIP PROJECT</span>
-        <div class="oss-headline-row">
-          <h2 class="oss-title">StackPilot</h2>
-          <span class="project-badge active">● Active</span>
-          <span class="project-badge license">Apache-2.0</span>
-        </div>
-        <span class="oss-kicker">Cloud Intelligence Platform</span>
-        <p class="oss-desc">
-          StackPilot helps engineering teams discover, understand and govern AWS infrastructure through inventory, topology, search, security insights and operational visibility.
-        </p>
 
-        <div class="oss-actions">
-          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-primary" target="_blank" rel="noopener">GitHub Repository</a>
-          <a href="https://github.com/siliconroots/stackpilot#readme" class="btn btn-secondary" target="_blank" rel="noopener">Documentation</a>
-          <a href="https://siliconroots.github.io" class="btn btn-outline">Website</a>
-        </div>
-
-        <div class="trust-signals" aria-label="Repository trust signals">
-          <span class="trust-signal">⌥ Public Repository</span>
-          <span class="trust-signal">🌱 Open Source</span>
-          <span class="trust-signal">⚖️ Apache-2.0 License</span>
-          <span class="trust-signal">📚 Documentation</span>
-          <span class="trust-signal">🏛️ GitHub Organization</span>
-          <span class="trust-signal">⚙️ Active Development</span>
-        </div>
-        <p class="oss-stats-note">Repository statistics are published live on GitHub. We don't display vanity metrics here—follow the repository for the real numbers.</p>
-      </div>
-    </div>
-  </section>
 
   <!-- Lightbox Modal for Gallery -->
   <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer">
@@ -580,6 +643,38 @@
             <span class="blueprint-stage">Horizon</span>
             <h3>AI-Assisted Insights</h3>
             <p>Operational intelligence powered by infrastructure topology data to offer automated configuration recommendations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enterprise Commercial Model -->
+      <div class="enterprise-tiering reveal" data-delay="150" style="margin-top: 80px;">
+        <div class="section-header" style="margin-bottom: 40px;">
+          <span class="editorial-tag">COMMERCIAL &amp; ENTERPRISE MODEL</span>
+          <h3 class="section-title" style="font-size: 2rem;">Built for Scale, Governed for Trust</h3>
+          <p class="section-subtitle">A sustainable open-source foundation backed by powerful, production-grade enterprise deployment paths.</p>
+        </div>
+
+        <div class="grid-container about-principles">
+          <div class="feature trust-card">
+            <div class="icon">🔓</div>
+            <h3>Community (OSS)</h3>
+            <p>Our core codebase is licensed under Apache-2.0. Run the control plane locally, evaluate topology, query resources, and run automated audits completely free.</p>
+            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">Apache-2.0 License</div>
+          </div>
+          
+          <div class="feature trust-card" style="border-top: 3px solid var(--accent);">
+            <div class="icon">🏢</div>
+            <h3>Silicon Roots Enterprise</h3>
+            <p>Deploy Silicon Roots natively in secure, regulated environments. Features multi-account federation, SAML SSO, team RBAC, immutable audit logging, and custom Rego compliance templates.</p>
+            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">Self-Hosted / Private Cloud</div>
+          </div>
+
+          <div class="feature trust-card">
+            <div class="icon">✨</div>
+            <h3>Silicon Roots Cloud</h3>
+            <p>A fully managed cloud console offering instant cross-cloud topology compilation, collaborative troubleshooting channels, and real-time webhook-based drift notifications.</p>
+            <div style="margin-top: 20px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">Managed SaaS</div>
           </div>
         </div>
       </div>
