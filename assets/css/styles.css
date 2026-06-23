@@ -1942,6 +1942,195 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
   outline-offset: 4px;
 }
 
+/* PROJECTS LANDSCAPE DIRECTORY */
+.projects-landscape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-landscape-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.4s var(--transition-bounce), border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-landscape-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-landscape-card.flagship {
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: linear-gradient(180deg, var(--bg-card) 0%, rgba(99, 102, 241, 0.03) 100%);
+  position: relative;
+}
+
+.project-landscape-card.flagship::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.project-landscape-header {
+  margin-bottom: 20px;
+}
+
+.project-landscape-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.project-landscape-title-group h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--text-main);
+  font-family: var(--font-display);
+}
+
+.project-landscape-badge.flagship {
+  font-size: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.project-status.active {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+}
+
+.project-status.research {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+.project-status.planned {
+  background: rgba(234, 179, 8, 0.1);
+  color: #eab308;
+}
+
+.project-status.roadmap {
+  background: rgba(168, 85, 247, 0.1);
+  color: #a855f7;
+}
+
+.project-landscape-category {
+  font-size: 0.8rem;
+  color: var(--accent-secondary);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-landscape-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.project-landscape-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.meta-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.project-landscape-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.project-action-placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* TECHNICAL SPECIFICATIONS MATRIX */
+.specs-block {
+  margin-top: 80px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.spec-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent);
+  padding: 24px;
+  border-radius: 0 12px 12px 0;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.spec-item:hover {
+  transform: translateX(4px);
+  border-left-color: var(--accent-secondary);
+}
+
+.spec-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.spec-val {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
 /* RESPONSIVE LAYOUTS & MEDIA QUERIES */
 
 /* Large Laptop / Desktop Breakpoints */
