@@ -104,32 +104,6 @@ Building a privacy-first, local AI career assistant focused on:
 
 ---
 
-## 🔮 Future Direction
-
-Planned initiatives under Silicon Roots:
-
-### Infrastructure Graph
-
-A relationship engine for cloud resources and dependencies.
-
-### Policy Engine
-
-Governance and compliance automation.
-
-### Cloud SDK
-
-Developer-friendly infrastructure discovery libraries.
-
-### Multi-Cloud Intelligence
-
-Azure and GCP visibility alongside AWS.
-
-### AI-Assisted Insights
-
-Infrastructure context and operational intelligence powered by data.
-
----
-
 ## 🤝 Contributing
 
 We welcome:
