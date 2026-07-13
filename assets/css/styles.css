@@ -2142,3 +2142,26 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Card Screenshot Preview Styles */
+.card-screenshot-wrapper {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  margin-bottom: 24px;
+  height: 170px;
+  background: var(--tech-bg);
+}
+
+.card-screenshot-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-landscape-card:hover .card-screenshot-wrapper img {
+  transform: scale(1.04);
+}
