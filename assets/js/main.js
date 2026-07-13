@@ -92,7 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeSlide = slides[currentIndex];
     if (activeSlide) {
       if (addressBar) {
-        addressBar.textContent = 'https://stackpilot.io' + activeSlide.getAttribute('data-route');
+        const isHirePilot = activeSlide.getAttribute('data-title').includes('HirePilot');
+        const domain = isHirePilot ? 'http://localhost:3000' : 'https://stackpilot.io';
+        addressBar.textContent = domain + activeSlide.getAttribute('data-route');
       }
       if (captionTitle) {
         captionTitle.textContent = activeSlide.getAttribute('data-title');

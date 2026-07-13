@@ -1,20 +1,23 @@
 # 🌱 Silicon Roots
 
-### Building Open Infrastructure Software for Modern Engineering Teams
+> **Part of the SiliconRoots Open Source Ecosystem**
+> [SiliconRoots Website](https://siliconroots.github.io) · [StackPilot](https://github.com/siliconroots/stackpilot) · [HirePilot](https://github.com/siliconroots/hirepilot) · [Ecosystem Products](https://siliconroots.github.io/products.html)
 
-Silicon Roots is an engineering-driven initiative focused on cloud intelligence, infrastructure visibility, platform engineering, and operational excellence.
+### Building Premium Open-Source Software
 
-We build software that helps teams understand, govern, and operate modern cloud environments with confidence.
+Silicon Roots is an open-source ecosystem focused on building modern developer tools and productivity software.
 
-> Our mission is simple: make infrastructure easier to understand than it is to create.
+We build software that helps teams and individuals understand, automate, and operate their systems and workflows with confidence.
+
+> Our mission is simple: make software easier to understand, operate, and control.
 
 ---
 
-## 🚀 Flagship Projects
+## 🚀 Ecosystem Projects
 
 ### StackPilot
 
-**Cloud Intelligence Platform for AWS**
+**Cloud Infrastructure Intelligence**
 
 StackPilot provides a unified view of cloud infrastructure through discovery, inventory, topology, governance, security insights, and operational visibility.
 
@@ -23,7 +26,7 @@ StackPilot provides a unified view of cloud infrastructure through discovery, in
 
 ### HirePilot
 
-**Local-first AI Career Operating System**
+**AI Career Operating System**
 
 HirePilot parses your resume, builds a Career Knowledge Graph, discovers jobs in parallel across 13+ sources via Celery background workers, scores match fit, and prepares evidence-backed application packages locally.
 

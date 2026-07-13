@@ -1818,7 +1818,7 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
 /* PROJECTS LANDSCAPE DIRECTORY */
 .projects-landscape-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: var(--card-gap);
   margin-top: 40px;
 }

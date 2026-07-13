@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Primary SEO Metadata -->
+  <title>Ecosystem Products — Silicon Roots</title>
+  <meta name="description" content="Explore Silicon Roots' open-source products including StackPilot and HirePilot, alongside our roadmap of upcoming developer tools." />
+  <meta name="keywords" content="Silicon Roots, Open Infrastructure Software, StackPilot, HirePilot, CostPilot, InfraPilot, DevOps, SRE, Platform Engineering" />
+  <meta name="author" content="Silicon Roots" />
+  <link rel="canonical" href="https://siliconroots.github.io/products.html" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://siliconroots.github.io/products.html" />
+  <meta property="og:title" content="Ecosystem Products — Silicon Roots" />
+  <meta property="og:description" content="Explore Silicon Roots' open-source products including StackPilot and HirePilot." />
+  <meta property="og:image" content="https://siliconroots.github.io/assets/brand/logo-dark.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://siliconroots.github.io/products.html" />
+  <meta property="twitter:title" content="Ecosystem Products — Silicon Roots" />
+  <meta property="twitter:description" content="Explore Silicon Roots' open-source products including StackPilot and HirePilot." />
+  <meta property="twitter:image" content="https://siliconroots.github.io/assets/brand/logo-dark.png" />
+
+  <!-- Favicons & Touch Icons -->
+  <link rel="icon" href="./assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/brand/favicon-16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/brand/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="./assets/brand/favicon-48.png" />
+  <link rel="apple-touch-icon" href="./assets/brand/apple-touch-icon.png" sizes="180x180" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+<body>
+  
+  <!-- Canvas particle network background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="site-nav" aria-label="Main Navigation">
+    <a href="index.html" class="navbar-logo-link" aria-label="Silicon Roots Home">
+      <div class="brand-logo-container">
+        <img class="nav-logo brand-logo-dark" src="./assets/brand/logo-dark.png" alt="Silicon Roots Logo" />
+        <img class="nav-logo brand-logo-light" src="./assets/brand/logo-light.png" alt="Silicon Roots Logo" />
+      </div>
+    </a>
+    <div class="nav-links" id="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="https://github.com/siliconroots" target="_blank" rel="noopener">Documentation</a>
+      <a href="https://github.com/siliconroots" target="_blank" rel="noopener">GitHub</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Color Theme">
+        <svg class="theme-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-2a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0-2.5A4.5 4.5 0 1 1 12 7.5v9z"/>
+        </svg>
+      </button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open Navigation Menu">
+        <svg class="menu-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+      <a href="https://github.com/siliconroots" class="cta-nav-button" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- Products Header -->
+  <header class="longterm-section" style="padding-top: 140px; padding-bottom: 60px;">
+    <div class="section-container">
+      <div class="longterm-card reveal" style="background: transparent; border: none; box-shadow: none; padding: 0; text-align: center;">
+        <span class="cta-eyebrow">OUR PRODUCTS</span>
+        <h1 style="font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: var(--text-main); margin-bottom: 20px;">
+          The SiliconRoots Ecosystem
+        </h1>
+        <p class="longterm-lead" style="margin: 0 auto; max-width: 800px;">
+          We build premium, battle-tested open-source products that focus on automation, operational clarity, and local-first execution.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- StackPilot Details -->
+  <section class="flagship-section" id="stackpilot" style="border-top: 1px solid var(--card-border); padding: 80px 0;">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="flagship-eyebrow">AVAILABLE</span>
+        <h2 class="section-title">StackPilot</h2>
+        <p class="section-subtitle">Cloud Infrastructure Intelligence Platform for AWS</p>
+        <p class="section-description-lead">
+          StackPilot delivers a unified view of multi-account cloud topologies, inventory, and governance through agentless metadata scanning.
+        </p>
+        <div class="flagship-cta-row">
+          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/siliconroots/stackpilot#readme" class="btn btn-secondary" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+
+      <!-- Core Capabilities -->
+      <div class="capabilities-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">What It Does</h3>
+        <div class="grid-container capabilities-grid">
+          <div class="feature trust-card">
+            <div class="icon">🔍</div>
+            <h3>Infrastructure Discovery</h3>
+            <p>Agentless scanning and inventory of AWS resources across regions and accounts.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🧠</div>
+            <h3>Cloud Intelligence</h3>
+            <p>Maps real-time topology, dependency rules, and provides Google-like universal search.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🛡️</div>
+            <h3>Governance &amp; Security</h3>
+            <p>Tracks compliance scoring, drift, and maps vulnerabilities safely using read-only access.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">📡</div>
+            <h3>Operational Visibility</h3>
+            <p>Consolidates EKS nodes, CPU allocations, and active container runtimes in a single pane.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshot Gallery -->
+      <div class="gallery-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Product Screenshots</h3>
+        <p class="gallery-block-sub">Click any screen to expand the interface.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-src="./assets/screenshots/executive-dashboard.webp" data-caption="StackPilot Executive Dashboard overview: CPU/Mem rings, uptime, and deployment counters." tabindex="0">
+            <img src="./assets/screenshots/executive-dashboard.webp" alt="StackPilot Executive Dashboard" loading="lazy" />
+            <div class="gallery-overlay"><span>Executive Dashboard</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/cloud-accounts.webp" data-caption="StackPilot Cloud Accounts mapping and AWS credentials health monitoring." tabindex="0">
+            <img src="./assets/screenshots/cloud-accounts.webp" alt="StackPilot Cloud Accounts" loading="lazy" />
+            <div class="gallery-overlay"><span>Cloud Accounts</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/topology.webp" data-caption="StackPilot Topology mapper displaying VPC security borders and live network links." tabindex="0">
+            <img src="./assets/screenshots/topology.webp" alt="StackPilot Topology Mapping" loading="lazy" />
+            <div class="gallery-overlay"><span>Topology Map</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/finops.webp" data-caption="StackPilot FinOps cost metrics filtering overhead costs down to namespaces." tabindex="0">
+            <img src="./assets/screenshots/finops.webp" alt="StackPilot FinOps" loading="lazy" />
+            <div class="gallery-overlay"><span>FinOps Analysis</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs Matrix -->
+      <div class="specs-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Technical Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Data Ingest Policy</span>
+            <span class="spec-val">Zero-Ingest (Only reads resource names, ARNs, and counts; no user data)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Permissions Scope</span>
+            <span class="spec-val">Least Privilege, Read-Only IAM delegation (SecurityAudit policy mapping)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Sync Mechanism</span>
+            <span class="spec-val">Agentless discovery via AWS and Kubernetes native APIs</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Licensing Model</span>
+            <span class="spec-val">Apache-2.0 License (Fully open-source code and Helm charts)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HirePilot Details -->
+  <section class="flagship-section" id="hirepilot" style="border-top: 1px solid var(--card-border); background: rgba(0, 0, 0, 0.05); padding: 80px 0;">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="flagship-eyebrow">AVAILABLE</span>
+        <h2 class="section-title">HirePilot</h2>
+        <p class="section-subtitle">Your Personal AI Career Operating System</p>
+        <p class="section-description-lead">
+          HirePilot is a local-first, privacy-respecting career OS that automates job matching, resume tailoring, and interview prep on your own machine.
+        </p>
+        <div class="flagship-cta-row">
+          <a href="https://github.com/siliconroots/hirepilot" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/siliconroots/hirepilot#documentation" class="btn btn-secondary" target="_blank" rel="noopener">Documentation</a>
+        </div>
+      </div>
+
+      <!-- Core Capabilities -->
+      <div class="capabilities-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">What It Does</h3>
+        <div class="grid-container capabilities-grid">
+          <div class="feature trust-card">
+            <div class="icon">📄</div>
+            <h3>Resume Intelligence</h3>
+            <p>Parses uploaded resume files and extracts skills, profiles, and evidence nodes.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🕸️</div>
+            <h3>Career Knowledge Graph</h3>
+            <p>Constructs and relates skills and projects in a local PostgreSQL instance.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🔍</div>
+            <h3>AI Job Discovery</h3>
+            <p>Scrapes and filters roles across 13+ sources based on candidate preferences.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">💬</div>
+            <h3>Interview Preparation</h3>
+            <p>Generates tailored STAR talking points and role-specific mock questions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshot Gallery -->
+      <div class="gallery-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Product Screenshots</h3>
+        <p class="gallery-block-sub">Click any screen to expand the interface.</p>
+        <div class="gallery-grid">
+          <div class="gallery-item" data-src="./assets/screenshots/career-command-center.png" data-caption="HirePilot Career Command Center briefing view: prioritized job matches and application metrics." tabindex="0">
+            <img src="./assets/screenshots/career-command-center.png" alt="HirePilot Command Center" loading="lazy" />
+            <div class="gallery-overlay"><span>Career Command Center</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/job-discovery.png" data-caption="HirePilot Job Discovery search panel: filtering roles across locations and keywords." tabindex="0">
+            <img src="./assets/screenshots/job-discovery.png" alt="HirePilot Job Discovery" loading="lazy" />
+            <div class="gallery-overlay"><span>Job Discovery</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/resume-intelligence.png" data-caption="HirePilot Resume Intelligence profile mapper matching candidate skills to roles." tabindex="0">
+            <img src="./assets/screenshots/resume-intelligence.png" alt="HirePilot Resume Intelligence" loading="lazy" />
+            <div class="gallery-overlay"><span>Resume Intelligence</span></div>
+          </div>
+          <div class="gallery-item" data-src="./assets/screenshots/interview-preparation.png" data-caption="HirePilot Interview Preparation engine generating tailored talking points." tabindex="0">
+            <img src="./assets/screenshots/interview-preparation.png" alt="HirePilot Interview Preparation" loading="lazy" />
+            <div class="gallery-overlay"><span>Interview Prep</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specs Matrix -->
+      <div class="specs-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Technical Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Data Ingest Policy</span>
+            <span class="spec-val">Local-Only (All database records and resumes stay strictly on the user's host machine)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Security Gate</span>
+            <span class="spec-val">Enforced manual approval; auto-submission of applications is disabled by default</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Execution Stack</span>
+            <span class="spec-val">FastAPI backend / Next.js frontend / Postgres database / Ollama local LLM orchestration</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Licensing Model</span>
+            <span class="spec-val">Permissive MIT License (Fully open-source and customizable)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon Showcase -->
+  <section class="projects-section" id="upcoming" style="padding: 80px 0; border-top: 1px solid var(--card-border);">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="cta-tag">ROADMAP</span>
+        <h2 class="section-title">Ecosystem Roadmap</h2>
+        <p class="section-subtitle">A preview of the open-source tools we are building next.</p>
+      </div>
+
+      <div class="projects-landscape-grid">
+        <!-- CostPilot Card -->
+        <div class="project-landscape-card coming-soon reveal" data-delay="100" style="opacity: 0.85;">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status pending" style="background: rgba(234, 179, 8, 0.1); color: #eab308; font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Coming Soon</span>
+              <h3>CostPilot</h3>
+            </div>
+            <span class="project-landscape-category">Cloud Cost Orchestrator</span>
+          </div>
+          <p class="project-landscape-desc">
+            Automated cloud cost reduction, instance resizing suggestions, and budget notifications mapped across multiple cloud accounts.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">TypeScript / Python</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">GitHub</button>
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">Documentation</button>
+          </div>
+        </div>
+
+        <!-- InfraPilot Card -->
+        <div class="project-landscape-card coming-soon reveal" data-delay="200" style="opacity: 0.85;">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status pending" style="background: rgba(234, 179, 8, 0.1); color: #eab308; font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Coming Soon</span>
+              <h3>InfraPilot</h3>
+            </div>
+            <span class="project-landscape-category">IaC Code Generator</span>
+          </div>
+          <p class="project-landscape-desc">
+            Translate architectural drawings and natural language requests into production-ready Terraform, Pulumi, or OpenTofu modules.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">Go / Python</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">GitHub</button>
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">Documentation</button>
+          </div>
+        </div>
+
+        <!-- DocPilot Card -->
+        <div class="project-landscape-card coming-soon reveal" data-delay="300" style="opacity: 0.85;">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status pending" style="background: rgba(234, 179, 8, 0.1); color: #eab308; font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Coming Soon</span>
+              <h3>DocPilot</h3>
+            </div>
+            <span class="project-landscape-category">Developer Documentation Assistant</span>
+          </div>
+          <p class="project-landscape-desc">
+            Context-aware AI documentation builder that scans repositories and auto-generates comprehensive design guides, runbooks, and diagrams.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">TypeScript / Rust</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">GitHub</button>
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">Documentation</button>
+          </div>
+        </div>
+
+        <!-- DeployPilot Card -->
+        <div class="project-landscape-card coming-soon reveal" data-delay="400" style="opacity: 0.85;">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status pending" style="background: rgba(234, 179, 8, 0.1); color: #eab308; font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Coming Soon</span>
+              <h3>DeployPilot</h3>
+            </div>
+            <span class="project-landscape-category">Continuous Deployment Engine</span>
+          </div>
+          <p class="project-landscape-desc">
+            A GitOps-based pipeline orchestrator featuring automated progressive delivery, canary traffic shifting, and health validation.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">Go / Kubernetes</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">GitHub</button>
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">Documentation</button>
+          </div>
+        </div>
+
+        <!-- FlowPilot Card -->
+        <div class="project-landscape-card coming-soon reveal" data-delay="500" style="opacity: 0.85;">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-status pending" style="background: rgba(234, 179, 8, 0.1); color: #eab308; font-family: var(--font-mono); font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; font-weight: 600;">Coming Soon</span>
+              <h3>FlowPilot</h3>
+            </div>
+            <span class="project-landscape-category">Event-Driven Workflow Automator</span>
+          </div>
+          <p class="project-landscape-desc">
+            Visual workflow and pipeline designer mapping events across standard developer tools, message queues, and API webhooks.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">TypeScript / Node.js</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">GitHub</button>
+            <button class="btn btn-outline btn-sm" disabled style="cursor: not-allowed; opacity: 0.5;">Documentation</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal for Gallery -->
+  <div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox Viewer">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous image">⟨</button>
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next image">⟩</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Expanded View" />
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-wrap">
+            <img class="footer-logo brand-logo-dark" src="./assets/brand/logo-dark.png" alt="Silicon Roots Logo" />
+            <img class="footer-logo brand-logo-light" src="./assets/brand/logo-light.png" alt="Silicon Roots Logo" />
+          </div>
+          <p class="footer-tagline">Open Infrastructure Software.</p>
+          <p class="footer-tagline footer-tagline-sub">Building open tools for DevOps, SRE &amp; platform teams.</p>
+        </div>
+
+        <!-- Column 2: Organization -->
+        <div class="footer-col">
+          <h4>Organization</h4>
+          <a href="index.html#about">About</a>
+          <a href="products.html">Products</a>
+          <a href="https://github.com/siliconroots" target="_blank" rel="noopener">Community</a>
+        </div>
+
+        <!-- Column 3: Connect -->
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://siliconroots.github.io">Website</a>
+          <a href="https://github.com/siliconroots" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:thesiliconroots@gmail.com">Email</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Silicon Roots. All rights reserved. StackPilot, HirePilot, and the Silicon Roots logo are trademarks of Silicon Roots.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript file -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
