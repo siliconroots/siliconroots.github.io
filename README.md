@@ -10,35 +10,24 @@ We build software that helps teams understand, govern, and operate modern cloud 
 
 ---
 
-## 🚀 Flagship Project
+## 🚀 Flagship Projects
 
 ### StackPilot
 
-Cloud Intelligence Platform for AWS
+**Cloud Intelligence Platform for AWS**
 
 StackPilot provides a unified view of cloud infrastructure through discovery, inventory, topology, governance, security insights, and operational visibility.
 
-### Core Capabilities
+* **Repository:** [https://github.com/siliconroots/stackpilot](https://github.com/siliconroots/stackpilot)
+* **Website:** [https://siliconroots.github.io](https://siliconroots.github.io)
 
-* Multi-Account AWS Discovery
-* Infrastructure Inventory
-* Cloud Resource Relationships
-* Infrastructure Topology
-* Universal Search
-* Security Posture Insights
-* FinOps & Cost Visibility
-* Organizations & RBAC
-* Audit Logs
-* Cluster Command Center
-* Infrastructure Intelligence
+### HirePilot
 
-🔗 Repository
+**Local-first AI Career Operating System**
 
-https://github.com/siliconroots/stackpilot
+HirePilot parses your resume, builds a Career Knowledge Graph, discovers jobs in parallel across 13+ sources via Celery background workers, scores match fit, and prepares evidence-backed application packages locally.
 
-🌐 Website
-
-https://siliconroots.github.io
+* **Repository:** [https://github.com/siliconroots/hirepilot](https://github.com/siliconroots/hirepilot)
 
 ---
 
@@ -100,6 +89,16 @@ Building a modern Cloud Intelligence Platform focused on:
 * FinOps Awareness
 * Multi-Account Management
 
+### HirePilot
+
+Building a privacy-first, local AI career assistant focused on:
+
+* Resume Intelligence & Parsing
+* Career Knowledge Graph (PostgreSQL)
+* Multi-Source Automated Discovery (13+ adapters)
+* Resume & Application Tailoring
+* Role-Specific Interview Generation
+
 ---
 
 ## 🔮 Future Direction
@@ -145,17 +144,13 @@ If you're interested in infrastructure, cloud platforms, DevOps, platform engine
 
 ## 📚 Resources
 
-🌐 Website
+🌐 **Website**: [https://siliconroots.github.io](https://siliconroots.github.io)
 
-https://siliconroots.github.io
+🚀 **StackPilot**: [https://github.com/siliconroots/stackpilot](https://github.com/siliconroots/stackpilot)
 
-🚀 StackPilot
+💼 **HirePilot**: [https://github.com/siliconroots/hirepilot](https://github.com/siliconroots/hirepilot)
 
-https://github.com/siliconroots/stackpilot
-
-📧 Contact
-
-[thesiliconroots@gmail.com](mailto:thesiliconroots@gmail.com)
+📧 **Contact**: [thesiliconroots@gmail.com](mailto:thesiliconroots@gmail.com)
 
 ---
 

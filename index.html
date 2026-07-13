@@ -233,29 +233,56 @@
       <div class="section-header reveal">
         <span class="cta-tag">PROJECTS</span>
         <h2 class="section-title">Our Projects</h2>
-        <p class="section-subtitle">We believe in doing a few things well. Today that means one flagship project. As we learn from real engineering work, more will follow.</p>
+        <p class="section-subtitle">We believe in doing a few things well. Today that means StackPilot and HirePilot. As we learn from real engineering work, more will follow.</p>
       </div>
 
-      <div class="project-landscape-card flagship eco-current reveal" data-delay="100">
-        <div class="project-landscape-header">
-          <div class="project-landscape-title-group">
-            <span class="project-landscape-badge flagship">Flagship</span>
-            <span class="project-status active">Available</span>
-            <h3>StackPilot</h3>
+      <div class="projects-landscape-grid">
+        <!-- StackPilot Card -->
+        <div class="project-landscape-card flagship eco-current reveal" data-delay="100">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-landscape-badge flagship">Flagship</span>
+              <span class="project-status active">Available</span>
+              <h3>StackPilot</h3>
+            </div>
+            <span class="project-landscape-category">Cloud Intelligence Platform</span>
           </div>
-          <span class="project-landscape-category">Cloud Intelligence Platform</span>
+          <p class="project-landscape-desc">
+            An agentless cloud intelligence platform for AWS. Multi-account discovery, resource inventory, live topology mapping, universal search, security posture, and operational visibility—in one operator console.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ Apache-2.0</span>
+            <span class="meta-tag">React / Java / Go</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <a href="#stackpilot" class="btn btn-secondary btn-sm">Explore StackPilot</a>
+            <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
-        <p class="project-landscape-desc">
-          An agentless cloud intelligence platform for AWS. Multi-account discovery, resource inventory, live topology mapping, universal search, security posture, and operational visibility—in one operator console.
-        </p>
-        <div class="project-landscape-meta">
-          <span class="meta-tag">⚖️ Apache-2.0</span>
-          <span class="meta-tag">React / Java / Go</span>
-          <span class="meta-tag">Open Source</span>
-        </div>
-        <div class="project-landscape-actions">
-          <a href="#stackpilot" class="btn btn-secondary btn-sm">Explore StackPilot</a>
-          <a href="https://github.com/siliconroots/stackpilot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
+
+        <!-- HirePilot Card -->
+        <div class="project-landscape-card flagship eco-current reveal" data-delay="200">
+          <div class="project-landscape-header">
+            <div class="project-landscape-title-group">
+              <span class="project-landscape-badge flagship">Flagship</span>
+              <span class="project-status active">Available</span>
+              <h3>HirePilot</h3>
+            </div>
+            <span class="project-landscape-category">Career Operating System</span>
+          </div>
+          <p class="project-landscape-desc">
+            An AI-powered local-first career operating system that understands your resume, continuously discovers matching opportunities, tailors resumes, prepares interviews and helps professionals land better jobs.
+          </p>
+          <div class="project-landscape-meta">
+            <span class="meta-tag">⚖️ MIT</span>
+            <span class="meta-tag">Next.js / FastAPI / Docker</span>
+            <span class="meta-tag">Open Source</span>
+          </div>
+          <div class="project-landscape-actions">
+            <a href="#hirepilot" class="btn btn-secondary btn-sm">Explore HirePilot</a>
+            <a href="https://github.com/siliconroots/hirepilot" class="btn btn-outline btn-sm" target="_blank" rel="noopener">GitHub</a>
+          </div>
         </div>
       </div>
     </div>
@@ -393,6 +420,101 @@
           <div class="spec-item">
             <span class="spec-label">Licensing Model</span>
             <span class="spec-val">Permissive Apache-2.0 License (Open-Source code, schemas, and Helm charts)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagship Project: HirePilot -->
+  <section class="flagship-section" id="hirepilot" style="border-top: 1px solid var(--card-border); background: rgba(0, 0, 0, 0.05);">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="flagship-eyebrow">🚀 FLAGSHIP PROJECT</span>
+        <h2 class="section-title">HirePilot</h2>
+        <p class="section-subtitle">Your Personal AI Career Operating System</p>
+        <p class="section-description-lead">
+          An AI-powered local-first career operating system that understands your resume, continuously discovers matching opportunities, tailors resumes, prepares interviews and helps professionals land better jobs.
+        </p>
+        <div class="flagship-cta-row">
+          <a href="https://github.com/siliconroots/hirepilot" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+          <a href="https://github.com/siliconroots/hirepilot#documentation" class="btn btn-secondary">Documentation</a>
+        </div>
+      </div>
+
+      <!-- Core Capabilities -->
+      <div class="capabilities-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">What It Does</h3>
+        <div class="grid-container">
+          <div class="feature trust-card">
+            <div class="icon">📄</div>
+            <h3>Resume Intelligence</h3>
+            <p>Automatically parses PDF, DOCX, TXT, and Markdown files to extract skills, experience, and target roles.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🕸️</div>
+            <h3>Career Knowledge Graph</h3>
+            <p>Connects skills, experiences, and evidence nodes to map your career profile in PostgreSQL.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🔍</div>
+            <h3>AI Job Discovery</h3>
+            <p>Celery workers scrape 13+ sources in parallel based on your profile, preferences, and locations.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🎯</div>
+            <h3>Resume Tailoring</h3>
+            <p>Generates tailored resume variants and cover letters grounded strictly in real evidence from your profile.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">💬</div>
+            <h3>Interview Preparation</h3>
+            <p>Generates custom question packs, talking points, and answers per shortlisted role to get you prepared.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🏢</div>
+            <h3>Company Intelligence</h3>
+            <p>Researches company details, tech stacks, funding, and culture to give you deep context before interviewing.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">💰</div>
+            <h3>Salary Intelligence</h3>
+            <p>Analyzes market salary benchmarks and sets strategies for negotiation based on local compensation rates.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🎛️</div>
+            <h3>Career Command Center</h3>
+            <p>A morning briefing dashboard showing excellent matches, prioritized actions, and daily goals.</p>
+          </div>
+          <div class="feature trust-card">
+            <div class="icon">🛡️</div>
+            <h3>Privacy First</h3>
+            <p>Runs entirely on your hardware with local models. No remote analytics, telemetry, or account registrations.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Specifications -->
+      <div class="specs-block reveal" data-delay="100">
+        <h3 class="gallery-block-title">Technical Specifications</h3>
+        <p class="gallery-block-sub">Architectural constraints and platform attributes.</p>
+        
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-label">Data Ingest Policy</span>
+            <span class="spec-val">Local-Only / Privacy-First (No external storage, all data is retained on the user's hardware)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Security Gate</span>
+            <span class="spec-val">Enforced Manual Approval (Submission disabled by default; `APPLICATION_SUBMISSION_ENABLED=false`)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Execution Stack</span>
+            <span class="spec-val">FastAPI (Backend) / Next.js (Frontend) / Celery & Redis (Workers) / PostgreSQL (Database)</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Licensing Model</span>
+            <span class="spec-val">Permissive MIT License (Open-Source code, local automation, and custom templates)</span>
           </div>
         </div>
       </div>
@@ -607,6 +729,20 @@
           <summary class="faq-question">How can I try StackPilot?</summary>
           <div class="faq-answer">
             <p>It is open source and self-hostable. Head to the repository on GitHub to read the documentation, run it locally or in your own Kubernetes cluster, and connect an AWS account with a read-only role.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">What is HirePilot?</summary>
+          <div class="faq-answer">
+            <p>HirePilot is our local-first AI career operating system. It parses your resume, builds a Career Knowledge Graph, discovers jobs in parallel across 13+ sources via Celery background workers, scores match fit, and prepares evidence-backed application packages—all stored on your local hardware.</p>
+          </div>
+        </details>
+
+        <details class="faq-item" tabindex="0">
+          <summary class="faq-question">How can I try HirePilot?</summary>
+          <div class="faq-answer">
+            <p>HirePilot is completely open source under the MIT License. You can clone the repository from GitHub, run it locally via Docker Compose, and upload your resume to get started in minutes. It runs fully local models with Ollama, keeping your data private.</p>
           </div>
         </details>
       </div>
