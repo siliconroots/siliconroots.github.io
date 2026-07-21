@@ -67,7 +67,7 @@
           <path d="M12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-2a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0-2.5A4.5 4.5 0 1 1 12 7.5v9z"/>
         </svg>
       </button>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Open Navigation Menu">
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
         <svg class="menu-toggle-icon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </svg>
@@ -75,16 +75,15 @@
       <a href="https://github.com/siliconroots" class="cta-nav-button" target="_blank" rel="noopener">GitHub</a>
     </div>
   </nav>
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
   <!-- Products Header -->
-  <header class="longterm-section" style="padding-top: 140px; padding-bottom: 60px;">
+  <header class="longterm-section products-page-header">
     <div class="section-container">
-      <div class="longterm-card reveal" style="background: transparent; border: none; box-shadow: none; padding: 0; text-align: center;">
+      <div class="longterm-card reveal">
         <span class="cta-eyebrow">OUR PRODUCTS</span>
-        <h1 style="font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: var(--text-main); margin-bottom: 20px;">
-          The SiliconRoots Ecosystem
-        </h1>
-        <p class="longterm-lead" style="margin: 0 auto; max-width: 800px;">
+        <h1 class="products-page-title">The SiliconRoots Ecosystem</h1>
+        <p class="longterm-lead products-page-lead">
           We build premium, battle-tested open-source products that focus on automation, operational clarity, and local-first execution.
         </p>
       </div>
@@ -92,7 +91,7 @@
   </header>
 
   <!-- StackPilot Details -->
-  <section class="flagship-section" id="stackpilot" style="border-top: 1px solid var(--card-border); padding: 100px 0;">
+  <section class="flagship-section product-detail-section" id="stackpilot">
     <div class="section-container">
       
       <!-- 1. Overview -->
@@ -110,9 +109,9 @@
       </div>
 
       <!-- 2. Why It Exists -->
-      <div class="capabilities-block reveal" style="margin-top: 60px;">
+      <div class="capabilities-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Why It Exists</h3>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">
+        <p class="centered-prose">
           Modern cloud infrastructure grows complex in seconds. As teams spin up multiple accounts and Kubernetes clusters, they lose track of what resources actually exist. Traditional observability solutions require deploying heavy agents, exposing security credentials, and paying high SaaS fees. StackPilot solves this by offering a zero-install, 100% read-only interface that scans and maps entire topologies in real time.
         </p>
       </div>
@@ -145,26 +144,26 @@
       </div>
 
       <!-- 4. Architecture -->
-      <div class="capabilities-block reveal" style="margin-top: 60px;">
+      <div class="capabilities-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Architecture</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px;">
-          <div class="trust-card" style="padding: 24px; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: 8px;">
-            <h4 style="color: var(--text-main); margin-bottom: 12px; font-family: 'Outfit', sans-serif;">Agentless Metadata Scanner</h4>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Leverages native cloud and Kubernetes APIs directly without deploying agents or sidecars in your production environments.</p>
+        <div class="architecture-grid">
+          <div class="architecture-card">
+            <h4>Agentless Metadata Scanner</h4>
+            <p>Leverages native cloud and Kubernetes APIs directly without deploying agents or sidecars in your production environments.</p>
           </div>
-          <div class="trust-card" style="padding: 24px; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: 8px;">
-            <h4 style="color: var(--text-main); margin-bottom: 12px; font-family: 'Outfit', sans-serif;">Read-Only Cache Layer</h4>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">Maintains a local Redis-backed cache to speed up universal search queries and minimize API rate-limiting penalties.</p>
+          <div class="architecture-card">
+            <h4>Read-Only Cache Layer</h4>
+            <p>Maintains a local Redis-backed cache to speed up universal search queries and minimize API rate-limiting penalties.</p>
           </div>
-          <div class="trust-card" style="padding: 24px; border: 1px solid var(--card-border); background: var(--card-bg); border-radius: 8px;">
-            <h4 style="color: var(--text-main); margin-bottom: 12px; font-family: 'Outfit', sans-serif;">Interactive React Console</h4>
-            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">A modern client-side React UI dashboard designed for rapid navigation, VPC topology rendering, and resource filtering.</p>
+          <div class="architecture-card">
+            <h4>Interactive React Console</h4>
+            <p>A modern client-side React UI dashboard designed for rapid navigation, VPC topology rendering, and resource filtering.</p>
           </div>
         </div>
       </div>
 
       <!-- 5. Screenshots -->
-      <div class="gallery-block reveal" data-delay="100" style="margin-top: 60px;">
+      <div class="gallery-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Product Screenshots</h3>
         <p class="gallery-block-sub">Click any screen to expand the interface.</p>
         <div class="gallery-grid">
@@ -190,7 +189,7 @@
       <!-- 6. Technology -->
       <!-- 7. How It Works -->
       <!-- 8. Documentation / 9. GitHub / 10. License / 11. Roadmap / 12. FAQ -->
-      <div class="specs-block reveal" data-delay="100" style="margin-top: 60px;">
+      <div class="specs-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Specifications, How it Works &amp; FAQ</h3>
         <div class="specs-grid">
           <div class="spec-item">
@@ -231,7 +230,7 @@
   </section>
 
   <!-- HirePilot Details -->
-  <section class="flagship-section" id="hirepilot" style="border-top: 1px solid var(--card-border); padding: 100px 0;">
+  <section class="flagship-section product-detail-section" id="hirepilot">
     <div class="section-container">
       
       <div class="section-header reveal">
@@ -247,13 +246,13 @@
         </div>
       </div>
 
-      <div class="reveal" style="margin-top: 48px;">
-        <div class="product-story-media gallery-item" data-src="./assets/screenshots/hero.png" data-caption="HirePilot — Your AI Career Engineer" tabindex="0" style="max-width: 1100px; margin: 0 auto;">
-          <img src="./assets/screenshots/hero.png" alt="HirePilot hero — AI Career Engineer briefing" loading="lazy" />
+      <div class="reveal product-block-spaced">
+        <div class="product-story-media gallery-item product-hero-media" data-src="./assets/screenshots/hero.png" data-caption="HirePilot — Your AI Career Engineer" tabindex="0">
+          <img src="./assets/screenshots/hero.png" alt="HirePilot hero — AI Career Engineer briefing" loading="lazy" width="1280" height="720" />
         </div>
       </div>
 
-      <div class="product-story reveal" style="margin-top: 64px;">
+      <div class="product-story reveal product-block-spaced">
         <div class="product-story-row">
           <div class="product-story-copy">
             <span class="product-story-step">01</span>
@@ -390,7 +389,7 @@
         </div>
       </div>
 
-      <div class="gallery-block reveal" data-delay="100" style="margin-top: 60px;">
+      <div class="gallery-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Product Screenshots</h3>
         <p class="gallery-block-sub">Click any screen to expand. Captured from the live HirePilot UI with realistic demo data.</p>
         <div class="gallery-grid gallery-grid-wide">
@@ -461,9 +460,9 @@
         </div>
       </div>
 
-      <div class="capabilities-block reveal" style="margin-top: 60px;">
+      <div class="capabilities-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Architecture</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px;">
+        <div class="architecture-grid">
           <div class="feature trust-card">
             <h3>Local AI (Ollama)</h3>
             <p>Runs Llama / Mistral on your machine for parsing, tailoring, and prep — OpenAI optional.</p>
@@ -479,7 +478,7 @@
         </div>
       </div>
 
-      <div class="specs-block reveal" data-delay="100" style="margin-top: 60px;">
+      <div class="specs-block reveal product-block-spaced">
         <h3 class="gallery-block-title">Specifications, How it Works &amp; FAQ</h3>
         <div class="specs-grid">
           <div class="spec-item">
@@ -570,6 +569,6 @@
   </footer>
 
   <!-- Core JavaScript file -->
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

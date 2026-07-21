@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const rootEl = document.documentElement;
   const currentTheme = localStorage.getItem('theme') || 'dark';
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
 
   if (currentTheme === 'light') {
     rootEl.setAttribute('data-theme', 'light');
@@ -25,25 +27,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle Logic
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navOverlay = document.getElementById('nav-overlay');
+
+  function setMenuOpen(isOpen) {
+    if (!navMenu || !menuToggle) return;
+    navMenu.classList.toggle('active', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close Navigation Menu' : 'Open Navigation Menu');
+    document.body.classList.toggle('nav-open', isOpen);
+    if (navOverlay) {
+      navOverlay.classList.toggle('active', isOpen);
+      navOverlay.setAttribute('aria-hidden', String(!isOpen));
+    }
+  }
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle('active');
+      setMenuOpen(!navMenu.classList.contains('active'));
     });
 
-    // Close menu when clicking any nav link
-    const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
     });
 
-    // Close menu when clicking outside the navbar
-    document.addEventListener('click', (e) => {
-      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        navMenu.classList.remove('active');
+    if (navOverlay) {
+      navOverlay.addEventListener('click', closeMenu);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+        closeMenu();
       }
     });
   }
@@ -65,30 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const ROTATE_INTERVAL_MS = 4500;
 
   function showSlide(index) {
-    // Wrap index boundaries
     if (index >= slides.length) index = 0;
     if (index < 0) index = slides.length - 1;
     currentIndex = index;
 
-    // Update active slide state
     slides.forEach((slide, idx) => {
-      if (idx === currentIndex) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
-      }
+      slide.classList.toggle('active', idx === currentIndex);
     });
 
-    // Update active dot indicators
     indicators.forEach((indicator, idx) => {
-      if (idx === currentIndex) {
-        indicator.classList.add('active');
-      } else {
-        indicator.classList.remove('active');
-      }
+      indicator.classList.toggle('active', idx === currentIndex);
+      indicator.setAttribute('aria-current', idx === currentIndex ? 'true' : 'false');
     });
 
-    // Update browser fake route and caption details
     const activeSlide = slides[currentIndex];
     if (activeSlide) {
       if (addressBar) {
@@ -106,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function startRotation() {
+    if (prefersReducedMotion || slides.length <= 1) return;
     stopRotation();
     carouselInterval = setInterval(() => {
       showSlide(currentIndex + 1);
@@ -119,35 +134,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Event bindings for manual navigation
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       showSlide(currentIndex - 1);
-      startRotation(); // Reset rotation timer
+      startRotation();
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', () => {
       showSlide(currentIndex + 1);
-      startRotation(); // Reset rotation timer
+      startRotation();
     });
   }
 
   indicators.forEach((indicator) => {
     indicator.addEventListener('click', (e) => {
-      const targetSlide = parseInt(e.target.getAttribute('data-slide'));
+      const targetSlide = parseInt(e.currentTarget.getAttribute('data-slide'), 10);
       showSlide(targetSlide);
-      startRotation(); // Reset rotation timer
+      startRotation();
     });
   });
 
-  // Pause on hover
   if (browser) {
     browser.addEventListener('mouseenter', stopRotation);
     browser.addEventListener('mouseleave', startRotation);
     
-    // Keyboard navigation when focused
     browser.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') {
         showSlide(currentIndex - 1);
@@ -159,9 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Initialize Showcase rotation
-  showSlide(0);
-  startRotation();
+  if (slides.length) {
+    showSlide(0);
+    startRotation();
+  }
 
 
   // ═══════════════════════════════════════════════════════
@@ -184,20 +197,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const src = item.getAttribute('data-src');
     const caption = item.getAttribute('data-caption');
+    const alt = item.querySelector('img')?.getAttribute('alt') || 'Expanded product screenshot';
 
     lightboxImg.setAttribute('src', src);
+    lightboxImg.setAttribute('alt', alt);
     lightboxCaption.textContent = caption;
     lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Lock background scroll
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
     
-    // Focus close button for accessibility
     if (lightboxClose) lightboxClose.focus();
   }
 
   function closeLightbox() {
     if (!lightbox) return;
     lightbox.classList.remove('active');
-    document.body.style.overflow = ''; // Restore background scroll
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   }
 
   function nextGalleryImage() {
@@ -212,13 +228,14 @@ document.addEventListener('DOMContentLoaded', () => {
     openLightbox(prevIdx);
   }
 
-  // Gallery click triggers
   galleryItems.forEach((item, idx) => {
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', item.querySelector('img')?.getAttribute('alt') || 'View screenshot');
     item.addEventListener('click', () => openLightbox(idx));
     
-    // Support enter key for accessibility
     item.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
         openLightbox(idx);
       }
     });
@@ -228,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (lightboxPrev) lightboxPrev.addEventListener('click', prevGalleryImage);
   if (lightboxNext) lightboxNext.addEventListener('click', nextGalleryImage);
 
-  // Close lightbox when clicking the overlay backdrop
   if (lightbox) {
+    lightbox.setAttribute('aria-hidden', 'true');
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         closeLightbox();
@@ -237,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard navigation for Lightbox
   window.addEventListener('keydown', (e) => {
     if (lightbox && lightbox.classList.contains('active')) {
       if (e.key === 'Escape') {
@@ -255,8 +271,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // PARTICLE CANVAS BACKDROP
   // ═══════════════════════════════════════════════════════
   const canvas = document.getElementById('particles');
-  if (canvas) {
+  if (canvas && !prefersReducedMotion && !isMobileViewport) {
     const ctx = canvas.getContext('2d');
+    let animationFrameId = null;
+    const particleCount = isMobileViewport ? 25 : 60;
 
     function resizeCanvas() {
       canvas.width = window.innerWidth;
@@ -266,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    const particles = Array.from({ length: 60 }, () => ({
+    const particles = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
       radius: Math.random() * 2 + 1,
@@ -298,17 +316,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
       });
 
-      // Draw connections
+      const connectionDistance = isMobileViewport ? 90 : 120;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 120) {
+          if (dist < connectionDistance) {
             ctx.beginPath();
             const [r, g, b] = line;
-            ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${1 - dist / 120})`;
+            ctx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${1 - dist / connectionDistance})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -316,40 +334,39 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       }
-      requestAnimationFrame(drawParticles);
+      animationFrameId = requestAnimationFrame(drawParticles);
     }
     drawParticles();
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      } else {
+        drawParticles();
+      }
+    });
   }
 
 
   // ═══════════════════════════════════════════════════════
   // SCROLL REVEAL OBSERVER
   // ═══════════════════════════════════════════════════════
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.dataset.delay) {
+  if (prefersReducedMotion) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+  } else {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = entry.target.dataset.delay ? parseInt(entry.target.dataset.delay, 10) : 0;
           setTimeout(() => {
             entry.target.classList.add('active');
-          }, parseInt(entry.target.dataset.delay));
-        } else {
-          entry.target.classList.add('active');
+          }, delay);
+          obs.unobserve(entry.target);
         }
-        observer.unobserve(entry.target); // Stop observing once active
-      }
-    });
-  }, observerOptions);
+      });
+    }, { root: null, rootMargin: '0px', threshold: 0.12 });
 
-  document.querySelectorAll('.reveal').forEach((el) => {
-    observer.observe(el);
-  });
-
-
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
 
 });
