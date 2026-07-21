@@ -2165,3 +2165,96 @@ a:focus-visible, button:focus-visible, [tabindex="0"]:focus-visible {
 .project-landscape-card:hover .card-screenshot-wrapper img {
   transform: scale(1.04);
 }
+
+/* HirePilot product storytelling rows */
+.product-story {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.product-story-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.product-story-row.reverse {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.product-story-row.reverse .product-story-copy {
+  order: 2;
+}
+
+.product-story-row.reverse .product-story-media {
+  order: 1;
+}
+
+.product-story-step {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.product-story-copy h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.product-story-copy p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  max-width: 420px;
+}
+
+.product-story-media {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow-rest);
+  cursor: pointer;
+}
+
+.product-story-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.icon-svg {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--accent);
+}
+
+.icon-svg svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.gallery-grid-wide {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .product-story-row,
+  .product-story-row.reverse {
+    grid-template-columns: 1fr;
+  }
+  .product-story-row.reverse .product-story-copy,
+  .product-story-row.reverse .product-story-media {
+    order: initial;
+  }
+}
